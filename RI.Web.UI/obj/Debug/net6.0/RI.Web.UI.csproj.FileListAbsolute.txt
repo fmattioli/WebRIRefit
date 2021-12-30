@@ -23,4 +23,3 @@ C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.dll
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\ref\RI.Web.UI.dll
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.pdb
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.genruntimeconfig.cache
-C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.csproj.AssemblyReference.cache
