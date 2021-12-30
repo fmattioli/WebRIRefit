@@ -27,7 +27,7 @@ namespace RI.Web.Application.Services.Titulo
                 retorno = mapper.Map<RecepcaoViewModel>(retornoAcao);
                 return retorno;
             }
-            catch (Exception ex)
+            catch 
             {
                 return retorno;
             }

@@ -1,9 +1,17 @@
-﻿$(document).ready(function () {
-    alert('oi');
-    $('#formularioLivro').hide();
-});
+﻿function mostrarForm() {
+    if ($('#formularioLivro').css('display') == 'none') {
+        $('#formularioLivro').css('display', 'inline');
+    }
+    else {
+        $('#formularioLivro').css('display', 'none');
+    }
+}
 
-
-function mostrarForm() {
-    $('#formularioLivro').show();
+function editarLivro() {
+    if ($('#formularioLivro').css('display') == 'none') {
+        $('#formularioLivro').css('display', 'inline');
+    }
+    else {
+        $('#formularioLivro').css('display', 'none');
+    }
 }

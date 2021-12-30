@@ -7,7 +7,7 @@
     <div class="input-field col s1">
         <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">add</i></a>
     </div>
-    <div id="formularioLivro">
+    <div style="display: none" id="formularioLivro">
         <form id="especialidadeForm">
             <div class="row">
                 <div class='input-field col s2'>
@@ -143,7 +143,10 @@
         </form>
     </div>
     <blockquote>
-        Não se esqueça de configurar as mensagens inicias de cada especialidade.
+        Para cadastrar um novo livro basta clicar no botão acima.
+    </blockquote>
+    <blockquote>
+        Selecione um item para editar.
     </blockquote>
     <div class="row">
         <div class='table-responsive' id="especialidadesGrid">
@@ -189,7 +192,7 @@
                                 Livro 2
                             </td>
                             <td>
-                                <a class="btn-floating btn-medium waves-light carmesim" asp-action="Mensagens" asp-controller="MensagemInicio" asp-route-id=""><i class="material-icons">chat</i></a>
+                                <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro()"><i class="small material-icons">edit</i></a>
                             </td>
 
                             <td>
@@ -208,9 +211,5 @@
     </div>
 </div>
 
-<div class="section"></div>
-<div class="section"></div>
-<div class="section"></div>
-<div class="section"></div>
-
+<script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/Especialidade.js"></script>
