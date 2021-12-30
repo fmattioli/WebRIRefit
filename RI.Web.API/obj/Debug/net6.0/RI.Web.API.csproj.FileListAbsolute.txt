@@ -41,3 +41,4 @@ C:\Refit\RI.Web\RI.Web.API\bin\Debug\net6.0\RI.Web.Application.pdb
 C:\Refit\RI.Web\RI.Web.API\bin\Debug\net6.0\RI.Web.Domain.pdb
 C:\Refit\RI.Web\RI.Web.API\bin\Debug\net6.0\RI.Web.Infra.Data.pdb
 C:\Refit\RI.Web\RI.Web.API\obj\Debug\net6.0\RI.Web.API.csproj.AssemblyReference.cache
+C:\Refit\RI.Web\RI.Web.API\bin\Debug\net6.0\Dapper.dll

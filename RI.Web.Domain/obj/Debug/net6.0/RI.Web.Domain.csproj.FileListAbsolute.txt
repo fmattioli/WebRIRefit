@@ -17,3 +17,4 @@ C:\Users\mimi_\Documents\SPCM\WebRI_Refit\WebRIRefit\RI.Web.Domain\obj\Debug\net
 C:\Users\mimi_\Documents\SPCM\WebRI_Refit\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.dll
 C:\Users\mimi_\Documents\SPCM\WebRI_Refit\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\ref\RI.Web.Domain.dll
 C:\Users\mimi_\Documents\SPCM\WebRI_Refit\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.pdb
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.csproj.AssemblyReference.cache

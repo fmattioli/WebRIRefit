@@ -3,12 +3,12 @@ using System.Data.SqlClient;
 
 namespace RI.Web.Infra.Data.DapperConfig
 {
-    public class DbSession : IDisposable
+    public class ConfigADO : IDisposable
     {
         protected static string? ConnectionString { get; set; }
 
         public IDbConnection Connection { get; set; }
-        public DbSession()
+        public ConfigADO()
         {
             Connection = new SqlConnection(@"Data Source=SPCM-DESENV-RI\S2019;Initial Catalog=WEBRI_5RISP;Integrated Security=false;User Id=webri;Password=webri;Connection Timeout=30;");
             Connection.Open();
@@ -59,7 +59,7 @@ namespace RI.Web.Infra.Data.DapperConfig
             }
         }
 
-        ~DbSession()
+        ~ConfigADO()
         {
             Dispose(false);
         }

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using RI.Web.Application.Interfaces.Livro;
+using RI.Web.Application.RetornoAcaoService;
 using RI.Web.Application.ViewModels.Livro;
+using RI.Web.Domain.Entities.Acao;
 using RI.Web.Domain.Interfaces.Livro;
 
 namespace RI.Web.Application.Services.Livro
@@ -15,9 +17,25 @@ namespace RI.Web.Application.Services.Livro
             this.mapper = mapper;
         }
 
-        public Task<LivroViewModel> ObterLivro(LivroViewModel livroViewModel)
+        public async Task<RetornoAcao<IEnumerable<LivroViewModel>>> ObterLivro()
         {
-            throw new NotImplementedException();
+            var retorno = new RetornoAcao<IEnumerable<LivroViewModel>>();
+            try
+            {
+                var livros = mapper.Map<IEnumerable<LivroViewModel>>(await livroRepository.ObterTodos("tblWRILivro"));
+                retorno.Sucesso = true;
+                retorno.Result = livros;
+                return retorno;
+                
+            }
+            catch (Exception ex)
+            {
+                retorno.Sucesso = false;
+                retorno.MensagemRetorno = ex.Message;
+                retorno.ExceptionRetorno = ex;
+                return retorno;
+            }
         }
+
     }
 }

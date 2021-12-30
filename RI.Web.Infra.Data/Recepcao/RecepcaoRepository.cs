@@ -6,14 +6,17 @@ using RI.Web.Domain.Interfaces.Titulo;
 using RI.Web.Infra.Data.DapperConfig;
 using RI.Web.Infra.Data.Repositories.Base;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace RI.Web.Infra.Data.Recepcao
 {
-    public class RecepcaoRepository : BaseRepository<TituloBasicoEntity>, IRecepcaoRepository
+    public class RecepcaoRepository :  IRecepcaoRepository
     {
-        public RecepcaoRepository(DbSession dbSession) : base(dbSession)
-        {
-        }
+        private ConfigADO _db;
+        public RecepcaoRepository(ConfigADO configADO) => _db = configADO;
+        
+        private StringBuilder SQL = new StringBuilder();
+        private List<SqlParameter> Lista = new List<SqlParameter>();
         public async Task<RecepcaoEntity> ObterRecepcao(TituloBasicoEntity Recepcao)
         {
             var retornoAcao = new RetornoAcao<RecepcaoEntity>();
