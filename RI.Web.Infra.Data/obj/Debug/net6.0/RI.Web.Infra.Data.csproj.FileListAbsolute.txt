@@ -1,0 +1,15 @@
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.csproj.AssemblyReference.cache
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.AssemblyInfoInputs.cache
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.AssemblyInfo.cs
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\RI.Web.Infra.Data.deps.json
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\RI.Web.Infra.Data.dll
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\ref\RI.Web.Infra.Data.dll
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\RI.Web.Infra.Data.pdb
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.Infra.Data\bin\Debug\net6.0\RI.Web.Domain.pdb
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.csproj.CopyComplete
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.dll
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\ref\RI.Web.Infra.Data.dll
+C:\Refit\RI.Web\RI.Web.Infra.Data\obj\Debug\net6.0\RI.Web.Infra.Data.pdb

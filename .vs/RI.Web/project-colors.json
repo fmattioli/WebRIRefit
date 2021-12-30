@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "52b1901e-2cd5-477c-9d44-30c6e3a0ea2d": {
+      "ProjectGuid": "52b1901e-2cd5-477c-9d44-30c6e3a0ea2d",
+      "DisplayName": "RI.Web.Domain",
+      "ColorIndex": 0
+    },
+    "ab46667f-9fc1-4ef2-9168-2bf924c1dfd0": {
+      "ProjectGuid": "ab46667f-9fc1-4ef2-9168-2bf924c1dfd0",
+      "DisplayName": "RI.Web.Infra.Data",
+      "ColorIndex": 1
+    },
+    "9f392665-fd32-4400-b306-ef602cf27f7d": {
+      "ProjectGuid": "9f392665-fd32-4400-b306-ef602cf27f7d",
+      "DisplayName": "RI.Web.Infra.IoC",
+      "ColorIndex": 2
+    },
+    "3c1ad271-c529-497d-acc8-1d636898a203": {
+      "ProjectGuid": "3c1ad271-c529-497d-acc8-1d636898a203",
+      "DisplayName": "RI.Web.Application",
+      "ColorIndex": 3
+    },
+    "9819e00c-923c-4634-af52-ff6463832150": {
+      "ProjectGuid": "9819e00c-923c-4634-af52-ff6463832150",
+      "DisplayName": "RI.Web.API",
+      "ColorIndex": 4
+    },
+    "1cbb1104-7537-4fad-b8a1-36ab44c4acec": {
+      "ProjectGuid": "1cbb1104-7537-4fad-b8a1-36ab44c4acec",
+      "DisplayName": "RI.Web.UI",
+      "ColorIndex": 5
+    },
+    "0f935cc8-26a0-416f-9226-b88a1dbc7c73": {
+      "ProjectGuid": "0f935cc8-26a0-416f-9226-b88a1dbc7c73",
+      "DisplayName": "RI.Web.UI",
+      "ColorIndex": 6
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 7
+}

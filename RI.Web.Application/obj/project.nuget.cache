@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bmh1NXJHcpaXZjcj64ymHwPEWDYrSS1IIfJW8niFmKKoP74Ex6Oc83rp7/iFF5+mttGXxGtzC5NfJ1JEhoGXUw==",
+  "success": true,
+  "projectFilePath": "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

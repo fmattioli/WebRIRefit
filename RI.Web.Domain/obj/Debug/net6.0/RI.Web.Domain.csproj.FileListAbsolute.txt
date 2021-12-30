@@ -1,0 +1,12 @@
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.AssemblyInfoInputs.cache
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.AssemblyInfo.cs
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.csproj.CoreCompileInputs.cache
+C:\Refit\RI.Web\RI.Web.Domain\bin\Debug\net6.0\RI.Web.Domain.deps.json
+C:\Refit\RI.Web\RI.Web.Domain\bin\Debug\net6.0\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.Domain\bin\Debug\net6.0\ref\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.Domain\bin\Debug\net6.0\RI.Web.Domain.pdb
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\ref\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.pdb
+C:\Refit\RI.Web\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.csproj.AssemblyReference.cache
