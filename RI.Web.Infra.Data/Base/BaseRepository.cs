@@ -1,8 +1,7 @@
 ﻿using Dapper;
-using RI.Web.Domain.Entities.Acao;
+using RI.Web.Domain.Entities.Acoes;
 using RI.Web.Domain.Interfaces.Base;
 using RI.Web.Infra.Data.ConfigDB;
-using RI.Web.Infra.Data.DapperConfig;
 using System.Data.SqlClient;
 using System.Text;
 

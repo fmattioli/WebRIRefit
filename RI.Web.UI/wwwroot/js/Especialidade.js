@@ -1,4 +1,7 @@
-﻿function mostrarForm() {
+﻿$(document).ready(function () {
+    obterLivros();
+});
+function mostrarForm() {
     if ($('#formularioLivro').css('display') == 'none') {
         $('#formularioLivro').css('display', 'inline');
     }
@@ -14,4 +17,26 @@ function editarLivro() {
     else {
         $('#formularioLivro').css('display', 'none');
     }
+}
+
+function obterLivros() {
+    $.ajax({
+        url: "https://localhost:7054/api/v1/Livro",
+        type: "GET",
+        dataType: "json",
+        data: JSON.stringify(intencaoLuisViewModel),
+        contentType: "application/json; charset=utf-8",
+        success: function (response) {
+           
+
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            M.toast({
+                html: "Erro ao adicionar usuário",
+                classes: 'black darken-4 rounded',
+            });
+        }
+    });
+
+})
 }

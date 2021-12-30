@@ -12,11 +12,11 @@ namespace RI.Web.API.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<LivroViewModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ObterRecepcao([FromServices] ILivroService livroService)
+        public async Task<IActionResult> ObterLivros([FromServices] ILivroService livroService)
         {
             if (ModelState.IsValid)
             {
-                var retorno = await livroService.ObterLivro();
+                var retorno = await livroService.ObterLivros();
                 return Ok(retorno);
             }
 

@@ -1,4 +1,4 @@
-﻿namespace RI.Web.Domain.Entities.Acao
+﻿namespace RI.Web.Domain.Entities.Acoes
 {
     public class RetornoAcao
     {

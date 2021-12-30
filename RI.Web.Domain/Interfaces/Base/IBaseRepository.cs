@@ -1,5 +1,4 @@
-﻿
-using RI.Web.Domain.Entities.Acao;
+﻿using RI.Web.Domain.Entities.Acoes;
 
 namespace RI.Web.Domain.Interfaces.Base
 {

@@ -1,10 +1,8 @@
-﻿using RI.Web.Domain;
-using RI.Web.Domain.Entities.Acao;
+﻿using RI.Web.Domain.Entities.Acoes;
 using RI.Web.Domain.Entities.Recepcao;
 using RI.Web.Domain.Entities.Recepcao.Titulo;
 using RI.Web.Domain.Interfaces.Titulo;
 using RI.Web.Infra.Data.DapperConfig;
-using RI.Web.Infra.Data.Repositories.Base;
 using System.Data.SqlClient;
 using System.Text;
 
