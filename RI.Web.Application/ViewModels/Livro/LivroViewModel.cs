@@ -1,9 +1,11 @@
-﻿namespace RI.Application.ViewModels.Livro
+﻿using RI.Web.Application.ViewModels.Livro;
+
+namespace RI.Application.ViewModels.Livro
 {
     public class LivroViewModel
     {
-        public int PK_Id { get; set; }
-        public string? Descricao { get; set; }
+        public int IdLivro { get; set; }
+        public string? DescricaoLivro { get; set; }
         public string? Sigla { get; set; }
         public int UltimaSequenciaUtilizada { get; set; }
         public string? Sessao { get; set; }
@@ -18,7 +20,11 @@
         public bool ValidarRegistroAnterior { get; set; }
         public bool Indisponibilidade { get; set; }
         public bool Transcricao { get; set; }
-        public int fk_tblWriLivroTJ { get; set; }
         public int EnviaBDL { get; set; }
+        public LivroTJViewModel LivroTJ { get; set; }
+        public LivroViewModel()
+        {
+            LivroTJ = new LivroTJViewModel();
+        }
     }
 }

@@ -20,11 +20,32 @@
         <ul id="consultas" class="dropdown-content">
             <li><a class="black-text" asp-action="Home" asp-controller="Especialidade">Indicador real</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Indicador pessoal</a></li>
-        </ul
-        
-        ><ul id="cadastros" class="dropdown-content">
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Imóveis</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Transcrição</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pesquisa geral</a></li>
+        </ul>
+       
+        <ul id="cadastros" class="dropdown-content">
             <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Livro</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pessoa</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Imóveis</a></li>
+        </ul>
+
+        <ul id="administracao" class="dropdown-content">
+            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Usuários</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Parâmetros</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Sequencias</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar cancelamento</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar reentrada</a></li>
+        </ul>
+
+        
+        <ul id="manutencoes" class="dropdown-content">
+            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Usuários</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Parâmetros</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Sequencias</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar cancelamento</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar reentrada</a></li>
         </ul>
 
         <ul id="acesso_rapido_mobile" class="dropdown-content">
@@ -36,14 +57,16 @@
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Indicador pessoal</a></li>
         </ul>
 
-        <nav class="" id="navMenu">
+        <nav>
             <div class="nav-wrapper">
-                <a class="brand-logo"></a>
+                <a class="brand-logo"> <img src="https://spcm.com.br/wp-content/themes/siplan/assets/images/logo.png" alt="logo spcm" height="33" width="240" /> </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Inicio<i class="material-icons right">home</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Acesso rápido<i class="material-icons right">wrap_text</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="manutencoes">Manutenções<i class="material-icons right">build</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="consultas">Consultas<i class="material-icons right">search</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="administracao">Administração<i class="material-icons right">transfer_within_a_station</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="cadastros">Cadastros<i class="material-icons right">mode_edit</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Sair<i class="material-icons right">keyboard_tab</i></a></li>
                 </ul>

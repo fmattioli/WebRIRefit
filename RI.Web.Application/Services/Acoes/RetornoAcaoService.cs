@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace RI.Web.Application.Services.Acoes
@@ -10,6 +11,7 @@ namespace RI.Web.Application.Services.Acoes
     {
         public bool Sucesso { get; set; }
         public string? MensagemRetorno { get; set; }
+        [JsonIgnore]
         public Exception? ExceptionRetorno { get; set; }
     }
 

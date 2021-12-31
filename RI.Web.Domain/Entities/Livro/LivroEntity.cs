@@ -4,8 +4,8 @@ namespace RI.Web.Domain.Entities.Livro
 {
     public class LivroEntity
     {
-        public int PK_Id { get; set; }
-        public string? Descricao { get; set; }
+        public int IdLivro { get; set; }
+        public string? DescricaoLivro { get; set; }
         public string? Sigla { get; set; }
         public int UltimaSequenciaUtilizada { get; set; }
         public string? Sessao { get; set; }
@@ -20,7 +20,11 @@ namespace RI.Web.Domain.Entities.Livro
         public bool ValidarRegistroAnterior { get; set; }
         public bool Indisponibilidade { get; set; }
         public bool Transcricao { get; set; }
-        public int fk_tblWriLivroTJ { get; set; }
         public int EnviaBDL { get; set; }
+        public LivroTJ LivroTJ { get; set; }
+        public LivroEntity()
+        {
+            LivroTJ = new LivroTJ();
+        }
     }
 }

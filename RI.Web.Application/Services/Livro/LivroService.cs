@@ -24,7 +24,7 @@ namespace RI.Web.Application.Services.Livro
             var retorno = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
             try
             {
-                var livrosEntity = await livroRepository.ObterTodos("tblWRILivro");
+                var livrosEntity = await livroRepository.ObterLivros();
                 var lirosViewModel = mapper.Map<IEnumerable<LivroViewModel>>(livrosEntity.Result);
                 retorno.Result = lirosViewModel;
                 retorno.Sucesso = true;
@@ -50,7 +50,6 @@ namespace RI.Web.Application.Services.Livro
                 retorno.Result = lirosTJViewModel;
                 retorno.Sucesso = true;
                 return retorno;
-
             }
             catch (Exception ex)
             {

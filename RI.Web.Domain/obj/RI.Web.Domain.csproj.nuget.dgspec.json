@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj": {}
+    "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\RI.Web.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj": {
+    "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\RI.Web.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj",
+        "projectUniqueName": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\RI.Web.Domain.csproj",
         "projectName": "RI.Web.Domain",
-        "projectPath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj",
-        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\obj\\",
+        "projectPath": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\RI.Web.Domain.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

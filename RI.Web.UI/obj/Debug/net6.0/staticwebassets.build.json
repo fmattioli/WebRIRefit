@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hJcVxJBcMO/lL/Bh1ifDo63hXI8tB34PizVg9yukYMY=",
+  "Hash": "R9ajAn/KLOfxzlX2YYdLmN8YLRVxDPmWd13jdzFX9H8=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RI.Web.UI\\wwwroot",
       "Source": "RI.Web.UI",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\RI.Web.UI.styles.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\RI.Web.UI.styles.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "RI.Web.UI.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\RI.Web.UI.styles.css"
+      "OriginalItemSpec": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\RI.Web.UI.styles.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RI.Web.UI.bundle.scp.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RI.Web.UI.bundle.scp.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "RI.Web.UI.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RI.Web.UI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RI.Web.UI.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\css\\login.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\css\\login.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\css\\modaladicionar.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\css\\modaladicionar.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "css/modaladicionar.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\modaladicionar.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\css\\site.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\favicon.ico",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\imagens\\logo.png",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\imagens\\logo.png",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "imagens/logo.png",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\imagens\\logo.png"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\ConfirmarExclusao.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\ConfirmarExclusao.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/ConfirmarExclusao.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\ConfirmarExclusao.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Graficos.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Graficos.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/Graficos.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Graficos.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\InicializarDatepicker.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarDatepicker.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/InicializarDatepicker.js",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\js\\InicializarDatepicker.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\InicializarSideNav.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarSideNav.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/InicializarSideNav.js",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\js\\InicializarSideNav.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\InicializarTooltips.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarTooltips.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/InicializarTooltips.js",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\js\\InicializarTooltips.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\IniciarMascaras.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\IniciarMascaras.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/IniciarMascaras.js",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\js\\IniciarMascaras.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Livro.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Livro.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/Livro.js",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Livro.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\mensagem.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\mensagem.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/mensagem.js",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\js\\mensagem.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\site.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Usuarios.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Usuarios.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "js/Usuarios.js",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Usuarios.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\css\\materialize.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\css\\materialize.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/css/materialize.css",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\materialize\\css\\materialize.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\css\\materialize.min.css",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\css\\materialize.min.css",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/css/materialize.min.css",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\materialize\\css\\materialize.min.css"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\js\\materialize.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\js\\materialize.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/js/materialize.js",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\materialize\\js\\materialize.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\js\\materialize.min.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\js\\materialize.min.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/js/materialize.min.js",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\materialize\\js\\materialize.min.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\LICENSE",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\LICENSE",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/LICENSE",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\materialize\\LICENSE"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\lib\\materialize\\README.md",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\materialize\\README.md",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
       "RelativePath": "lib/materialize/README.md",
       "AssetKind": "All",

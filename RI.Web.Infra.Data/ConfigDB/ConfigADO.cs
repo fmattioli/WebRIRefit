@@ -47,6 +47,20 @@ namespace RI.Web.Infra.Data.DapperConfig
             return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
 
         }
+
+        public async Task<SqlDataReader> RetornarDadosSQLServer(string command)
+        {
+            SqlConnection connection = GetConnectionSQLServer();
+
+            await connection.OpenAsync();
+            SqlCommand cmd = new SqlCommand(command, connection)
+            {
+                CommandTimeout = 90
+            };
+
+            return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
+
+        }
         public SqlConnection GetConnectionSQLServer()
         {
             try

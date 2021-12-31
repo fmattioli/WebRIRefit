@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EEMnFONfQrUfIBvbTa97K+irIz5+3CPsXT77E9MIi9mEGuuRp1iSUbPnyXM6fmITd96M8ANCw4CS0mHSqXcXgA==",
+  "dgSpecHash": "/WTpe8HUK2ZhMpL6s+BbNZWzQYnu2Yq9kSopEO7WAIm+LhSw4zXvpHe42R5QtTTK8HIrfsv7Coss2IA6GctQPg==",
   "success": true,
-  "projectFilePath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj",
+  "projectFilePath": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.Domain\\RI.Web.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -23,7 +23,6 @@ namespace RI.Web.Infra.Data.Repositories.Base
             var retorno = new RetornoAcao<IEnumerable<T>>();
             try
             {
-                
                 using (var conn = _db.Connection)
                 {
                     SQL.Clear();
@@ -33,6 +32,28 @@ namespace RI.Web.Infra.Data.Repositories.Base
                     retorno.Result = resultado;
                     return retorno;
                 }
+            }
+            catch (Exception ex)
+            {
+                retorno.Sucesso = false;
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
+        public async Task<RetornoAcao<T>> ObterPorId(string tabela, string coluna, string valor)
+        {
+            var retorno = new RetornoAcao<T>();
+            try
+            {
+                SQL.Clear();
+                SQL.AppendLine($"SELECT * FROM {tabela} WHERE {coluna} = {valor}");
+                var resultado = (await _db.Connection.QueryFirstOrDefaultAsync<T>(SQL.ToString()));
+                retorno.Sucesso = true;
+                retorno.Result = resultado;
+                return retorno;
+
             }
             catch (Exception ex)
             {

@@ -163,9 +163,10 @@
                         {
                             string enviarDOI = livro.EnviarDOI ? "Sim" : "Não";
                             string Indisp = livro.Indisponibilidade ? "Sim" : "Não";
+                            string? livroTJ = livro.LivroTJ.Descricao;
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => livro.Descricao)
+                                    @Html.DisplayFor(modelItem => livro.DescricaoLivro)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => livro.Sigla)
@@ -183,7 +184,7 @@
                                     @Indisp
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => livro.fk_tblWriLivroTJ)
+                                    @livroTJ
                                 </td>
                                 <td>
                                     <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro()"><i class="small material-icons">edit</i></a>

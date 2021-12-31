@@ -2,7 +2,7 @@
 {
     public class LivroTJViewModel
     {
-        public int PK_Id { get; set; }
-        public string Descricao { get; set; }
+        public int IdLivroTJ { get; set; }
+        public string? Descricao { get; set; }
     }
 }
