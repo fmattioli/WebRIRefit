@@ -18,6 +18,7 @@ namespace RI.Web.API
             services.AddEndpointsApiExplorer();
             services.AddAutoMapperConfiguration();
             services.AddSwaggerGen();
+            services.AddCors();
         }
 
 
@@ -31,6 +32,9 @@ namespace RI.Web.API
                 app.UseSwaggerUI();
             }
 
+            app.UseCors(builder => {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
             app.UseCors();
             app.UseHttpsRedirection();
             app.UseAuthorization();

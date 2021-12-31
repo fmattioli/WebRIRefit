@@ -1,4 +1,10 @@
-﻿namespace RI.Web.Application.RetornoAcaoService
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RI.Web.Application.Services.Acoes
 {
     public class RetornoAcaoService
     {
@@ -7,7 +13,7 @@
         public Exception? ExceptionRetorno { get; set; }
     }
 
-    public class RetornoAcaoServices<T> : RetornoAcaoService
+    public class RetornoAcaoService<T> : RetornoAcaoService
     {
         public T? Result { get; set; }
     }

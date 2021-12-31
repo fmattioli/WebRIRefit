@@ -20,14 +20,14 @@ function editarLivro() {
 }
 
 function obterLivros() {
+    
     $.ajax({
         url: "https://localhost:7054/api/v1/Livro",
         type: "GET",
         dataType: "json",
-        data: JSON.stringify(intencaoLuisViewModel),
         contentType: "application/json; charset=utf-8",
         success: function (response) {
-           
+            console.log(response);
 
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -38,5 +38,6 @@ function obterLivros() {
         }
     });
 
-})
 }
+
+

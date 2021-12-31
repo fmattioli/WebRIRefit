@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Cnjm2WEvHHRlNniBSiGRSDxHEuqjt6TziC2Dk7g9TiM=",
+  "Hash": "fsST1jdoSVdQYEgvdcYugj79+xd3rfZEe4wXC/BoZ2o=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -136,23 +136,6 @@
       "OriginalItemSpec": "wwwroot\\js\\ConfirmarExclusao.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Especialidade.js",
-      "SourceId": "RI.Web.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
-      "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/Especialidade.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Especialidade.js"
-    },
-    {
       "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Graficos.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
@@ -238,12 +221,12 @@
       "OriginalItemSpec": "wwwroot\\js\\IniciarMascaras.js"
     },
     {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Intencoes.js",
+      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\Livro.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/Intencoes.js",
+      "RelativePath": "js/Livro.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,7 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Intencoes.js"
+      "OriginalItemSpec": "wwwroot\\js\\Livro.js"
     },
     {
       "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\mensagem.js",
@@ -270,40 +253,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\mensagem.js"
-    },
-    {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\perguntas.js",
-      "SourceId": "RI.Web.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
-      "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/perguntas.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\perguntas.js"
-    },
-    {
-      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\resposta.js",
-      "SourceId": "RI.Web.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
-      "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/resposta.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\resposta.js"
     },
     {
       "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\site.js",

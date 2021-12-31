@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/lib/materialize/css/materialize.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/modaladicionar.css" rel="stylesheet" />
 
 </head>
 <body>
     <header>
-        <ul id="conversacao" class="dropdown-content">
-            <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Intenções</a></li>
+        <ul id="acesso_rapido" class="dropdown-content">
+            <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Recepção</a></li>
+            <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Certidão</a></li>
         </ul>
 
-        <ul id="cadastros" class="dropdown-content">
-            <li><a class="black-text" asp-action="Home" asp-controller="Especialidade">Especialidades</a></li>
-            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Usuários</a></li>
+        <ul id="consultas" class="dropdown-content">
+            <li><a class="black-text" asp-action="Home" asp-controller="Especialidade">Indicador real</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Indicador pessoal</a></li>
+        </ul
+        
+        ><ul id="cadastros" class="dropdown-content">
+            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Livro</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pessoa</a></li>
         </ul>
 
-        <ul id="conversacao_mobile" class="dropdown-content">
+        <ul id="acesso_rapido_mobile" class="dropdown-content">
             <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Intenções</a></li>
         </ul>
 
         <ul id="cadastros_mobile" class="dropdown-content">
-            <li><a class="black-text" asp-action="Home" asp-controller="Especialidade">Especialidades</a></li>
-            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Usuários</a></li>
+            <li><a class="black-text" asp-action="Home" asp-controller="Especialidade">Indicador real</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Indicador pessoal</a></li>
         </ul>
 
         <nav class="" id="navMenu">
@@ -35,17 +41,18 @@
                 <a class="brand-logo">Gerenciador</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a asp-action="Home" asp-controller="Home">Início</a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="conversacao">Conversação<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="cadastros">Cadastros<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a onclick="window.location.href = '/Usuarios/Login'">Sair</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Inicio<i class="material-icons right">home</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Acesso rápido<i class="material-icons right">wrap_text</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="consultas">Consultas<i class="material-icons right">search</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="cadastros">Cadastros<i class="material-icons right">mode_edit</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Sair<i class="material-icons right">keyboard_tab</i></a></li>
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a class="dropdown-trigger" href="#!" data-target="conversacao_mobile">Conversação<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="cadastros_mobile">Cadastros<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido_mobile">Acesso rápido<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="cadastros_mobile">Consultas<i class="material-icons right">arrow_drop_down</i></a></li>
             <li><a onclick="window.location.href = '/Usuarios/Login'">Sair</a></li>
         </ul>
 
@@ -74,6 +81,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

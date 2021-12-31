@@ -17,7 +17,9 @@ namespace RI.Web.API.Controllers
             if (ModelState.IsValid)
             {
                 var retorno = await livroService.ObterLivros();
-                return Ok(retorno);
+                if (retorno.Sucesso)
+                    return Ok(retorno.Result);
+                return BadRequest(retorno.ExceptionRetorno);
             }
 
             return BadRequest(ModelState);
