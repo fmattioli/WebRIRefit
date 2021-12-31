@@ -23,6 +23,7 @@ namespace RI.Web.Infra.Data.Repositories.Base
             var retorno = new RetornoAcao<IEnumerable<T>>();
             try
             {
+                
                 using (var conn = _db.Connection)
                 {
                     SQL.Clear();
@@ -41,5 +42,6 @@ namespace RI.Web.Infra.Data.Repositories.Base
                 return retorno;
             }
         }
+
     }
 }

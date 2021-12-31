@@ -1,32 +1,62 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RI.Web.UI.Models;
-using System.Diagnostics;
+using Newtonsoft.Json;
+using RI.Application.ViewModels.Livro;
+using RI.Web.Application.Services.Acoes;
 
 namespace RI.Web.UI.Controllers
 {
     public class LivroController : Controller
     {
-        private readonly ILogger<LivroController> _logger;
-
-        public LivroController(ILogger<LivroController> logger)
+        public async Task<IActionResult> GerenciarLivro()
         {
-            _logger = logger;
+            var retorno = await ObterLivros();
+            if (retorno.Sucesso)
+                return View(retorno.Result);
+            else
+                return BadRequest(retorno.MensagemRetorno);
         }
 
-        public IActionResult GerenciarLivro()
+        public async Task<RetornoAcaoService<IEnumerable<LivroViewModel>>> ObterLivros()
         {
-            return View();
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    var response = await httpClient.GetAsync(GetUrlAPI("livro"));
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var retornoSucesso = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
+                        string jsonLivros = await response.Content.ReadAsStringAsync();
+                        retornoSucesso = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroViewModel>>>(jsonLivros);
+                        if (retornoSucesso is not null && retornoSucesso.Result is not null && retornoSucesso.Sucesso)
+                        {
+                            return retornoSucesso;
+                        }
+                    }
+
+                    var retornoFalhaComunicacao = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
+                    retornoFalhaComunicacao.Sucesso = false;
+                    retornoFalhaComunicacao.MensagemRetorno = "Falha ao consumir  a API";
+                    return retornoFalhaComunicacao;
+                }
+            }
+            catch (Exception ex)
+            {
+                var retornoException = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
+                retornoException.ExceptionRetorno = ex;
+                retornoException.MensagemRetorno = ex.Message;
+                return retornoException;
+            }
         }
 
-        public IActionResult Privacy()
+        public string GetUrlAPI(string action)
         {
-            return View();
-        }
+            var builder = new ConfigurationBuilder()
+                 .SetBasePath(Directory.GetCurrentDirectory())
+                 .AddJsonFile($"appsettings.json");
+            var config = builder.Build();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return config.GetSection("ApiSettings:Url").Value + action;
         }
     }
 }

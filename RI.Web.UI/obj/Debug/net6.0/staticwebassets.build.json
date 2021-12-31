@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fsST1jdoSVdQYEgvdcYugj79+xd3rfZEe4wXC/BoZ2o=",
+  "Hash": "hJcVxJBcMO/lL/Bh1ifDo63hXI8tB34PizVg9yukYMY=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\imagens\\logo.png",
+      "SourceId": "RI.Web.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\",
+      "BasePath": "_content/RI.Web.UI",
+      "RelativePath": "imagens/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\logo.png"
     },
     {
       "Identity": "C:\\Refit\\RI.Web\\RI.Web.UI\\wwwroot\\js\\ConfirmarExclusao.js",

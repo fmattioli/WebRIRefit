@@ -23,6 +23,7 @@ namespace RI.Web.Infra.IoC
             services.AddScoped<IRecepcaoService, RecepcaoService>();
             services.AddScoped<ILivroRepository, LivroRepository>();
             services.AddScoped<ILivroService, LivroService>();
+            services.AddScoped<ILivroTJRepository, LivroTJRepository>();
 
             return services;
         }

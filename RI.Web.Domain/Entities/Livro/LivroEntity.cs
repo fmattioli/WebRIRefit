@@ -4,10 +4,9 @@ namespace RI.Web.Domain.Entities.Livro
 {
     public class LivroEntity
     {
-        //[Column("PK_Id")]
         public int PK_Id { get; set; }
         public string? Descricao { get; set; }
-        public string? Siga { get; set; }
+        public string? Sigla { get; set; }
         public int UltimaSequenciaUtilizada { get; set; }
         public string? Sessao { get; set; }
         public bool ControlaSequenciaDoAto { get; set; }

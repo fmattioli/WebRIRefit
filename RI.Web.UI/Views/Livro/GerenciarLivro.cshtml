@@ -1,4 +1,6 @@
-﻿<title>Livros</title>
+﻿@model IEnumerable<RI.Application.ViewModels.Livro.LivroViewModel>
+
+<title>Livros</title>
 <div class="section"></div>
 <div class="section"></div>
 
@@ -54,38 +56,34 @@
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Controla sequencia do livro</label>
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Sequencia ato zero</label>
                 </div>
 
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Tipo de livro TJ</label>
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Enviar DOI\EST</label>
                 </div>
@@ -93,46 +91,41 @@
             <div class="row">
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Apontar indisponibilidade</label>
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Controlar sequencia do ato</label>
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Sequencia ato inicial</label>
                 </div>
                 <div class="input-field col s2">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Validar registro anterior</label>
                 </div>
                 <div class="input-field col s3">
                     <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="0">Sim</option>
+                        <option value="2">Não</option>
                     </select>
                     <label>Permite descrever garantia</label>
                 </div>
@@ -153,7 +146,6 @@
             <table id="livros">
                 <thead>
                     <tr>
-                        <th>Código</th>
                         <th>Descrição</th>
                         <th>Sigla</th>
                         <th>Sessao</th>
@@ -164,42 +156,44 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @for (int i = 0; i < 10; i++)
+                    @if (Model is not null)
                     {
-                        <tr id="">
-                            <td>
-                                95
-                            </td>
-                            <td>
-                                Estorno de prenotacao
-                            </td>
-                            <td>
-                                MAT
-                            </td>
-                            <td>
-                                20
-                            </td>
-                            <td>
-                                Não
-                            </td>
-                            <td>
-                                Sim
-                            </td>
-                            <td>
-                                Não
-                            </td>
-                            <td>
-                                Livro 2
-                            </td>
-                            <td>
-                                <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro()"><i class="small material-icons">edit</i></a>
-                            </td>
 
-                            <td>
-                                <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirEspecialidade('');"><i class="material-icons">delete</i></a>
-                            </td>
+                        @foreach (var livro in Model)
+                        {
+                            string enviarDOI = livro.EnviarDOI ? "Sim" : "Não";
+                            string Indisp = livro.Indisponibilidade ? "Sim" : "Não";
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => livro.Descricao)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => livro.Sigla)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => livro.Sessao)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => livro.UltimaSequenciaUtilizada)
+                                </td>
+                                <td>
+                                    @enviarDOI
+                                </td>
+                                <td>
+                                    @Indisp
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => livro.fk_tblWriLivroTJ)
+                                </td>
+                                <td>
+                                    <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro()"><i class="small material-icons">edit</i></a>
+                                </td>
 
-                        </tr>
+                                <td>
+                                    <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirEspecialidade('');"><i class="material-icons">delete</i></a>
+                                </td>
+                            </tr>
+                        }
                     }
                 </tbody>
             </table>

@@ -24,3 +24,10 @@ C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\ref\RI.Web.UI.dll
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.pdb
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.genruntimeconfig.cache
 C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.csproj.AssemblyReference.cache
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\AutoMapper.dll
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\RI.Web.Application.dll
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\RI.Web.Domain.dll
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\RI.Web.Application.pdb
+C:\Refit\RI.Web\RI.Web.UI\bin\Debug\net6.0\RI.Web.Domain.pdb
+C:\Refit\RI.Web\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.csproj.CopyComplete

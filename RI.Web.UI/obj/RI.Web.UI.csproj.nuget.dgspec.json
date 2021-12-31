@@ -4,14 +4,83 @@
     "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj": {}
   },
   "projects": {
-    "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj": {
+    "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj",
-        "projectName": "RI.Web.UI",
-        "projectPath": "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj",
+        "projectUniqueName": "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj",
+        "projectName": "RI.Web.Application",
+        "projectPath": "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj",
         "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\",
+        "outputPath": "C:\\Refit\\RI.Web\\RI.Web.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj": {
+                "projectPath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj",
+        "projectName": "RI.Web.Domain",
+        "projectPath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\RI.Web.Domain.csproj",
+        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Refit\\RI.Web\\RI.Web.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,6 +113,79 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj",
+        "projectName": "RI.Web.UI",
+        "projectPath": "C:\\Refit\\RI.Web\\RI.Web.UI\\RI.Web.UI.csproj",
+        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Refit\\RI.Web\\RI.Web.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj": {
+                "projectPath": "C:\\Refit\\RI.Web\\RI.Web.Application\\RI.Web.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

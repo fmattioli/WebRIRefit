@@ -1,10 +1,10 @@
-﻿namespace RI.Web.Application.ViewModels.Livro
+﻿namespace RI.Application.ViewModels.Livro
 {
     public class LivroViewModel
     {
         public int PK_Id { get; set; }
         public string? Descricao { get; set; }
-        public string? Siga { get; set; }
+        public string? Sigla { get; set; }
         public int UltimaSequenciaUtilizada { get; set; }
         public string? Sessao { get; set; }
         public bool ControlaSequenciaDoAto { get; set; }
