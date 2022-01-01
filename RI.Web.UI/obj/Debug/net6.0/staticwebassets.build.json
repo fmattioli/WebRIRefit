@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R9ajAn/KLOfxzlX2YYdLmN8YLRVxDPmWd13jdzFX9H8=",
+  "Hash": "0aYv8961oE6Pe99rKDREj3pahmbVaW74sm8umW4UYcs=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -136,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\imagens\\logo.png"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\ConfirmarExclusao.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\inicializacoes\\InicializarDatepicker.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/ConfirmarExclusao.js",
+      "RelativePath": "js/inicializacoes/InicializarDatepicker.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\ConfirmarExclusao.js"
+      "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\InicializarDatepicker.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Graficos.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\inicializacoes\\inicializarselects.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/Graficos.js",
+      "RelativePath": "js/inicializacoes/inicializarselects.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Graficos.js"
+      "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\inicializarselects.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarDatepicker.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\inicializacoes\\InicializarSideNav.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/InicializarDatepicker.js",
+      "RelativePath": "js/inicializacoes/InicializarSideNav.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\InicializarDatepicker.js"
+      "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\InicializarSideNav.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarSideNav.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\inicializacoes\\InicializarTooltips.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/InicializarSideNav.js",
+      "RelativePath": "js/inicializacoes/InicializarTooltips.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\InicializarSideNav.js"
+      "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\InicializarTooltips.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\InicializarTooltips.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\inicializacoes\\IniciarMascaras.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/InicializarTooltips.js",
+      "RelativePath": "js/inicializacoes/IniciarMascaras.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\InicializarTooltips.js"
+      "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\IniciarMascaras.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\IniciarMascaras.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\livro\\Livro.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/IniciarMascaras.js",
+      "RelativePath": "js/livro/Livro.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\IniciarMascaras.js"
+      "OriginalItemSpec": "wwwroot\\js\\livro\\Livro.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Livro.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\shared\\confirmarexclusao.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/Livro.js",
+      "RelativePath": "js/shared/confirmarexclusao.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Livro.js"
+      "OriginalItemSpec": "wwwroot\\js\\shared\\confirmarexclusao.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\mensagem.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\shared\\util.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/mensagem.js",
+      "RelativePath": "js/shared/util.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,41 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\mensagem.js"
-    },
-    {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\site.js",
-      "SourceId": "RI.Web.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
-      "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
-    },
-    {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\Usuarios.js",
-      "SourceId": "RI.Web.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
-      "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/Usuarios.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Usuarios.js"
+      "OriginalItemSpec": "wwwroot\\js\\shared\\util.js"
     },
     {
       "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -3,6 +3,7 @@
  @if (Model is not null)
 {
     var livrosTJ = ViewBag.LivrosTJ as IEnumerable<RI.Web.Application.ViewModels.Livro.LivroTJViewModel>;
+    var counter = 1;
     <title>Livros</title>
     <div class="section"></div>
     <div class="col s12">
@@ -37,18 +38,18 @@
                         <span class="helper-text" data-error="Informe uma sessão!" data-success="Tudo certo!"></span>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="controlaSeqLivro">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Não</option>
-                            <option value="2">Sim</option>
-                            <option value="3">Automática</option>
+                            <option value="3">Não</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Automática</option>
                         </select>
                         <label>Controla sequencia do livro</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s2">
-                        <select>
+                        <select id="seqatozero">
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">AV</option>
                             <option value="1">REG</option>
@@ -58,7 +59,7 @@
                         <label>Sequencia ato zero</label>
                     </div>
                     <div class="input-field col s3">
-                        <select>
+                        <select id="tipolivro">
                             <option value="" disabled selected>Escolha uma opção</option>
                             @if (livrosTJ is not null)
                             {
@@ -71,67 +72,67 @@
                         <label>Tipo de livro TJ</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="enviarDOI">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Enviar DOI\EST</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="apontarindisponibilidade">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Apontar indisponibilidade</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="controlaseqato">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Controlar sequência do ato</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="seqatoinicial">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Sequência ato inicial</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="validar_reg_anterior">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Validar registro anterior</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="permitegarantia">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Permite descrever garantia</label>
                     </div>
                     <div class="input-field col s2">
-                        <select>
+                        <select id="transcricao">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Transcrição</label>
                     </div>
 
                     <div class="input-field col s3">
-                        <select>
+                        <select id="enviarBDL">
                             <option value="" disabled selected>Escolha uma opção</option>
-                            <option value="0">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="0">Não</option>
+                            <option value="1">Sim</option>
                         </select>
                         <label>Enviar BDL</label>
                     </div>
@@ -155,6 +156,7 @@
                 <table class="highlight table-responsive">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>Descrição</th>
                             <th>Sigla</th>
                             <th>Sessao</th>
@@ -173,6 +175,9 @@
                                 string Indisp = livro.Indisponibilidade ? "Sim" : "Não";
                                 string? livroTJ = livro.LivroTJ.Descricao;
                                 <tr>
+                                    <td>
+                                        @counter
+                                    </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => livro.DescricaoLivro)
                                     </td>
@@ -195,13 +200,14 @@
                                         @livroTJ
                                     </td>
                                     <td>
-                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro(@livro)"><i class="small material-icons">edit</i></a>
+                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro('@livro.IdLivro')"><i class="small material-icons">edit</i></a>
                                     </td>
 
                                     <td>
-                                        <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirLivro(@livro.IdLivro);"><i class="material-icons">delete</i></a>
+                                        <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirLivro('@livro.IdLivro');"><i class="material-icons">delete</i></a>
                                     </td>
                                 </tr>
+                                counter = @counter + 1;
                             }
                         }
                     </tbody>
@@ -212,6 +218,6 @@
             <partial name="_ModalExcluir" />
         </div>
     </div>
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/js/Livro.js"></script>
+
+    <script src="~/js/Livro/Livro.js"></script>
 }
