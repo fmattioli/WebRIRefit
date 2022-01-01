@@ -1,6 +1,7 @@
-﻿using RI.Web.Application.ViewModels.Livro;
+﻿
+using System.Text.Json.Serialization;
 
-namespace RI.Application.ViewModels.Livro
+namespace RI.Web.Application.ViewModels.Livro
 {
     public class LivroViewModel
     {
@@ -22,6 +23,8 @@ namespace RI.Application.ViewModels.Livro
         public bool Transcricao { get; set; }
         public int EnviaBDL { get; set; }
         public LivroTJViewModel LivroTJ { get; set; }
+        [JsonIgnore]
+        public int IdLivroTJ { get; set; }
         public LivroViewModel()
         {
             LivroTJ = new LivroTJViewModel();

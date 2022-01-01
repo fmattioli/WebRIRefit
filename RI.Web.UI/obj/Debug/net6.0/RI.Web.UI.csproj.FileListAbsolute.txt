@@ -64,3 +64,15 @@ C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\obj\Debug\net6.0\ref\RI.Web.UI.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.pdb
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\obj\Debug\net6.0\RI.Web.UI.genruntimeconfig.cache
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\Dapper.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.Data.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.IoC.dll
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.IoC.pdb
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.Data.pdb

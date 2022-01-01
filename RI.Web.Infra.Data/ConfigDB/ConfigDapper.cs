@@ -17,23 +17,10 @@ namespace RI.Web.Infra.Data.ConfigDB
             Connection.Open();
 
         }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-
         protected virtual void Dispose(bool disposing)
         {
             Connection.Dispose();
             Connection.Close();
-        }
-
-        ~ConfigDapper()
-        {
-            Dispose(false);
         }
     }
 }

@@ -3,12 +3,12 @@ using System.Data.SqlClient;
 
 namespace RI.Web.Infra.Data.DapperConfig
 {
-    public class ConfigADO : IDisposable
+    public class ConfigSQLServer : IDisposable
     {
         protected static string? ConnectionString { get; set; }
 
         public IDbConnection Connection { get; set; }
-        public ConfigADO()
+        public ConfigSQLServer()
         {
             Connection = new SqlConnection(@"Data Source=SPCM-DESENV-RI\S2019;Initial Catalog=WEBRI_5RISP;Integrated Security=false;User Id=webri;Password=webri;Connection Timeout=30;");
             Connection.Open();
@@ -45,22 +45,8 @@ namespace RI.Web.Infra.Data.DapperConfig
                 foreach (SqlParameter Parametro in Parametros)
                     cmd.Parameters.Add(Parametro);
             return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
-
         }
 
-        public async Task<SqlDataReader> RetornarDadosSQLServer(string command)
-        {
-            SqlConnection connection = GetConnectionSQLServer();
-
-            await connection.OpenAsync();
-            SqlCommand cmd = new SqlCommand(command, connection)
-            {
-                CommandTimeout = 90
-            };
-
-            return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
-
-        }
         public SqlConnection GetConnectionSQLServer()
         {
             try
@@ -73,7 +59,7 @@ namespace RI.Web.Infra.Data.DapperConfig
             }
         }
 
-        ~ConfigADO()
+        ~ConfigSQLServer()
         {
             Dispose(false);
         }

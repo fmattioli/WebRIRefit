@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using RI.Application.ViewModels.Livro;
 using RI.Web.Application.Interfaces.Livro;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Livro;
@@ -22,42 +21,79 @@ namespace RI.Web.Application.Services.Livro
         public async Task<RetornoAcaoService<IEnumerable<LivroViewModel>>> ObterLivros()
         {
             var retorno = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
-            try
+
+            var retornoLivroEntity = await livroRepository.ObterLivros();
+            if (retornoLivroEntity.Sucesso)
             {
-                var livrosEntity = await livroRepository.ObterLivros();
-                var lirosViewModel = mapper.Map<IEnumerable<LivroViewModel>>(livrosEntity.Result);
-                retorno.Result = lirosViewModel;
+                var livroViewModel = mapper.Map<IEnumerable<LivroViewModel>>(retornoLivroEntity.Result);
+                retorno.Result = livroViewModel;
                 retorno.Sucesso = true;
                 return retorno;
-
             }
-            catch(Exception ex)
+            retorno.Sucesso = false;
+            retorno.ExceptionRetorno = retornoLivroEntity.ExceptionRetorno;
+            retorno.MensagemRetorno = retornoLivroEntity.MensagemRetorno;
+            return retorno;
+        }
+
+
+        public async Task<RetornoAcaoService<LivroViewModel>> ObterLivroPorId(int Id)
+        {
+            var retorno = new RetornoAcaoService<LivroViewModel>();
+            var retornoObterLivro = await livroRepository.ObterPorId("tblWRILivro", "PK_Id", Id);
+            if (retornoObterLivro.Sucesso)
             {
-                retorno.Sucesso = false;
-                retorno.ExceptionRetorno = ex;
-                retorno.MensagemRetorno = ex.Message;
+                var livroViewModel = mapper.Map<LivroViewModel>(retornoObterLivro.Result);
+                var retornoObterLivroTJ = await ObterLivroTJPorId(livroViewModel.IdLivroTJ);
+                if (retornoObterLivroTJ.Sucesso)
+                    livroViewModel.LivroTJ = mapper.Map<LivroTJViewModel>(retornoObterLivroTJ.Result);
+
+                retorno.Result = livroViewModel;
+                retorno.Sucesso = true;
                 return retorno;
             }
+
+            retorno.Sucesso = false;
+            retorno.ExceptionRetorno = retornoObterLivro.ExceptionRetorno;
+            retorno.MensagemRetorno = retornoObterLivro.MensagemRetorno;
+            return retorno;
         }
 
         public async Task<RetornoAcaoService<IEnumerable<LivroTJViewModel>>> ObterLivrosTJ()
         {
             var retorno = new RetornoAcaoService<IEnumerable<LivroTJViewModel>>();
-            try
+
+            var retornoLivroEntity = await livroTJRepository.ObterTodos("tblWRILivroTJ");
+            if (retornoLivroEntity.Sucesso)
             {
-                var livrosEntity = await livroTJRepository.ObterTodos("tblWRILivroTJ");
-                var lirosTJViewModel = mapper.Map<IEnumerable<LivroTJViewModel>>(livrosEntity.Result);
+                var lirosTJViewModel = mapper.Map<IEnumerable<LivroTJViewModel>>(retornoLivroEntity.Result);
                 retorno.Result = lirosTJViewModel;
                 retorno.Sucesso = true;
                 return retorno;
             }
-            catch (Exception ex)
+
+            retorno.Sucesso = false;
+            retorno.ExceptionRetorno = retornoLivroEntity.ExceptionRetorno;
+            retorno.MensagemRetorno = retornoLivroEntity.MensagemRetorno;
+            return retorno;
+        }
+
+        public async Task<RetornoAcaoService<LivroTJViewModel>> ObterLivroTJPorId(int Id)
+        {
+            var retorno = new RetornoAcaoService<LivroTJViewModel>();
+            var retornoLivroTJ = await livroTJRepository.ObterPorId("tblWRILivroTJ", "PK_Id", Id);
+            if (retornoLivroTJ.Sucesso)
             {
-                retorno.Sucesso = false;
-                retorno.ExceptionRetorno = ex;
-                retorno.MensagemRetorno = ex.Message;
+                var lirosTJViewModel = mapper.Map<LivroTJViewModel>(retornoLivroTJ.Result);
+                retorno.Result = lirosTJViewModel;
+                retorno.Sucesso = true;
                 return retorno;
             }
+
+            retorno.Sucesso = false;
+            retorno.ExceptionRetorno = retornoLivroTJ.ExceptionRetorno;
+            retorno.MensagemRetorno = retornoLivroTJ.MensagemRetorno;
+            return retorno;
         }
     }
 }

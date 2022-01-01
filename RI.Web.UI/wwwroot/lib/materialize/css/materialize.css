@@ -4477,6 +4477,7 @@ nav {
 
     nav .nav-wrapper {
         position: relative;
+        margin-right: 20px;
         height: 100%;
     }
 
@@ -4500,12 +4501,12 @@ nav .sidenav-trigger {
     }
 
 nav .brand-logo {
-    position: absolute;
+    position: relative;
+    left: 13%;
     color: #000000;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
-    background-image: url('~/imagens/logo.png');
 }
 
     nav .brand-logo.center {

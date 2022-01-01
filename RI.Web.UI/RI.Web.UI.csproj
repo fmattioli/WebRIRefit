@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RI.Web.Application\RI.Web.Application.csproj" />
+    <ProjectReference Include="..\RI.Web.Infra.IoC\RI.Web.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>

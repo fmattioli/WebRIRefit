@@ -1,210 +1,217 @@
-﻿@model IEnumerable<RI.Application.ViewModels.Livro.LivroViewModel>
+﻿@model IEnumerable<RI.Web.Application.ViewModels.Livro.LivroViewModel>
 
-<title>Livros</title>
-<div class="section"></div>
-<div class="section"></div>
+ @if (Model is not null)
+{
+    var livrosTJ = ViewBag.LivrosTJ as IEnumerable<RI.Web.Application.ViewModels.Livro.LivroTJViewModel>;
+    <title>Livros</title>
+    <div class="section"></div>
+    <div class="col s12">
 
-<div class="col s12">
+        <div id="add" class="input-field col s1">
+            <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">add</i></a>
+        </div>
+        <div id="showless" class="input-field col s1" style="display: none">
+            <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">remove</i></a>
+        </div>
+        <div style="display: none" id="formularioLivro">
+            <form id="especialidadeForm">
+                <div class="row">
+                    <div class='input-field col s3'>
+                        <input id="descricao" type="text" class="validate" required>
+                        <label for="descricao">Descrição</label>
+                        <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
+                    </div>
+                    <div class='input-field col s2'>
+                        <input id="sigla" type="text" class="validate" required>
+                        <label for="sigla">Sigla</label>
+                        <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                    </div>
+                    <div class='input-field col s2'>
+                        <input id="sessao" type="text" class="validate" required>
+                        <label for="sessao">Sessão</label>
+                        <span class="helper-text" data-error="Informe uma sessão!" data-success="Tudo certo!"></span>
+                    </div>
+                    <div class='input-field col s2'>
+                        <input id="ultimasequencia" type="text" class="validate" required>
+                        <label for="ultimasequencia">Ultima sequecia</label>
+                        <span class="helper-text" data-error="Informe uma sessão!" data-success="Tudo certo!"></span>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Não</option>
+                            <option value="2">Sim</option>
+                            <option value="3">Automática</option>
+                        </select>
+                        <label>Controla sequencia do livro</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">AV</option>
+                            <option value="1">REG</option>
+                            <option value="2">ABM</option>
+                            <option value="3">Todas</option>
+                        </select>
+                        <label>Sequencia ato zero</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            @if (livrosTJ is not null)
+                            {
+                                @foreach (var livroTJ in livrosTJ)
+                                {
+                                    <option value="@livroTJ.IdLivroTJ">@livroTJ.Descricao</option>
+                                }
+                            }
+                        </select>
+                        <label>Tipo de livro TJ</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Enviar DOI\EST</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Apontar indisponibilidade</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Controlar sequência do ato</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Sequência ato inicial</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Validar registro anterior</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Permite descrever garantia</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Transcrição</label>
+                    </div>
 
-    <div class="input-field col s1">
-        <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">add</i></a>
-    </div>
-    <div style="display: none" id="formularioLivro">
-        <form id="especialidadeForm">
-            <div class="row">
-                <div class='input-field col s2'>
-                    <input id="especialidade" type="text" class="validate" required>
-                    <label for="especialidade">Código</label>
-                    <span class="helper-text" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Descrição</label>
-                    <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Sigla</label>
-                    <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Descrição</label>
-                    <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="especialidade" type="text" class="validate" required>
-                    <label for="especialidade">Ultima sequecia</label>
-                    <span class="helper-text" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Sessão</label>
-                    <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Sigla</label>
-                    <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
-                </div>
-                <div class='input-field col s2'>
-                    <input id="descricao" type="text" class="validate" required>
-                    <label for="descricao">Descrição</label>
-                    <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
-                </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Controla sequencia do livro</label>
-                </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Sequencia ato zero</label>
-                </div>
+                    <div class="input-field col s3">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="0">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                        <label>Enviar BDL</label>
+                    </div>
 
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Tipo de livro TJ</label>
+                    <div class="input-field col s1">
+                        <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">add</i></a>
+                    </div>
                 </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Enviar DOI\EST</label>
+                <div class="row">
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Apontar indisponibilidade</label>
-                </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Controlar sequencia do ato</label>
-                </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Sequencia ato inicial</label>
-                </div>
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Validar registro anterior</label>
-                </div>
-                <div class="input-field col s3">
-                    <select>
-                        <option value="" disabled selected>Escolha uma opção</option>
-                        <option value="0">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <label>Permite descrever garantia</label>
-                </div>
-                <div class="input-field col s1">
-                    <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">add</i></a>
-                </div>
-            </div>
-        </form>
-    </div>
-    <blockquote>
-        Para cadastrar um novo livro basta clicar no botão acima.
-    </blockquote>
-    <blockquote>
-        Selecione um item para editar.
-    </blockquote>
-    <div class="row">
-        <div class='table-responsive' id="especialidadesGrid">
-            <table id="livros">
-                <thead>
-                    <tr>
-                        <th>Descrição</th>
-                        <th>Sigla</th>
-                        <th>Sessao</th>
-                        <th>Ultima Sequencia utilizada</th>
-                        <th>Enviar DOI</th>
-                        <th>Apontar indisponibiidade</th>
-                        <th>Tipo de livro TJ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model is not null)
-                    {
-
-                        @foreach (var livro in Model)
+            </form>
+        </div>
+        <blockquote>
+            Para cadastrar um novo livro basta clicar no botão acima.
+        </blockquote>
+        <blockquote>
+            Selecione um item para editar.
+        </blockquote>
+        <div class="row">
+            <div>
+                <table class="highlight table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Sigla</th>
+                            <th>Sessao</th>
+                            <th>Ultima Sequencia utilizada</th>
+                            <th>Enviar DOI</th>
+                            <th>Apontar indisponibiidade</th>
+                            <th>Tipo de livro TJ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model is not null)
                         {
-                            string enviarDOI = livro.EnviarDOI ? "Sim" : "Não";
-                            string Indisp = livro.Indisponibilidade ? "Sim" : "Não";
-                            string? livroTJ = livro.LivroTJ.Descricao;
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => livro.DescricaoLivro)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => livro.Sigla)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => livro.Sessao)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => livro.UltimaSequenciaUtilizada)
-                                </td>
-                                <td>
-                                    @enviarDOI
-                                </td>
-                                <td>
-                                    @Indisp
-                                </td>
-                                <td>
-                                    @livroTJ
-                                </td>
-                                <td>
-                                    <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro()"><i class="small material-icons">edit</i></a>
-                                </td>
+                            @foreach (var livro in Model)
+                            {
+                                string enviarDOI = livro.EnviarDOI ? "Sim" : "Não";
+                                string Indisp = livro.Indisponibilidade ? "Sim" : "Não";
+                                string? livroTJ = livro.LivroTJ.Descricao;
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => livro.DescricaoLivro)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => livro.Sigla)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => livro.Sessao)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => livro.UltimaSequenciaUtilizada)
+                                    </td>
+                                    <td>
+                                        @enviarDOI
+                                    </td>
+                                    <td>
+                                        @Indisp
+                                    </td>
+                                    <td>
+                                        @livroTJ
+                                    </td>
+                                    <td>
+                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro(@livro)"><i class="small material-icons">edit</i></a>
+                                    </td>
 
-                                <td>
-                                    <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirEspecialidade('');"><i class="material-icons">delete</i></a>
-                                </td>
-                            </tr>
+                                    <td>
+                                        <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirLivro(@livro.IdLivro);"><i class="material-icons">delete</i></a>
+                                    </td>
+                                </tr>
+                            }
                         }
-                    }
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <partial name="_ModalExcluir" />
         </div>
     </div>
-
-    <div>
-        <partial name="_ModalExcluir" />
-    </div>
-</div>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/Livro.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/Livro.js"></script>
+}

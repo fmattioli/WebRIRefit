@@ -1,6 +1,6 @@
 namespace RI.Web.UI.Models
 {
-    public class ErrorViewModel
+    public class LivroComponent
     {
         public string? RequestId { get; set; }
 

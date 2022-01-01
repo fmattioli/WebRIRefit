@@ -10,9 +10,9 @@ namespace RI.Web.Infra.Data.Livro
 {
     public class LivroRepository : BaseRepository<LivroEntity>, ILivroRepository
     {
-        private ConfigADO db { get; set; }
+        private ConfigSQLServer db { get; set; }
         private readonly ILivroTJRepository livroTJRepository;
-        public LivroRepository(ConfigDapper _db, ConfigADO configADO, ILivroTJRepository livroTJRepository) : base(_db)
+        public LivroRepository(ConfigDapper _db, ConfigSQLServer configADO, ILivroTJRepository livroTJRepository) : base(_db)
         {
             db = configADO;
             this.livroTJRepository = livroTJRepository;
@@ -20,9 +20,8 @@ namespace RI.Web.Infra.Data.Livro
 
         public async Task<RetornoAcao<IEnumerable<LivroEntity>>> ObterLivros()
         {
-            var retorno = new RetornoAcao<IEnumerable<LivroEntity>>();
-            var livro = new List<LivroEntity>();
-            var retornoLivroTJ = new LivroTJ();
+            var retornoAcao = new RetornoAcao<IEnumerable<LivroEntity>>();
+            var ListaLivros = new List<LivroEntity>();
             try
             {
                 SQL.Clear();
@@ -50,8 +49,7 @@ namespace RI.Web.Infra.Data.Livro
                 SQL.AppendLine("FROM tblWRILivro                                                                ");
                 SQL.AppendLine("LEFT JOIN tblWRILivroTJ ON tblWRILivro.fk_tblWriLivroTJ = tblWRILivroTJ.PK_Id   ");
 
-
-                using (var conn = _db.Connection)
+                using (var conn = dapper.Connection)
                 {
                     using (SqlDataReader reader = await db.RetornarDadosSQLServer(SQL.ToString(), Lista))
                     {
@@ -59,16 +57,20 @@ namespace RI.Web.Infra.Data.Livro
                         {
                             while (reader.Read())
                             {
+                                #region Obter configurações de livros TJ (De-Para Selo Digital)
+                                //Livro TJ
+                                var LivroTJ = new LivroTJ();
                                 int IdLivroTJ = (reader["fk_tblWriLivroTJ"] as int?).GetValueOrDefault();
                                 if (IdLivroTJ != 0)
                                 {
-                                    var retornoLivroTJAcao = await livroTJRepository.ObterPorId("tblWRILivroTJ", "PK_Id", IdLivroTJ.ToString());
-                                    retornoLivroTJ = retornoLivroTJAcao.Result;
+                                    var retornoLivroTJAcao = await livroTJRepository.ObterPorId("tblWRILivroTJ", "PK_Id", IdLivroTJ);
+                                    LivroTJ = retornoLivroTJAcao.Result;
                                 }
+                                #endregion
 
-                                livro.Add(new LivroEntity
+                                ListaLivros.Add(new LivroEntity
                                 {
-                                    IdLivro = (reader["IdLivro"] as int?).GetValueOrDefault(),
+                                    IdLivro = (reader["IdLivro"] as short?).GetValueOrDefault(),
                                     DescricaoLivro = (reader["DescricaoLivro"] as string),
                                     Sigla = (reader["Sigla"] as string),
                                     UltimaSequenciaUtilizada = (reader["UltimaSequenciaUtilizada"] as int?).GetValueOrDefault(),
@@ -85,23 +87,23 @@ namespace RI.Web.Infra.Data.Livro
                                     Transcricao = (reader["Transcricao"] as bool?).GetValueOrDefault(),
                                     UltimoLivroUtilizado = (reader["UltimoLivroUtilizado"] as int?).GetValueOrDefault(),
                                     ValidarRegistroAnterior = (reader["ValidarRegistroAnterior"] as bool?).GetValueOrDefault(),
-                                    LivroTJ = retornoLivroTJ ?? new LivroTJ()
+                                    LivroTJ = LivroTJ ?? new LivroTJ()
                                 });
                             }
                         }
                     }
                 }
 
-                retorno.Sucesso = true;
-                retorno.Result = livro;
-                return retorno;
+                retornoAcao.Sucesso = true;
+                retornoAcao.Result = ListaLivros;
+                return retornoAcao;
             }
             catch (Exception ex)
             {
-                retorno.Sucesso = false;
-                retorno.ExceptionRetorno = ex;
-                retorno.MensagemRetorno = ex.Message;
-                return retorno;
+                retornoAcao.Sucesso = false;
+                retornoAcao.ExceptionRetorno = ex;
+                retornoAcao.MensagemRetorno = ex.Message;
+                return retornoAcao;
             }
         }
     }

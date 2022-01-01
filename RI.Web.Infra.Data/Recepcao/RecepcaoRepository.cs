@@ -10,8 +10,8 @@ namespace RI.Web.Infra.Data.Recepcao
 {
     public class RecepcaoRepository :  IRecepcaoRepository
     {
-        private ConfigADO _db;
-        public RecepcaoRepository(ConfigADO configADO) => _db = configADO;
+        private ConfigSQLServer _db;
+        public RecepcaoRepository(ConfigSQLServer configADO) => _db = configADO;
         
         private StringBuilder SQL = new StringBuilder();
         private List<SqlParameter> Lista = new List<SqlParameter>();

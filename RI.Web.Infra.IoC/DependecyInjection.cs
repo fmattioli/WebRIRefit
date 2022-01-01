@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using RI.Web.Application.Interfaces.Livro;
 using RI.Web.Application.Interfaces.Titulo;
 using RI.Web.Application.Services.Livro;
@@ -15,9 +14,9 @@ namespace RI.Web.Infra.IoC
 {
     public static class DependecyInjection
     {
-        public static IServiceCollection AdicionarInfra(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AdicionarInfra(this IServiceCollection services)
         {
-            services.AddScoped<ConfigADO>();
+            services.AddScoped<ConfigSQLServer>();
             services.AddScoped<ConfigDapper>();
             services.AddScoped<IRecepcaoRepository, RecepcaoRepository>();
             services.AddScoped<IRecepcaoService, RecepcaoService>();
