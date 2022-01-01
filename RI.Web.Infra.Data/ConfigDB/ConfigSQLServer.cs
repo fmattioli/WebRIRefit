@@ -1,29 +1,27 @@
-﻿using System.Data;
+﻿using Microsoft.Extensions.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace RI.Web.Infra.Data.DapperConfig
 {
     public class ConfigSQLServer : IDisposable
     {
-        protected static string? ConnectionString { get; set; }
-
-        public IDbConnection Connection { get; set; }
-        public ConfigSQLServer()
+        private readonly IConfiguration configuration;
+        private IDbConnection Connection
         {
-            Connection = new SqlConnection(@"Data Source=SPCM-DESENV-RI\S2019;Initial Catalog=WEBRI_5RISP;Integrated Security=false;User Id=webri;Password=webri;Connection Timeout=30;");
+            get { return new SqlConnection(configuration.GetConnectionString("WebRI")); }
+            set { }
+        }
+        public ConfigSQLServer(IConfiguration configuration)
+        {
+            this.configuration = configuration;
             Connection.Open();
-            Inicializar();
         }
 
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
-
-        public static void Inicializar()
-        {
-            ConnectionString = @"Data Source=SPCM-DESENV-RI\S2019;Initial Catalog=WEBRI_5RISP;Integrated Security=false;User Id=webri;Password=webri;Connection Timeout=30;";
         }
 
         protected virtual void Dispose(bool disposing)
@@ -34,24 +32,31 @@ namespace RI.Web.Infra.Data.DapperConfig
 
         public async Task<SqlDataReader> RetornarDadosSQLServer(string command, List<SqlParameter> Parametros)
         {
-            SqlConnection connection = GetConnectionSQLServer();
-
-            await connection.OpenAsync();
-            SqlCommand cmd = new SqlCommand(command, connection)
+            try
             {
-                CommandTimeout = 90
-            };
-            if (Parametros != null)
-                foreach (SqlParameter Parametro in Parametros)
-                    cmd.Parameters.Add(Parametro);
-            return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
+                SqlConnection connection = GetConnectionSQLServer();
+
+                await connection.OpenAsync();
+                SqlCommand cmd = new SqlCommand(command, connection)
+                {
+                    CommandTimeout = 90
+                };
+                if (Parametros != null)
+                    foreach (SqlParameter Parametro in Parametros)
+                        cmd.Parameters.Add(Parametro);
+                return await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public SqlConnection GetConnectionSQLServer()
         {
             try
             {
-                return new SqlConnection(ConnectionString);
+                return new SqlConnection(configuration.GetConnectionString("WebRI"));
             }
             catch
             {

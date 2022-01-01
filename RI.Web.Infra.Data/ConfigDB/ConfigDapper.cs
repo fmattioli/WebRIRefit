@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,19 +9,31 @@ using System.Threading.Tasks;
 
 namespace RI.Web.Infra.Data.ConfigDB
 {
-    public class ConfigDapper
+    public class ConfigDapper : IDisposable
     {
-        public IDbConnection Connection { get; set; }
-        public ConfigDapper()
-        {
-            Connection = new SqlConnection(@"Data Source=SPCM-DESENV-RI\S2019;Initial Catalog=WEBRI_5RISP;Integrated Security=false;User Id=webri;Password=webri;Connection Timeout=30;");
-            Connection.Open();
+        private readonly IConfiguration configuration;
 
+        public IDbConnection Connection
+        {
+            get { return new SqlConnection(configuration.GetConnectionString("WebRI")); }
+            set { }
         }
-        protected virtual void Dispose(bool disposing)
+        public ConfigDapper(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+            Connection.Open();
+        }
+
+        public void Dispose()
         {
             Connection.Dispose();
             Connection.Close();
+        }
+
+
+        ~ConfigDapper()
+        {
+            Dispose();
         }
     }
 }

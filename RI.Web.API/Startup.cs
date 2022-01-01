@@ -13,7 +13,7 @@ namespace RI.Web.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AdicionarInfra();
+            services.AdicionarInfra(Configuration);
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddAutoMapperConfiguration();

@@ -291,6 +291,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Dapper": "2.0.123",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "RI.Web.Domain": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },

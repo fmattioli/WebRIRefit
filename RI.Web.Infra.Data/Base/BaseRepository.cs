@@ -25,13 +25,16 @@ namespace RI.Web.Infra.Data.Repositories.Base
             var retorno = new RetornoAcao<IEnumerable<T>>();
             try
             {
-                SQL.Clear();
-                SQL.AppendLine($"SELECT * FROM {tabela}");
-                var resultado = (await dapper.Connection.QueryAsync<T>(SQL.ToString())).ToList();
-                retorno.Sucesso = true;
-                retorno.Result = resultado;
-                return retorno;
-
+                using (var conn = dapper.Connection)
+                {
+                    SQL.Clear();
+                    SQL.AppendLine($"SELECT * FROM {tabela}");
+                    var resultado = (await conn.QueryAsync<T>(SQL.ToString())).ToList();
+                    retorno.Sucesso = true;
+                    retorno.Result = resultado;
+                    conn.Close();
+                    return retorno;
+                }
             }
             catch (Exception ex)
             {
@@ -47,12 +50,16 @@ namespace RI.Web.Infra.Data.Repositories.Base
             var retorno = new RetornoAcao<T>();
             try
             {
-                SQL.Clear();
-                SQL.AppendLine($"SELECT * FROM {tabela} WHERE {coluna} = {valor}");
-                var resultado = (await dapper.Connection.QueryFirstOrDefaultAsync<T>(SQL.ToString()));
-                retorno.Sucesso = true;
-                retorno.Result = resultado;
-                return retorno;
+                using (var conn = dapper.Connection)
+                {
+                    SQL.Clear();
+                    SQL.AppendLine($"SELECT * FROM {tabela} WHERE {coluna} = {valor}");
+                    var resultado = (await conn.QueryFirstOrDefaultAsync<T>(SQL.ToString()));
+                    retorno.Sucesso = true;
+                    retorno.Result = resultado;
+                    conn.Close();
+                    return retorno;
+                }
 
             }
             catch (Exception ex)

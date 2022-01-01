@@ -49,49 +49,47 @@ namespace RI.Web.Infra.Data.Livro
                 SQL.AppendLine("FROM tblWRILivro                                                                ");
                 SQL.AppendLine("LEFT JOIN tblWRILivroTJ ON tblWRILivro.fk_tblWriLivroTJ = tblWRILivroTJ.PK_Id   ");
 
-                using (var conn = dapper.Connection)
+                using (SqlDataReader reader = await db.RetornarDadosSQLServer(SQL.ToString(), Lista))
                 {
-                    using (SqlDataReader reader = await db.RetornarDadosSQLServer(SQL.ToString(), Lista))
+                    if (reader != null)
                     {
-                        if (reader != null)
+                        while (reader.Read())
                         {
-                            while (reader.Read())
+                            #region Obter configurações de livros TJ (De-Para Selo Digital)
+                            //Livro TJ
+                            var LivroTJ = new LivroTJ();
+                            int IdLivroTJ = (reader["fk_tblWriLivroTJ"] as int?).GetValueOrDefault();
+                            if (IdLivroTJ != 0)
                             {
-                                #region Obter configurações de livros TJ (De-Para Selo Digital)
-                                //Livro TJ
-                                var LivroTJ = new LivroTJ();
-                                int IdLivroTJ = (reader["fk_tblWriLivroTJ"] as int?).GetValueOrDefault();
-                                if (IdLivroTJ != 0)
-                                {
-                                    var retornoLivroTJAcao = await livroTJRepository.ObterPorId("tblWRILivroTJ", "PK_Id", IdLivroTJ);
-                                    LivroTJ = retornoLivroTJAcao.Result;
-                                }
-                                #endregion
-
-                                ListaLivros.Add(new LivroEntity
-                                {
-                                    IdLivro = (reader["IdLivro"] as short?).GetValueOrDefault(),
-                                    DescricaoLivro = (reader["DescricaoLivro"] as string),
-                                    Sigla = (reader["Sigla"] as string),
-                                    UltimaSequenciaUtilizada = (reader["UltimaSequenciaUtilizada"] as int?).GetValueOrDefault(),
-                                    Sessao = (reader["Sessao"] as string),
-                                    ControlaSequenciaDoAto = (reader["ControlaSequenciaDoAto"] as bool?).GetValueOrDefault(),
-                                    ControlaSequenciaDoLivro = (reader["ControlaSequenciaDoAto"] as int?).GetValueOrDefault(),
-                                    SiglaOficial = (reader["ControlaSequenciaDoAto"] as string),
-                                    EnviaBDL = (reader["EnviaBDL"] as int?).GetValueOrDefault(),
-                                    EnviarDOI = (reader["EnviarDOI"] as bool?).GetValueOrDefault(),
-                                    Indisponibilidade = (reader["Indisponibilidade"] as bool?).GetValueOrDefault(),
-                                    PermiteDescreverGarantia = (reader["PermiteDescreverGarantia"] as int?).GetValueOrDefault(),
-                                    PermiteSequenciaDoAtoZero = (reader["PermiteSequenciaDoAtoZero"] as int?).GetValueOrDefault(),
-                                    SequenciaInicialAtos = (reader["SequenciaInicialAtos"] as int?).GetValueOrDefault(),
-                                    Transcricao = (reader["Transcricao"] as bool?).GetValueOrDefault(),
-                                    UltimoLivroUtilizado = (reader["UltimoLivroUtilizado"] as int?).GetValueOrDefault(),
-                                    ValidarRegistroAnterior = (reader["ValidarRegistroAnterior"] as bool?).GetValueOrDefault(),
-                                    LivroTJ = LivroTJ ?? new LivroTJ()
-                                });
+                                var retornoLivroTJAcao = await livroTJRepository.ObterPorId("tblWRILivroTJ", "PK_Id", IdLivroTJ);
+                                LivroTJ = retornoLivroTJAcao.Result;
                             }
+                            #endregion
+
+                            ListaLivros.Add(new LivroEntity
+                            {
+                                IdLivro = (reader["IdLivro"] as short?).GetValueOrDefault(),
+                                DescricaoLivro = (reader["DescricaoLivro"] as string),
+                                Sigla = (reader["Sigla"] as string),
+                                UltimaSequenciaUtilizada = (reader["UltimaSequenciaUtilizada"] as int?).GetValueOrDefault(),
+                                Sessao = (reader["Sessao"] as string),
+                                ControlaSequenciaDoAto = (reader["ControlaSequenciaDoAto"] as bool?).GetValueOrDefault(),
+                                ControlaSequenciaDoLivro = (reader["ControlaSequenciaDoAto"] as int?).GetValueOrDefault(),
+                                SiglaOficial = (reader["ControlaSequenciaDoAto"] as string),
+                                EnviaBDL = (reader["EnviaBDL"] as int?).GetValueOrDefault(),
+                                EnviarDOI = (reader["EnviarDOI"] as bool?).GetValueOrDefault(),
+                                Indisponibilidade = (reader["Indisponibilidade"] as bool?).GetValueOrDefault(),
+                                PermiteDescreverGarantia = (reader["PermiteDescreverGarantia"] as int?).GetValueOrDefault(),
+                                PermiteSequenciaDoAtoZero = (reader["PermiteSequenciaDoAtoZero"] as int?).GetValueOrDefault(),
+                                SequenciaInicialAtos = (reader["SequenciaInicialAtos"] as int?).GetValueOrDefault(),
+                                Transcricao = (reader["Transcricao"] as bool?).GetValueOrDefault(),
+                                UltimoLivroUtilizado = (reader["UltimoLivroUtilizado"] as int?).GetValueOrDefault(),
+                                ValidarRegistroAnterior = (reader["ValidarRegistroAnterior"] as bool?).GetValueOrDefault(),
+                                LivroTJ = LivroTJ ?? new LivroTJ()
+                            });
                         }
                     }
+
                 }
 
                 retornoAcao.Sucesso = true;
