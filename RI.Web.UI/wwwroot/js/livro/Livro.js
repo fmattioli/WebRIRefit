@@ -2,6 +2,10 @@
 const url = `https://localhost:7054/api/v1`;
 
 function mostrarForm() {
+
+    $('#btnEditar').css('display', 'none');
+    $('#btnSalvar').css('display', 'inline');
+
     if ($('#formularioLivro').css('display') == 'none') {
         $('#formularioLivro').css('display', 'inline');
         $('#showless').css('display', 'inline');
@@ -44,6 +48,8 @@ function editarLivro(livroId) {
                 carregarSelectBooleano('permitegarantia', response.result.permiteDescreverGarantia);
                 carregarSelectBooleano('transcricao', response.result.transcricao);
                 carregarSelectBooleano('enviarBDL', response.result.enviaBDL);
+                $('#btnSalvar').css('display', 'none');
+                $('#btnEditar').css('display', 'inline');
                 return;
             }
 

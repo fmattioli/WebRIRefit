@@ -10,11 +10,11 @@ namespace RI.Web.Infra.Data.Livro
 {
     public class LivroRepository : BaseRepository<LivroEntity>, ILivroRepository
     {
-        private ConfigSQLServer db { get; set; }
+        private ConfigSQLServer ConfigSql { get; set; }
         private readonly ILivroTJRepository livroTJRepository;
         public LivroRepository(ConfigDapper _db, ConfigSQLServer configADO, ILivroTJRepository livroTJRepository) : base(_db)
         {
-            db = configADO;
+            ConfigSql = configADO;
             this.livroTJRepository = livroTJRepository;
         }
 
@@ -49,7 +49,7 @@ namespace RI.Web.Infra.Data.Livro
                 SQL.AppendLine("FROM tblWRILivro                                                                ");
                 SQL.AppendLine("LEFT JOIN tblWRILivroTJ ON tblWRILivro.fk_tblWriLivroTJ = tblWRILivroTJ.PK_Id   ");
 
-                using (SqlDataReader reader = await db.RetornarDadosSQLServer(SQL.ToString(), Lista))
+                using (SqlDataReader reader = await ConfigSql.RetornarDadosSQLServer(SQL.ToString(), Lista))
                 {
                     if (reader != null)
                     {
@@ -68,7 +68,7 @@ namespace RI.Web.Infra.Data.Livro
 
                             ListaLivros.Add(new LivroEntity
                             {
-                                IdLivro = (reader["IdLivro"] as short?).GetValueOrDefault(),
+                                Id = (reader["IdLivro"] as short?).GetValueOrDefault(),
                                 DescricaoLivro = (reader["DescricaoLivro"] as string),
                                 Sigla = (reader["Sigla"] as string),
                                 UltimaSequenciaUtilizada = (reader["UltimaSequenciaUtilizada"] as int?).GetValueOrDefault(),

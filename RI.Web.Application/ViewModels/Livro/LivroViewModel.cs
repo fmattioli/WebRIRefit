@@ -5,7 +5,7 @@ namespace RI.Web.Application.ViewModels.Livro
 {
     public class LivroViewModel
     {
-        public int IdLivro { get; set; }
+        public int Id { get; set; }
         public string? DescricaoLivro { get; set; }
         public string? Sigla { get; set; }
         public int UltimaSequenciaUtilizada { get; set; }

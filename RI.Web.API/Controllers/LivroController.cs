@@ -58,5 +58,37 @@ namespace RI.Web.API.Controllers
 
             return BadRequest(ModelState);
         }
+
+        [HttpPut("EditarLivro")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(RetornoAcaoService), StatusCodes.Status200OK)]
+        public async Task<ActionResult<LivroViewModel>> EditarLivro(LivroViewModel Livro, [FromServices] ILivroService livroService)
+        {
+            if (ModelState.IsValid)
+            {
+                var retorno = await livroService.EditarLivro(Livro);
+                if (retorno.Sucesso)
+                    return Ok(retorno);
+                return BadRequest(retorno.MensagemRetorno);
+            }
+
+            return BadRequest(ModelState);
+        }
+
+        [HttpPost("CriarLivro")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(RetornoAcaoService<bool>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<LivroViewModel>> CriarLivro(int Id, [FromServices] ILivroService livroService)
+        {
+            if (ModelState.IsValid)
+            {
+                var retorno = await livroService.ObterLivroPorId(Id);
+                if (retorno.Sucesso)
+                    return Ok(retorno);
+                return BadRequest(retorno.MensagemRetorno);
+            }
+
+            return BadRequest(ModelState);
+        }
     }
 }

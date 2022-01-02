@@ -37,7 +37,7 @@ namespace RI.Web.Infra.Data.DapperConfig
                 SqlConnection connection = GetConnectionSQLServer();
 
                 await connection.OpenAsync();
-                SqlCommand cmd = new SqlCommand(command, connection)
+                SqlCommand cmd = new(command, connection)
                 {
                     CommandTimeout = 90
                 };

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0aYv8961oE6Pe99rKDREj3pahmbVaW74sm8umW4UYcs=",
+  "Hash": "eyvhWIzdIZUSextpnSDgNMS4auZp60ELrMRfqWKInhU=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -221,12 +221,12 @@
       "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\IniciarMascaras.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\livro\\Livro.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\livro\\livro.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/livro/Livro.js",
+      "RelativePath": "js/livro/livro.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\livro\\Livro.js"
+      "OriginalItemSpec": "wwwroot\\js\\livro\\livro.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\shared\\confirmarexclusao.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\util\\ConfirmarExclusao.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/shared/confirmarexclusao.js",
+      "RelativePath": "js/util/ConfirmarExclusao.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\shared\\confirmarexclusao.js"
+      "OriginalItemSpec": "wwwroot\\js\\util\\ConfirmarExclusao.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\shared\\util.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\util\\util.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/shared/util.js",
+      "RelativePath": "js/util/util.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,7 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\shared\\util.js"
+      "OriginalItemSpec": "wwwroot\\js\\util\\util.js"
     },
     {
       "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

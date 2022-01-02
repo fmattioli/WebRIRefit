@@ -2,6 +2,7 @@
 using RI.Web.Application.Interfaces.Livro;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Livro;
+using RI.Web.Domain.Entities.Livro;
 using RI.Web.Domain.Interfaces.Livro;
 
 namespace RI.Web.Application.Services.Livro
@@ -93,6 +94,14 @@ namespace RI.Web.Application.Services.Livro
             retorno.Sucesso = false;
             retorno.ExceptionRetorno = retornoLivroTJ.ExceptionRetorno;
             retorno.MensagemRetorno = retornoLivroTJ.MensagemRetorno;
+            return retorno;
+        }
+
+        public async Task<RetornoAcaoService> EditarLivro(LivroViewModel Livro)
+        {
+            var retorno = new RetornoAcaoService();
+            var livro = mapper.Map<LivroEntity>(Livro);
+            await livroRepository.Atualizar(livro);
             return retorno;
         }
     }

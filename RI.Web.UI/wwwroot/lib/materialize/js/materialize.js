@@ -23,7 +23,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       slice = ArrayProto.slice,
       filter = ArrayProto.filter,
       push = ArrayProto.push;
-
+    ''
   var noop = function () {},
       isFunction = function (item) {
     // @see https://crbug.com/568448

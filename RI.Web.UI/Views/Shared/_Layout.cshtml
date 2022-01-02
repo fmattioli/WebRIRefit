@@ -24,7 +24,7 @@
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Transcrição</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pesquisa geral</a></li>
         </ul>
-       
+
         <ul id="cadastros" class="dropdown-content">
             <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Livro</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pessoa</a></li>
@@ -39,7 +39,7 @@
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar reentrada</a></li>
         </ul>
 
-        
+
         <ul id="manutencoes" class="dropdown-content">
             <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Usuários</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Parâmetros</a></li>
@@ -47,6 +47,16 @@
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar cancelamento</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar reentrada</a></li>
         </ul>
+
+        
+        <ul id="controlediario" class="dropdown-content">
+            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Usuários</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Parâmetros</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Sequencias</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar cancelamento</a></li>
+            <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar reentrada</a></li>
+        </ul>
+
 
         <ul id="acesso_rapido_mobile" class="dropdown-content">
             <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Intenções</a></li>
@@ -66,8 +76,9 @@
                     <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Acesso rápido<i class="material-icons right">wrap_text</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="manutencoes">Manutenções<i class="material-icons right">build</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="consultas">Consultas<i class="material-icons right">search</i></a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="administracao">Administração<i class="material-icons right">transfer_within_a_station</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="cadastros">Cadastros<i class="material-icons right">mode_edit</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="administracao">Administração<i class="material-icons right">keyboard</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="controlediario">Controle diário<i class="material-icons right">playlist_add</i></a></li>
                     <li><a class="dropdown-trigger" href="#!" data-target="acesso_rapido">Sair<i class="material-icons right">keyboard_tab</i></a></li>
                 </ul>
             </div>
@@ -95,13 +106,13 @@
         </div>
     </footer>
 
-    
+
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/js/shared/confirmarexclusao.js"></script>
+    <script src="~/js/util/confirmarexclusao.js"></script>
     <script src="~/lib/materialize/js/materialize.js"></script>
     <script src="~/js/inicializacoes/InicializarTooltips.js"></script>
     <script src="~/js/inicializacoes/InicializarDatepicker.js"></script>
     <script src="~/js/inicializacoes/inicializarselects.js"></script>
-    <script src="~/js/shared/util.js"></script>
+    <script src="~/js/util/util.js"></script>
 </body>
 </html>

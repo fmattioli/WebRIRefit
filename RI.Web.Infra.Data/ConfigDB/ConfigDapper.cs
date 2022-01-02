@@ -26,14 +26,7 @@ namespace RI.Web.Infra.Data.ConfigDB
 
         public void Dispose()
         {
-            Connection.Dispose();
-            Connection.Close();
-        }
-
-
-        ~ConfigDapper()
-        {
-            Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

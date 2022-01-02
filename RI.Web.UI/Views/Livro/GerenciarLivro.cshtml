@@ -136,9 +136,11 @@
                         </select>
                         <label>Enviar BDL</label>
                     </div>
-
-                    <div class="input-field col s1">
+                    <div class="input-field col s1" id="btnSalvar">
                         <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="input-field col s1" id="btnEditar" style="display: none">
+                        <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">save</i></a>
                     </div>
                 </div>
                 <div class="row">
@@ -200,11 +202,11 @@
                                         @livroTJ
                                     </td>
                                     <td>
-                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro('@livro.IdLivro')"><i class="small material-icons">edit</i></a>
+                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro('@livro.Id')"><i class="small material-icons">edit</i></a>
                                     </td>
 
                                     <td>
-                                        <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirLivro('@livro.IdLivro');"><i class="material-icons">delete</i></a>
+                                        <a class="btn-floating btn-medium waves-effect waves-light borgonha" onclick="excluirLivro('@livro.Id');"><i class="material-icons">delete</i></a>
                                     </td>
                                 </tr>
                                 counter = @counter + 1;
@@ -219,5 +221,5 @@
         </div>
     </div>
 
-    <script src="~/js/Livro/Livro.js"></script>
+    <script src="~/js/Livro/livro.js"></script>
 }

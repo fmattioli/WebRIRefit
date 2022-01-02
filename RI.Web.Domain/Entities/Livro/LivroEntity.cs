@@ -3,10 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RI.Web.Domain.Entities.Livro
 {
+    [Table("tblWRILivros")]
     public class LivroEntity
     {
         [Column("PK_Id")]
-        public short IdLivro { get; set; }
+        public short Id { get; set; }
         [Column("Descricao")]
         public string? DescricaoLivro { get; set; }
         [Column("Sigla")]
