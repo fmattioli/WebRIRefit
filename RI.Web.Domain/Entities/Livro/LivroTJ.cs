@@ -10,7 +10,7 @@ namespace RI.Web.Domain.Entities.Livro
     public class LivroTJ
     {
         [Column("PK_ID")]
-        public int IdLivroTJ { get; set; }
+        public int Id { get; set; }
         [Column("Descricao")]
         public string? Descricao { get; set; }
     }

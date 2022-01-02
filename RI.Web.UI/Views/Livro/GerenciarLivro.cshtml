@@ -17,6 +17,7 @@
         <div style="display: none" id="formularioLivro">
             <form id="especialidadeForm">
                 <div class="row">
+                    <input id="idlivro" type="hidden" class="validate" required>
                     <div class='input-field col s3'>
                         <input id="descricao" type="text" class="validate" required>
                         <label for="descricao">Descrição</label>
@@ -65,7 +66,7 @@
                             {
                                 @foreach (var livroTJ in livrosTJ)
                                 {
-                                    <option value="@livroTJ.IdLivroTJ">@livroTJ.Descricao</option>
+                                    <option value="@livroTJ.Id">@livroTJ.Descricao</option>
                                 }
                             }
                         </select>
@@ -140,7 +141,7 @@
                         <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">add</i></a>
                     </div>
                     <div class="input-field col s1" id="btnEditar" style="display: none">
-                        <a class="btn-floating btn-large waves-effect waves-light" onclick="adicionarEspecialidade()"><i class="material-icons">save</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light" onclick="editarLivro()"><i class="material-icons">save</i></a>
                     </div>
                 </div>
                 <div class="row">
@@ -202,7 +203,7 @@
                                         @livroTJ
                                     </td>
                                     <td>
-                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="editarLivro('@livro.Id')"><i class="small material-icons">edit</i></a>
+                                        <a class="btn-floating btn-medium waves-light carmesim" onclick="CarregarCamposEditarLivro('@livro.Id')"><i class="small material-icons">edit</i></a>
                                     </td>
 
                                     <td>
@@ -221,5 +222,5 @@
         </div>
     </div>
 
-    <script src="~/js/Livro/livro.js"></script>
+    <script src="~/js/livro/livro.js"></script>
 }

@@ -11,9 +11,11 @@ namespace RI.Web.Application.ViewModels.Livro
         public int UltimaSequenciaUtilizada { get; set; }
         public string? Sessao { get; set; }
         public bool ControlaSequenciaDoAto { get; set; }
+        [JsonIgnore]
         public string? SiglaOficial { get; set; }
         public int PermiteSequenciaDoAtoZero { get; set; }
         public int ControlaSequenciaDoLivro { get; set; }
+        [JsonIgnore]
         public int UltimoLivroUtilizado { get; set; }
         public int SequenciaInicialAtos { get; set; }
         public int PermiteDescreverGarantia { get; set; }

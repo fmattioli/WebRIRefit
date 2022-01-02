@@ -2,7 +2,7 @@
 {
     public class LivroTJViewModel
     {
-        public int IdLivroTJ { get; set; }
+        public int Id { get; set; }
         public string? Descricao { get; set; }
 
     }

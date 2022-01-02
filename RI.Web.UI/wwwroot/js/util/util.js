@@ -29,6 +29,11 @@ function carregarSelectPeloNome(id, valueToSelect) {
     $('#' + id).formSelect();
 }
 
+function retornarTrueOrFalse(value) {
+    if (value === 0)
+        return false;
+    return true;
+}
 
 
 

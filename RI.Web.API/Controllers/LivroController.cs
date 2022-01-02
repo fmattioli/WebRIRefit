@@ -62,7 +62,7 @@ namespace RI.Web.API.Controllers
         [HttpPut("EditarLivro")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(RetornoAcaoService), StatusCodes.Status200OK)]
-        public async Task<ActionResult<LivroViewModel>> EditarLivro(LivroViewModel Livro, [FromServices] ILivroService livroService)
+        public async Task<ActionResult<LivroViewModel>> EditarLivro([FromBody] LivroViewModel Livro, [FromServices] ILivroService livroService)
         {
             if (ModelState.IsValid)
             {

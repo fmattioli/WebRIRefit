@@ -38,6 +38,7 @@ namespace RI.Web.Domain.Entities.Livro
         public bool Indisponibilidade { get; set; }
         [Column("Transcricao")]
         public bool Transcricao { get; set; }
+        [Column("EnviaBDL")]
         public int EnviaBDL { get; set; }
         [Column("fk_tblWriLivroTJ")]
         public int IdLivroTJ { get; set; }
