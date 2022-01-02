@@ -2,6 +2,7 @@
 using RI.Web.Application.Interfaces.Livro;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Livro;
+using RI.Web.Domain.Entities.Acoes;
 using RI.Web.Domain.Entities.Livro;
 using RI.Web.Domain.Interfaces.Livro;
 
@@ -99,10 +100,9 @@ namespace RI.Web.Application.Services.Livro
 
         public async Task<RetornoAcaoService> EditarLivro(LivroViewModel Livro)
         {
-            var retorno = new RetornoAcaoService();
             var livro = mapper.Map<LivroEntity>(Livro);
-            await livroRepository.Atualizar(livro);
-            return retorno;
+            var retorno = await livroRepository.Atualizar(livro);
+            return mapper.Map<RetornoAcaoService>(retorno);
         }
     }
 }

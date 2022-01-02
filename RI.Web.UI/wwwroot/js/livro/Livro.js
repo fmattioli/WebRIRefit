@@ -40,7 +40,7 @@ function CarregarCamposEditarLivro(livroId) {
                 carretorTextoInput('ultimasequencia', response.result.ultimaSequenciaUtilizada);
                 carregarSelectPeloValor('controlaSeqLivro', response.result.controlaSequenciaDoLivro);
                 carregarSelectPeloValor('seqatozero', response.result.permiteSequenciaDoAtoZero);
-                carregarSelectPeloValor('tipolivro', response.result.livroTJ.id);
+                carregarSelectPeloValor('tipolivro', response.result.idLivroTJ);
                 carregarSelectBooleano('enviarDOI', response.result.enviarDOI);
                 carregarSelectBooleano('apontarindisponibilidade', response.result.indisponibilidade);
                 carregarSelectBooleano('controlaseqato', response.result.controlaSequenciaDoAto);
@@ -88,33 +88,29 @@ function editarLivro() {
             "sigla": $('#sigla').val(),
             "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
             "sessao": $('#sessao').val(),
-            "controlaSequenciaDoAto": retornarTrueOrFalse($('#controlaseqato').val()),
+            "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
             "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
             "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
-            "sequenciaInicialAtos": $('#seqatoinicial').val(),
-            "permiteDescreverGarantia": $('#permitegarantia').val(),
-            "enviarDOI": retornarTrueOrFalse($('#enviarDOI').val()),
-            "validarRegistroAnterior": retornarTrueOrFalse($('#validar_reg_anterior').val()),
-            "indisponibilidade": retornarTrueOrFalse($('#apontarindisponibilidade').val()),
-            "transcricao": retornarTrueOrFalse($('#transcricao').val()),
+            "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
+            "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
+            "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
+            "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
+            "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
+            "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
             "enviaBDL": parseInt($('#enviarBDL').val()),
-            "livroTJ": {
-                "id": $('#tipolivro').val(),
-                "descricao": $('#tipolivro').val()
-            }
+            "idLivroTJ": $('#tipolivro').val()
+            
         }),
 
         success: function (response) {
-
             if (isNullOrEmpty(response.mensagemRetorno)) {
-                location.reload(true);
-                return;
-            }
+                M.toast({
+                    html: "Livro alterado com sucesso.",
+                    classes: 'carmesim darken-4 rounded',
+                });
 
-            M.toast({
-                html: response.msgErro,
-                classes: 'black darken-4 rounded',
-            });
+                mostrarForm();
+            }
 
         },
         error: function (xhr, textStatus, errorThrown) {

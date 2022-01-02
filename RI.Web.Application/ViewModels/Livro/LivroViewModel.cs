@@ -25,7 +25,6 @@ namespace RI.Web.Application.ViewModels.Livro
         public bool Transcricao { get; set; }
         public int EnviaBDL { get; set; }
         public LivroTJViewModel LivroTJ { get; set; }
-        [JsonIgnore]
         public int IdLivroTJ { get; set; }
         public LivroViewModel()
         {

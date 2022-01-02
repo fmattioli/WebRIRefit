@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RI.Web.Domain.Entities.Livro
 {
-    [Table("tblWRILivros")]
+    [Table("tblWRILivro")]
     public class LivroEntity
     {
         [Column("PK_Id")]
@@ -40,9 +40,11 @@ namespace RI.Web.Domain.Entities.Livro
         public bool Transcricao { get; set; }
         [Column("EnviaBDL")]
         public int EnviaBDL { get; set; }
+
+        public LivroTJ LivroTJ { get; set; }
+
         [Column("fk_tblWriLivroTJ")]
         public int IdLivroTJ { get; set; }
-        public LivroTJ LivroTJ { get; set; }
 
         public LivroEntity()
         {

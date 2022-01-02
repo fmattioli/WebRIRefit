@@ -80,7 +80,7 @@ namespace RI.Web.Infra.Data.Repositories.Base
             try
             {
                 SQL.Clear();
-                var propriedades = Entidade.GetType().GetProperties();
+                var propriedades = Entidade.GetType().GetProperties().Where(prop => Attribute.IsDefined(prop, typeof(ColumnAttribute))).ToList();
                 string lastItem = propriedades[^1].Name;
                 SQL.AppendLine($"Update {(Entidade.GetType().GetCustomAttributes(true)[2] as TableAttribute)?.Name}");
                 SQL.AppendLine($"SET");
@@ -88,10 +88,11 @@ namespace RI.Web.Infra.Data.Repositories.Base
                 {
                     if (propridade.Name != "Id")
                     {
+                        var nomeColuna = (propridade.GetCustomAttributes(true)[0] as ColumnAttribute)?.Name;
                         if (propridade.Name != lastItem)
-                            SQL.AppendLine($"{propridade.Name}='{propridade.GetValue(Entidade)}',");
+                            SQL.AppendLine($"{nomeColuna}='{propridade.GetValue(Entidade)}',");
                         else
-                            SQL.AppendLine($"{propridade.Name}='{propridade.GetValue(Entidade)}'");
+                            SQL.AppendLine($"{nomeColuna}='{propridade.GetValue(Entidade)}'");
                     }
                 }
                 SQL.AppendLine($"Where PK_Id = {propriedades.FirstOrDefault(a => a.Name == "Id")?.GetValue(Entidade)}");
