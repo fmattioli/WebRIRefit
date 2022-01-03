@@ -1,6 +1,10 @@
 ﻿const nomeController = 'Livro';
 const url = `https://localhost:7054/api/v1`;
 
+function limparCampos() {
+    $('#livroForm').trigger("reset");
+    mostrarForm();
+}
 function mostrarForm() {
 
     $('#btnEditar').css('display', 'none');
@@ -71,9 +75,6 @@ function CarregarCamposEditarLivro(livroId) {
 }
 
 function editarLivro() {
-    var livro = {
-
-    };
 
     var endPoint = `${url}/${nomeController}/EditarLivro/`;
 
@@ -123,12 +124,91 @@ function editarLivro() {
     console.log(livro);
 }
 
-function excluirLivro(idLivro) {
+
+
+function adicionarLivro() {
+    var endPoint = `${url}/${nomeController}/AdicionarLivro/`;
+    $.ajax({
+        method: "POST",
+        url: endPoint,
+        dataType: "json",
+        contentType: 'application/json; charset=UTF-8',
+        data: JSON.stringify({
+            "descricaoLivro": $('#descricao').val(),
+            "sigla": $('#sigla').val(),
+            "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
+            "sessao": $('#sessao').val(),
+            "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
+            "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
+            "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
+            "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
+            "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
+            "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
+            "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
+            "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
+            "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
+            "enviaBDL": parseInt($('#enviarBDL').val()),
+            "idLivroTJ": $('#tipolivro').val(),
+            "Ativo": true
+
+        }),
+
+        success: function (response) {
+            if (isNullOrEmpty(response.mensagemRetorno)) {
+                M.toast({
+                    html: "Livro cadastrado com sucesso.",
+                    classes: 'carmesim darken-4 rounded',
+                });
+
+                location.reload(true);
+            }
+
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            M.toast({
+                html: "Erro ao inserir o livro",
+                classes: 'carmesim darken-4 rounded',
+            });
+        }
+    })
+    console.log(livro);
+}
+
+
+function excluirLivro(livroId) {
     $('.modal').modal({
         dismissble: true
     });
+
     $('#modal').modal('open');
     $(".texto").text("Deseja realmente excluir?");
+
+    var endPoint = `${url}/${nomeController}/${livroId}`;
+
+    $(".btnExcluir").on('click', function () {
+        $.ajax({
+            method: "DELETE",
+            url: endPoint,
+            dataType: "json",
+            data: { Id: livroId },
+            success: function (response) {
+                if (isNullOrEmpty(response.mensagemRetorno)) {
+                    M.toast({
+                        html: "Livro excluído com sucesso!",
+                        classes: 'carmesim darken-4 rounded',
+                    });
+                    $('#modal').modal('close');
+                    location.reload(true);
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                M.toast({
+                    html: "Erro ao excluir especialidade",
+                    classes: 'black darken-4 rounded',
+                });
+            }
+        })
+    })
 
 }
 

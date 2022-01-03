@@ -6,7 +6,7 @@ using RI.Web.Application.ViewModels.Livro;
 
 namespace RI.Web.UI.Controllers
 {
-    public class LivroController : Controller
+    public class LivroController : BaseController
     {
         private readonly ILivroService livroService;
         public LivroController(ILivroService livroService) => this.livroService = livroService;
@@ -23,42 +23,24 @@ namespace RI.Web.UI.Controllers
 
         public async Task<RetornoAcaoService<IEnumerable<LivroViewModel>>> ObterLivros()
         {
-            var retornoLivros = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
-            var retornoLivrosTJ = new RetornoAcaoService<IEnumerable<LivroTJViewModel>>();
             var retornoLivro = await RequisicaoAPI("Livro/ObterLivros");
             var retornoLivroTJ = await RequisicaoAPI("Livro/ObterLivrosTJ");
             if (retornoLivro.IsSuccessStatusCode && retornoLivroTJ.IsSuccessStatusCode)
             {
-                retornoLivros = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroViewModel>>>(await retornoLivro.Content.ReadAsStringAsync());
-                retornoLivrosTJ = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroTJViewModel>>>(await retornoLivroTJ.Content.ReadAsStringAsync());
+                var retornoLivros = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroViewModel>>>(await retornoLivro.Content.ReadAsStringAsync());
+                var retornoLivrosTJ = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroTJViewModel>>>(await retornoLivroTJ.Content.ReadAsStringAsync());
                 ViewBag.LivrosTJ = retornoLivrosTJ?.Result;
                 if (retornoLivros is not null && retornoLivros.Sucesso && retornoLivrosTJ is not null && retornoLivrosTJ.Sucesso)
                     return retornoLivros;
             }
 
-            var retornoLivrosErro = new RetornoAcaoService<IEnumerable<LivroViewModel>>();
-            retornoLivrosErro.Sucesso = false;
-            retornoLivrosErro.MensagemRetorno = $"Erro ao consumir a API. {retornoLivro.ReasonPhrase}-{retornoLivro.ReasonPhrase}";
+            var retornoLivrosErro = new RetornoAcaoService<IEnumerable<LivroViewModel>>
+            {
+                Sucesso = false,
+                MensagemRetorno = $"Erro ao consumir a API. {retornoLivro.ReasonPhrase}-{retornoLivro.ReasonPhrase}"
+            };
             return retornoLivrosErro;
         }
 
-        private async Task<HttpResponseMessage> RequisicaoAPI(string Metodo)
-        {
-            using (var httpClient = new HttpClient())
-            {
-                var response = await httpClient.GetAsync(GetUrlAPI(Metodo));
-                return response;
-            }
-        }
-
-        public string GetUrlAPI(string action)
-        {
-            var builder = new ConfigurationBuilder()
-                 .SetBasePath(Directory.GetCurrentDirectory())
-                 .AddJsonFile($"appsettings.json");
-            var config = builder.Build();
-
-            return config.GetSection("ApiSettings:Url").Value + action;
-        }
     }
 }

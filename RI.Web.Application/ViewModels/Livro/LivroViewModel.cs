@@ -26,6 +26,7 @@ namespace RI.Web.Application.ViewModels.Livro
         public int EnviaBDL { get; set; }
         public LivroTJViewModel LivroTJ { get; set; }
         public int IdLivroTJ { get; set; }
+        public bool Ativo { get; set; }
         public LivroViewModel()
         {
             LivroTJ = new LivroTJViewModel();

@@ -86,7 +86,7 @@ namespace RI.Web.Infra.Data.Repositories.Base
                 SQL.AppendLine($"SET");
                 foreach (var propridade in propriedades)
                 {
-                    if (propridade.Name != "Id")
+                    if (propridade.Name != "Id" && propridade.Name != "Ativo")
                     {
                         var nomeColuna = (propridade.GetCustomAttributes(true)[0] as ColumnAttribute)?.Name;
                         if (propridade.Name != lastItem)
@@ -117,7 +117,7 @@ namespace RI.Web.Infra.Data.Repositories.Base
             {
                 using var conn = dapper.Connection;
                 SQL.Clear();
-                SQL.AppendLine($"Update {Tabela} SET Ativo = 0 Where WHERE PK_Id = {Valor}");
+                SQL.AppendLine($"Update {Tabela} SET Ativo = 0 Where PK_Id = {Valor}");
                 var resultado = (await conn.ExecuteAsync(SQL.ToString()));
                 retorno.Sucesso = true;
                 conn.Close();
@@ -139,6 +139,56 @@ namespace RI.Web.Infra.Data.Repositories.Base
                 using var conn = dapper.Connection;
                 SQL.Clear();
                 SQL.AppendLine($"DELETE FROM {Tabela} WHERE PK_Id = {Valor}");
+                var resultado = (await conn.ExecuteAsync(SQL.ToString()));
+                retorno.Sucesso = true;
+                conn.Close();
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
+        public async Task<RetornoAcao> Inserir(T Entidade)
+        {
+            var retorno = new RetornoAcao();
+            try
+            {
+                SQL.Clear();
+                var propriedades = Entidade.GetType().GetProperties().Where(prop => Attribute.IsDefined(prop, typeof(ColumnAttribute))).ToList();
+                string lastItem = propriedades[^1].Name;
+                SQL.AppendLine($"INSERT INTO {(Entidade.GetType().GetCustomAttributes(true)[2] as TableAttribute)?.Name}");
+                SQL.AppendLine($"(");
+                foreach (var propridade in propriedades)
+                {
+                    if (propridade.Name != "Id")
+                    {
+                        var nomeColuna = (propridade.GetCustomAttributes(true)[0] as ColumnAttribute)?.Name;
+                        if (propridade.Name != lastItem)
+                            SQL.AppendLine($"{nomeColuna},");
+                        else
+                            SQL.AppendLine($"{nomeColuna}");
+                    }
+                }
+                SQL.AppendLine($")");
+                SQL.AppendLine($"VALUES");
+                SQL.AppendLine($"(");
+                foreach (var propridade in propriedades)
+                {
+                    if (propridade.Name != "Id")
+                    {
+                        var nomeColuna = (propridade.GetCustomAttributes(true)[0] as ColumnAttribute)?.Name;
+                        if (propridade.Name != lastItem)
+                            SQL.AppendLine($"'{propridade.GetValue(Entidade)}',");
+                        else
+                            SQL.AppendLine($"'{propridade.GetValue(Entidade)}'");
+                    }
+                }
+                SQL.AppendLine($")");
+                using var conn = dapper.Connection;
                 var resultado = (await conn.ExecuteAsync(SQL.ToString()));
                 retorno.Sucesso = true;
                 conn.Close();

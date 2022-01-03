@@ -12,10 +12,10 @@
             <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">add</i></a>
         </div>
         <div id="showless" class="input-field col s1" style="display: none">
-            <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">remove</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="limparCampos();"><i class="material-icons">remove</i></a>
         </div>
         <div style="display: none" id="formularioLivro">
-            <form id="especialidadeForm">
+            <form id="livroForm">
                 <div class="row">
                     <input id="idlivro" type="hidden" class="validate" required>
                     <div class='input-field col s3'>
@@ -24,7 +24,7 @@
                         <span class="helper-text" data-error="Informe uma descrição!" data-success="Tudo certo!"></span>
                     </div>
                     <div class='input-field col s2'>
-                        <input id="sigla" type="text" class="validate" required>
+                        <input id="sigla" type="text" class="validate" maxlength="3" required>
                         <label for="sigla">Sigla</label>
                         <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                     </div>
@@ -138,7 +138,7 @@
                         <label>Enviar BDL</label>
                     </div>
                     <div class="input-field col s1" id="btnSalvar">
-                        <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="adicionarEspecialidade()"><i class="material-icons">add</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="adicionarLivro()"><i class="material-icons">add</i></a>
                     </div>
                     <div class="input-field col s1" id="btnEditar" style="display: none">
                         <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="editarLivro()"><i class="material-icons">save</i></a>
@@ -222,5 +222,5 @@
         </div>
     </div>
 
-    <script src="~/js/livro/livro.js"></script>
+    <script src="~/js/livro/Livro.js"></script>
 }

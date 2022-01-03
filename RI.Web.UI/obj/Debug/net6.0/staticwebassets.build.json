@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eyvhWIzdIZUSextpnSDgNMS4auZp60ELrMRfqWKInhU=",
+  "Hash": "zGU0mNgGAjp8QdyZJO+wqe5v8fWCYGVBzVDFXwhhzBQ=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -221,12 +221,12 @@
       "OriginalItemSpec": "wwwroot\\js\\inicializacoes\\IniciarMascaras.js"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\livro\\livro.js",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\livro\\Livro.js",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "js/livro/livro.js",
+      "RelativePath": "js/livro/Livro.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,7 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\livro\\livro.js"
+      "OriginalItemSpec": "wwwroot\\js\\livro\\Livro.js"
     },
     {
       "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\js\\util\\ConfirmarExclusao.js",

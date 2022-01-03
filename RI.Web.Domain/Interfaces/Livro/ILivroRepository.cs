@@ -7,5 +7,6 @@ namespace RI.Web.Domain.Interfaces.Livro
     public interface ILivroRepository : IBaseRepository<LivroEntity>
     {
         public Task<RetornoAcao<IEnumerable<LivroEntity>>> ObterLivros();
+        public Task<RetornoAcao> InserirLivro(LivroEntity Livro);
     }
 }

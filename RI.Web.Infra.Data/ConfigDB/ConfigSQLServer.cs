@@ -52,6 +52,14 @@ namespace RI.Web.Infra.Data.DapperConfig
             }
         }
 
+        public async Task<int> ExecutarComandoSQLServer(string command)
+        {
+            using SqlConnection connection = GetConnectionSQLServer();
+            await connection.OpenAsync();
+            SqlCommand sqlCommand = new(command, connection);
+            return await sqlCommand.ExecuteNonQueryAsync();
+        }
+
         public SqlConnection GetConnectionSQLServer()
         {
             try

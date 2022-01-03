@@ -4,8 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AdicionarInfra(builder.Configuration);
+builder.Services.AdicionarInfra();
 builder.Services.AddAutoMapperConfiguration();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

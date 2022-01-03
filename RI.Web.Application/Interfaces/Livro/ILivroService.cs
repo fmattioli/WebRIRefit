@@ -9,6 +9,8 @@ namespace RI.Web.Application.Interfaces.Livro
         Task<RetornoAcaoService<LivroViewModel>> ObterLivroPorId(int Id);
         Task<RetornoAcaoService<IEnumerable<LivroTJViewModel>>> ObterLivrosTJ();
         Task<RetornoAcaoService<LivroTJViewModel>> ObterLivroTJPorId(int Id);
+        Task<RetornoAcaoService> AdicionarLivro(LivroViewModel Livro);
         Task<RetornoAcaoService> EditarLivro(LivroViewModel Livro);
+        Task<RetornoAcaoService> DesativarLivro(int Id);
     }
 }

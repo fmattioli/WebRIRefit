@@ -75,14 +75,14 @@ namespace RI.Web.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPost("CriarLivro")]
+        [HttpPost("AdicionarLivro")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(RetornoAcaoService<bool>), StatusCodes.Status200OK)]
-        public async Task<ActionResult<LivroViewModel>> CriarLivro(int Id, [FromServices] ILivroService livroService)
+        public async Task<ActionResult<LivroViewModel>> AdicionarLivro(LivroViewModel Livro, [FromServices] ILivroService livroService)
         {
             if (ModelState.IsValid)
             {
-                var retorno = await livroService.ObterLivroPorId(Id);
+                var retorno = await livroService.AdicionarLivro(Livro);
                 if (retorno.Sucesso)
                     return Ok(retorno);
                 return BadRequest(retorno.MensagemRetorno);
@@ -90,5 +90,22 @@ namespace RI.Web.API.Controllers
 
             return BadRequest(ModelState);
         }
+
+        [HttpDelete("{Id}", Name = "DesativarLivro")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(RetornoAcaoService<LivroViewModel>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<LivroViewModel>> DesativarLivro(int Id, [FromServices] ILivroService livroService)
+        {
+            if (ModelState.IsValid)
+            {
+                var retorno = await livroService.DesativarLivro(Id);
+                if (retorno.Sucesso)
+                    return Ok(retorno);
+                return BadRequest(retorno.MensagemRetorno);
+            }
+
+            return BadRequest(ModelState);
+        }
+
     }
 }

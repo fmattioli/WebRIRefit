@@ -18,8 +18,6 @@ namespace RI.Web.Domain.Entities.Livro
         public string? Sessao { get; set; }
         [Column("ControlaSequenciaDoAto")]
         public bool ControlaSequenciaDoAto { get; set; }
-        [Column("SiglaOficial")]
-        public string? SiglaOficial { get; set; }
         [Column("PermiteSequenciaDoAtoZero")]
         public int PermiteSequenciaDoAtoZero { get; set; }
         [Column("ControlaSequenciaDoLivro")]
@@ -40,6 +38,8 @@ namespace RI.Web.Domain.Entities.Livro
         public bool Transcricao { get; set; }
         [Column("EnviaBDL")]
         public int EnviaBDL { get; set; }
+        [Column("Ativo")]
+        public bool Ativo { get; set; }
 
         public LivroTJ LivroTJ { get; set; }
 

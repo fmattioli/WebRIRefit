@@ -15,7 +15,7 @@ namespace RI.Web.Infra.IoC
 {
     public static class DependecyInjection
     {
-        public static IServiceCollection AdicionarInfra(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AdicionarInfra(this IServiceCollection services)
         {
             services.AddSingleton<ConfigSQLServer>();
             services.AddSingleton<ConfigDapper>();

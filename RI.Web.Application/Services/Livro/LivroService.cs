@@ -28,7 +28,7 @@ namespace RI.Web.Application.Services.Livro
             if (retornoLivroEntity.Sucesso)
             {
                 var livroViewModel = mapper.Map<IEnumerable<LivroViewModel>>(retornoLivroEntity.Result);
-                retorno.Result = livroViewModel;
+                retorno.Result = livroViewModel.Where(a => a.Ativo);
                 retorno.Sucesso = true;
                 return retorno;
             }
@@ -102,6 +102,19 @@ namespace RI.Web.Application.Services.Livro
         {
             var livro = mapper.Map<LivroEntity>(Livro);
             var retorno = await livroRepository.Atualizar(livro);
+            return mapper.Map<RetornoAcaoService>(retorno);
+        }
+
+        public async Task<RetornoAcaoService> AdicionarLivro(LivroViewModel Livro)
+        {
+            var livro = mapper.Map<LivroEntity>(Livro);
+            var retorno = await livroRepository.InserirLivro(livro);
+            return mapper.Map<RetornoAcaoService>(retorno);
+        }
+
+        public async Task<RetornoAcaoService> DesativarLivro(int Id)
+        {
+            var retorno = await livroRepository.Desativar("tblWRILivro", Id);
             return mapper.Map<RetornoAcaoService>(retorno);
         }
     }
