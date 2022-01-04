@@ -1,0 +1,14 @@
+﻿<ul class="pagination">
+    @for (int i = 1; i <= ViewBag.TotalLinhas; i++)
+    {
+        if (ViewBag.Pagina == i)
+        {
+            <li class="active carmesim"><a onclick="proximaPagina(@i, 10)">@i</a></li>
+        }
+        else
+        {
+            <li class="waves-effect"><a asp-action="GerenciarLivro" asp-controller="Livro" , asp-route-Pagina="@i">@i</a></li>
+        }
+    }
+</ul>
+<script src="~/js/util/util.js"></script>

@@ -39,7 +39,7 @@
                         <span class="helper-text" data-error="Informe uma sessão!" data-success="Tudo certo!"></span>
                     </div>
                     <div class="input-field col s2">
-                        <select id="controlaSeqLivro">
+                        <select id="controlaSeqLivro" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="3">Não</option>
                             <option value="1">Sim</option>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s2">
-                        <select id="seqatozero">
+                        <select id="seqatozero" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">AV</option>
                             <option value="1">REG</option>
@@ -59,7 +59,7 @@
                         </select>
                         <label>Sequencia ato zero</label>
                     </div>
-                    <div class="input-field col s3">
+                    <div class="input-field col s3" required>
                         <select id="tipolivro">
                             <option value="" disabled selected>Escolha uma opção</option>
                             @if (livrosTJ is not null)
@@ -73,14 +73,14 @@
                         <label>Tipo de livro TJ</label>
                     </div>
                     <div class="input-field col s2">
-                        <select id="enviarDOI">
+                        <select id="enviarDOI" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
                         </select>
                         <label>Enviar DOI\EST</label>
                     </div>
-                    <div class="input-field col s2">
+                    <div class="input-field col s2" required>
                         <select id="apontarindisponibilidade">
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
@@ -89,7 +89,7 @@
                         <label>Apontar indisponibilidade</label>
                     </div>
                     <div class="input-field col s2">
-                        <select id="controlaseqato">
+                        <select id="controlaseqato" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
@@ -97,7 +97,7 @@
                         <label>Controlar sequência do ato</label>
                     </div>
                     <div class="input-field col s2">
-                        <select id="seqatoinicial">
+                        <select id="seqatoinicial" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
@@ -105,23 +105,23 @@
                         <label>Sequência ato inicial</label>
                     </div>
                     <div class="input-field col s2">
-                        <select id="validar_reg_anterior">
+                        <select id="validar_reg_anterior" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
                         </select>
                         <label>Validar registro anterior</label>
                     </div>
-                    <div class="input-field col s2">
-                        <select id="permitegarantia">
+                    <div class="input-field col s2" required>
+                        <select id="permitegarantia" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
                         </select>
                         <label>Permite descrever garantia</label>
                     </div>
-                    <div class="input-field col s2">
-                        <select id="transcricao">
+                    <div class="input-field col s2" required>
+                        <select id="transcricao" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="input-field col s3">
-                        <select id="enviarBDL">
+                        <select id="enviarBDL" required>
                             <option value="" disabled selected>Escolha uma opção</option>
                             <option value="0">Não</option>
                             <option value="1">Sim</option>
@@ -216,7 +216,11 @@
                     </tbody>
                 </table>
             </div>
+            <div>
+                <partial name="_Paginacao" />
+            </div>
         </div>
+        
         <div>
             <partial name="_ModalExcluir" />
         </div>

@@ -1,6 +1,8 @@
 ﻿const nomeController = 'Livro';
 const url = `https://localhost:7054/api/v1`;
 
+
+
 function limparCampos() {
     $('#livroForm').trigger("reset");
     mostrarForm();
@@ -75,103 +77,137 @@ function CarregarCamposEditarLivro(livroId) {
 }
 
 function editarLivro() {
+    var formValido = true;
+    $('input[type="text"]').each(function () {
+        if ($.trim($(this).val()).length == 0) 
+            formValido = false;
+    });
 
-    var endPoint = `${url}/${nomeController}/EditarLivro/`;
+    $('select').each(function () {
+        if ($.trim($(this).val()).length == 0) 
+            formValido = false;
+    });
 
-    $.ajax({
-        method: "PUT",
-        url: endPoint,
-        dataType: "json",
-        contentType: 'application/json; charset=UTF-8',
-        data: JSON.stringify({
-            "id": parseInt($('#idlivro').val()),
-            "descricaoLivro": $('#descricao').val(),
-            "sigla": $('#sigla').val(),
-            "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
-            "sessao": $('#sessao').val(),
-            "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
-            "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
-            "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
-            "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
-            "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
-            "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
-            "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
-            "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
-            "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
-            "enviaBDL": parseInt($('#enviarBDL').val()),
-            "idLivroTJ": $('#tipolivro').val()
-            
-        }),
+    if (formValido) {
+        var endPoint = `${url}/${nomeController}/EditarLivro/`
 
-        success: function (response) {
-            if (isNullOrEmpty(response.mensagemRetorno)) {
+        $.ajax({
+            method: "PUT",
+            url: endPoint,
+            dataType: "json",
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({
+                "id": parseInt($('#idlivro').val()),
+                "descricaoLivro": $('#descricao').val(),
+                "sigla": $('#sigla').val(),
+                "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
+                "sessao": $('#sessao').val(),
+                "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
+                "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
+                "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
+                "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
+                "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
+                "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
+                "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
+                "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
+                "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
+                "enviaBDL": parseInt($('#enviarBDL').val()),
+                "idLivroTJ": $('#tipolivro').val()
+
+            }),
+
+            success: function (response) {
+                if (isNullOrEmpty(response.mensagemRetorno)) {
+                    M.toast({
+                        html: "Livro alterado com sucesso.",
+                        classes: 'carmesim darken-4 rounded',
+                    });
+
+                    mostrarForm();
+                }
+
+            },
+            error: function (xhr, textStatus, errorThrown) {
                 M.toast({
-                    html: "Livro alterado com sucesso.",
+                    html: "Erro ao obter dados para edição do livro",
                     classes: 'carmesim darken-4 rounded',
                 });
-
-                mostrarForm();
             }
-
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            M.toast({
-                html: "Erro ao obter dados para edição do livro",
-                classes: 'carmesim darken-4 rounded',
-            });
-        }
-    })
-    console.log(livro);
+        })
+    }
 }
 
 
 
 function adicionarLivro() {
-    var endPoint = `${url}/${nomeController}/AdicionarLivro/`;
-    $.ajax({
-        method: "POST",
-        url: endPoint,
-        dataType: "json",
-        contentType: 'application/json; charset=UTF-8',
-        data: JSON.stringify({
-            "descricaoLivro": $('#descricao').val(),
-            "sigla": $('#sigla').val(),
-            "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
-            "sessao": $('#sessao').val(),
-            "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
-            "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
-            "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
-            "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
-            "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
-            "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
-            "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
-            "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
-            "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
-            "enviaBDL": parseInt($('#enviarBDL').val()),
-            "idLivroTJ": $('#tipolivro').val(),
-            "Ativo": true
+    var formValido = true;
+    $('input[type="text"]').each(function () {
+        if ($.trim($(this).val()).length == 0) {
+            formValido = false;
+        }
+    });
 
-        }),
+    $('select').each(function () {
+        if ($.trim($(this).val()).length == 0) {
+            formValido = false;
+        }
+    });
 
-        success: function (response) {
-            if (isNullOrEmpty(response.mensagemRetorno)) {
+    if (formValido) {
+        var endPoint = `${url}/${nomeController}/AdicionarLivro/`;
+        $.ajax({
+            method: "POST",
+            url: endPoint,
+            dataType: "json",
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({
+                "descricaoLivro": $('#descricao').val(),
+                "sigla": $('#sigla').val(),
+                "ultimaSequenciaUtilizada": $('#ultimasequencia').val(),
+                "sessao": $('#sessao').val(),
+                "controlaSequenciaDoAto": retornarTrueOrFalse(parseInt($('#controlaseqato').val())),
+                "PermiteSequenciaDoAtoZero": $('#seqatozero').val(),
+                "controlaSequenciaDoLivro": $('#controlaSeqLivro').val(),
+                "sequenciaInicialAtos": parseInt($('#seqatoinicial').val()),
+                "permiteDescreverGarantia": parseInt($('#permitegarantia').val()),
+                "enviarDOI": retornarTrueOrFalse(parseInt($('#enviarDOI').val())),
+                "validarRegistroAnterior": retornarTrueOrFalse(parseInt($('#validar_reg_anterior').val())),
+                "indisponibilidade": retornarTrueOrFalse(parseInt($('#apontarindisponibilidade').val())),
+                "transcricao": retornarTrueOrFalse(parseInt($('#transcricao').val())),
+                "enviaBDL": parseInt($('#enviarBDL').val()),
+                "idLivroTJ": $('#tipolivro').val(),
+                "Ativo": true
+
+            }),
+
+            success: function (response) {
+                if (isNullOrEmpty(response.mensagemRetorno)) {
+                    M.toast({
+                        html: "Livro cadastrado com sucesso.",
+                        classes: 'carmesim darken-4 rounded',
+                    });
+
+                    location.reload(true);
+                }
+
+            },
+            error: function (xhr, textStatus, errorThrown) {
                 M.toast({
-                    html: "Livro cadastrado com sucesso.",
+                    html: "Erro ao inserir o livro",
                     classes: 'carmesim darken-4 rounded',
                 });
-
-                location.reload(true);
             }
-
-        },
-        error: function (xhr, textStatus, errorThrown) {
+        })
+        console.log(livro);
+    }
+    else {
+        if (!formValido) {
             M.toast({
-                html: "Erro ao inserir o livro",
+                html: "Preencha os campos corretamente.",
                 classes: 'carmesim darken-4 rounded',
             });
         }
-    })
-    console.log(livro);
+    }
 }
 
 

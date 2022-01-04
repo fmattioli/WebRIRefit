@@ -26,7 +26,7 @@ namespace RI.Web.API.Controllers
             return BadRequest(ModelState);
         }
 
-
+        //[ApiExplorerSettings(IgnoreApi = true)]
         [HttpGet("ObterLivrosTJ")]
         [ProducesResponseType(typeof(RetornoAcaoService<IEnumerable<LivroTJViewModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

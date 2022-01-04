@@ -36,4 +36,7 @@ function retornarTrueOrFalse(value) {
 }
 
 
+function proximaPagina() {
+    alert('oi');
+}
 

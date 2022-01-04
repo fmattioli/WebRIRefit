@@ -6,7 +6,7 @@ using RI.Web.Application.ViewModels.Livro;
 
 namespace RI.Web.UI.Controllers
 {
-    public class LivroController : BaseController
+    public class LivroController : BaseController<LivroViewModel>
     {
         private readonly ILivroService livroService;
         public LivroController(ILivroService livroService) => this.livroService = livroService;
@@ -15,10 +15,25 @@ namespace RI.Web.UI.Controllers
         public async Task<IActionResult> GerenciarLivro()
         {
             var retorno = await ObterLivros();
-            if (retorno.Sucesso)
-                return View(retorno.Result);
-            else
-                return BadRequest(retorno.MensagemRetorno);
+            if (retorno.Sucesso && retorno.Result is not null)
+            {
+                var retornoPaginacao = ConfigurarPaginacao(retorno.Result, retorno?.Result?.Count(), 10, 1);
+                return View(retornoPaginacao);
+            }
+
+            return BadRequest(retorno.MensagemRetorno);
+        }
+
+        [HttpGet("{Pagina}", Name = "GerenciarLivro")]
+        public async Task<IActionResult> GerenciarLivro(int Pagina)
+        {
+            var retorno = await ObterLivros();
+            if (retorno.Sucesso && retorno.Result is not null)
+            {
+                var retornoPaginacao = ConfigurarPaginacao(retorno.Result, retorno?.Result?.Count(), 10, Pagina);
+                return View("GerenciarLivro", retornoPaginacao);
+            }
+            return BadRequest(retorno.MensagemRetorno);
         }
 
         public async Task<RetornoAcaoService<IEnumerable<LivroViewModel>>> ObterLivros()
@@ -29,9 +44,12 @@ namespace RI.Web.UI.Controllers
             {
                 var retornoLivros = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroViewModel>>>(await retornoLivro.Content.ReadAsStringAsync());
                 var retornoLivrosTJ = JsonConvert.DeserializeObject<RetornoAcaoService<IEnumerable<LivroTJViewModel>>>(await retornoLivroTJ.Content.ReadAsStringAsync());
-                ViewBag.LivrosTJ = retornoLivrosTJ?.Result;
+
                 if (retornoLivros is not null && retornoLivros.Sucesso && retornoLivrosTJ is not null && retornoLivrosTJ.Sucesso)
+                {
+                    ViewBag.LivrosTJ = retornoLivrosTJ.Result;
                     return retornoLivros;
+                }
             }
 
             var retornoLivrosErro = new RetornoAcaoService<IEnumerable<LivroViewModel>>
