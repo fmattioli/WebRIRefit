@@ -2124,6 +2124,11 @@
 }
 
 .borgonha {
+    background-color: #5a0000 !important;
+}
+
+
+.bordo {
     background-color: #7f0101 !important;
 }
 
@@ -3460,7 +3465,6 @@ table span.badge {
 
 .container {
     margin: 0 auto;
-    max-width: 1280px;
     width: 90%;
 }
 
@@ -3472,7 +3476,7 @@ table span.badge {
 
 @media only screen and (min-width: 993px) {
     .container {
-        width: 70%;
+        width: 85%;
     }
 }
 
@@ -3518,12 +3522,26 @@ table span.badge {
         min-height: 1px;
     }
 
+    .row .button-recepcao {
+        float: left;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 0.35rem;
+        min-height: 1px;
+    }
+
         .row .col[class*="push-"], .row .col[class*="pull-"] {
             position: relative;
         }
 
         .row .col.s1 {
             width: 8.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .row .col.button-recepcao {
             margin-left: auto;
             left: auto;
             right: auto;
@@ -4502,7 +4520,7 @@ nav .sidenav-trigger {
 
 nav .brand-logo {
     position: relative;
-    left: 13%;
+    left: 8%;
     color: #000000;
     display: inline-block;
     font-size: 2.1rem;
@@ -4687,7 +4705,7 @@ html {
 
 @media only screen and (min-width: 1200px) {
     html {
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -5201,6 +5219,8 @@ small {
 .tabs {
     position: relative;
     overflow-x: auto;
+    display:flex;
+    flex-direction:row;
     overflow-y: hidden;
     height: 48px;
     width: 100%;
@@ -5253,10 +5273,11 @@ small {
     }
 
         .tabs .tab a {
-            color: rgba(238, 110, 115, 0.7);
+            color: #000000;
             display: block;
             width: 100%;
             height: 100%;
+            font-weight: bold;
             padding: 0 24px;
             font-size: 14px;
             text-overflow: ellipsis;
@@ -5272,7 +5293,7 @@ small {
 
             .tabs .tab a:hover, .tabs .tab a.active {
                 background-color: transparent;
-                color: #ee6e73;
+                color: #5a0000;
             }
 
         .tabs .tab.disabled a,
@@ -6036,6 +6057,7 @@ body.keyboard-focused .dropdown-content li:focus {
     display: flex;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    font-weight:bold;
     line-height: 1.5;
     padding: 1rem;
     background-color: #fff;

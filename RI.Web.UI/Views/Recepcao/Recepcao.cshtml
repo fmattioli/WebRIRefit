@@ -1,0 +1,443 @@
+﻿<title>Recepção</title>
+<div class="section"></div>
+<partial name="recepcao/_menu" />
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3 carmesim"><a class="active" href="#test1">Recepção</a></li>
+            <li class="tab col s3 carmesim"><a href="#test2">Andamentos</a></li>
+            <li class="tab col s3 carmesim"><a class="active" href="#test2">Selos</a></li>
+            <li class="tab col s3 carmesim disabled"><a href="#test3">Tarefas</a></li>
+            <li class="tab col s3 carmesim"><a class="active" href="#test2">SisCoaf</a></li>
+        </ul>
+    </div>
+    <div id="test1" class="col s12">
+        <ul class="collapsible">
+            <li class="active">
+                <div class="collapsible-header carmesim"><i class="material-icons">content_paste</i>Dados da prenotação</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="input-field col s2">
+                            <select id="natureza" required>
+                                <option value="" disabled selected>Escolha uma</option>
+                                <option value="0">AV</option>
+                                <option value="1">REG</option>
+                                <option value="2">ABM</option>
+                                <option value="3">Todas</option>
+                            </select>
+                            <label>Tipo da prenotação</label>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="protocolo" type="text" class="validate" required>
+                            <label for="protocolo">Protocolo</label>
+                            <span class="helper-text" data-error="Informe um protocolo!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="magnetico" type="text" class="validate" required disabled>
+                            <label for="magnetico">Magnético</label>
+                            <span class="helper-text"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="solicitacao" type="text" class="validate" required>
+                            <label for="solicitacao">Solicitação</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="nratendimento" type="text" class="validate" required>
+                            <label for="nratendimento">Nr atendimento</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="rps" type="text" class="validate" required>
+                            <label for="rps">RPS</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='input-field col s2'>
+                            <input id="dataprotocolo" type="text" class="validate" required>
+                            <label for="dataprotocolo">Data protocolo</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="previsao" type="text" class="validate" required>
+                            <label for="previsao">Data previsão</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="dataexigencia" type="text" class="validate" required>
+                            <label for="dataexigencia">Exigência</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="seq" type="text" class="validate" required>
+                            <label for="seq">Seq</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="dataregistro" type="text" class="validate" required>
+                            <label for="dataregistro">Registro</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="datacancelamento" type="text" class="validate" required>
+                            <label for="datacancelamento">Data cancelamento</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='input-field col s2'>
+                            <input id="reentrada" type="text" class="validate" required>
+                            <label for="reentrada">Reentrada</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="dataexpira" type="text" class="validate" required>
+                            <label for="dataexpira">Data expira</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="previacustas" type="text" class="validate" required>
+                            <label for="previacustas">Prévia de custas</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="deposito" type="text" class="validate" required>
+                            <label for="deposito">Depósito</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s1'>
+                            <input id="acessorias" type="text" class="validate" required>
+                            <label for="acessorias">Acessórias</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="custas" type="text" class="validate" required>
+                            <label for="custas">Custas</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                        <div class='input-field col s1'>
+                            <input id="saldo" type="text" class="validate" required>
+                            <label for="saldo">Saldo</label>
+                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header carmesim"><i class="material-icons">storage</i>Dados do título</div>
+                <div class="collapsible-body">
+                    <form id="livroForm">
+                        <div class="row">
+                            <div class="input-field col s2">
+                                <select id="natureza" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Natureza</label>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="negocio" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Negócio</label>
+                            </div>
+                            <div class='input-field col s3'>
+                                <input id="orgao" type="text" class="validate" required>
+                                <label for="orgao">Orgão</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="datatitulo" type="text" class="validate" required>
+                                <label for="datatitulo">Data título</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="processo" type="text" class="validate" required>
+                                <label for="processo">Processo</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='input-field col s1'>
+                                <input id="oficio" type="text" class="validate" required>
+                                <label for="oficio">Ofício</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s1'>
+                                <input id="livro" type="text" class="validate" required>
+                                <label for="livro">Livro</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s1'>
+                                <input id="complemento" type="text" class="validate" required>
+                                <label for="complemento">Compl.</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s1'>
+                                <input id="folhainicial" type="text" class="validate" required>
+                                <label for="folhainicial">Folha inicial</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="complementofolhainicial" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Compl.</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="folhafinal" type="text" class="validate" required>
+                                <label for="sigla">Folha final</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="complementofolhafinal" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Compl.</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="dataprevisao" type="text" class="validate" required>
+                                <label for="dataprevisao">Data previsão</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="observacaotitulo" class="materialize-textarea"></textarea>
+                                <label>Observação</label>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header carmesim"><i class="material-icons">person_add</i>Dados do apresentante</div>
+                <div class="collapsible-body">
+                    <form id="livroForm">
+                        <blockquote>
+                            Apresentante
+                        </blockquote>
+                        <div class="row">
+                            <div class="input-field col s2">
+                                <select id="tipodocumento" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo documento</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="numerodocumentoapresentante" type="text" class="validate" required>
+                                <label for="sigla">Documento</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="nome" type="text" class="validate" required>
+                                <label for="nome">Nome</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="tipotelefone" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo telefone</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="telefone" type="text" class="validate" required>
+                                <label for="telefone">Telefone</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="email" type="text" class="validate" required>
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                 <div class="collapsible-body">
+                    <form id="livroForm">
+                        <blockquote>
+                            Contato
+                        </blockquote>
+                        <div class="row">
+                            <div class="input-field col s2">
+                                <select id="tipodocumento" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo documento</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="numerodocumentoapresentante" type="text" class="validate" required>
+                                <label for="sigla">Documento</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="nome" type="text" class="validate" required>
+                                <label for="nome">Nome</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="tipotelefone" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo telefone</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="telefone" type="text" class="validate" required>
+                                <label for="telefone">Telefone</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="email" type="text" class="validate" required>
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="collapsible-body">
+                    <form id="livroForm">
+                        <blockquote>
+                            Cliente para movimentação
+                        </blockquote>
+                        <div class="row">
+                            <div class="input-field col s2">
+                                <select id="tipodocumento" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo documento</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="numerodocumentoapresentante" type="text" class="validate" required>
+                                <label for="sigla">Documento</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="nome" type="text" class="validate" required>
+                                <label for="nome">Nome</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class="input-field col s2">
+                                <select id="banco" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Banco</label>
+                            </div>
+                             <div class="input-field col s2">
+                                <select id="tptelefone" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Telefone</label>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="telefone" type="text" class="validate" required>
+                                <label for="telefone">Telefone</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="email" type="text" class="validate" required>
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                             <div class='input-field col s2'>
+                                <input id="email" type="text" class="validate" required>
+                                <label for="email">Agencia</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                             <div class='input-field col s1'>
+                                <input id="email" type="text" class="validate" required>
+                                <label for="email">Conta</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                             <div class="input-field col s2">
+                                <select id="tptelefone" required>
+                                    <option value="" disabled selected>Escolha uma</option>
+                                    <option value="0">AV</option>
+                                    <option value="1">REG</option>
+                                    <option value="2">ABM</option>
+                                    <option value="3">Todas</option>
+                                </select>
+                                <label>Tipo conta</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header carmesim"><i class="material-icons">group_add</i>Participantes</div>
+                <div class="collapsible-body">
+                    <form id="livroForm">
+                        <div class="row">
+                            <div class='input-field col s5'>
+                                <input id="numerodocumentoapresentante" type="text" class="validate" required>
+                                <label for="sigla">Outorgante</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s5'>
+                                <input id="nome" type="text" class="validate" required>
+                                <label for="nome">Outorgado</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                            <div class='input-field col s2'>
+                                <input id="telefone" type="text" class="validate" required>
+                                <label for="telefone">Livro</label>
+                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div id="test2" class="col s12"></div>
+    <div id="test3" class="col s12"></div>
+    <div id="test4" class="col s12"></div>
+</div>
+
+
+<script src="~/js/livro/Livro.js"></script>

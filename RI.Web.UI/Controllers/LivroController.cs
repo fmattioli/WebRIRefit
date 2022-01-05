@@ -12,7 +12,7 @@ namespace RI.Web.UI.Controllers
         public LivroController(ILivroService livroService) => this.livroService = livroService;
 
         [HttpGet]
-        public async Task<IActionResult> GerenciarLivro()
+        public async Task<IActionResult> GerenciarLivros()
         {
             var retorno = await ObterLivros();
             if (retorno.Sucesso && retorno.Result is not null)
@@ -31,7 +31,7 @@ namespace RI.Web.UI.Controllers
             if (retorno.Sucesso && retorno.Result is not null)
             {
                 var retornoPaginacao = ConfigurarPaginacao(retorno.Result, retorno?.Result?.Count(), 10, Pagina);
-                return View("GerenciarLivro", retornoPaginacao);
+                return View("GerenciarLivros", retornoPaginacao);
             }
             return BadRequest(retorno.MensagemRetorno);
         }

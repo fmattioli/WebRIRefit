@@ -6,14 +6,13 @@
     <link href="~/lib/materialize/css/materialize.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-    <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/modaladicionar.css" rel="stylesheet" />
 
 </head>
 <body>
     <header>
         <ul id="acesso_rapido" class="dropdown-content">
-            <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Recepção</a></li>
+            <li><a class="black-text" asp-action="Recepcao" asp-controller="Recepcao">Recepção</a></li>
             <li><a class="black-text" asp-action="Home" asp-controller="Intencao">Certidão</a></li>
         </ul>
 
@@ -26,7 +25,7 @@
         </ul>
 
         <ul id="cadastros" class="dropdown-content">
-            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Livro</a></li>
+            <li><a class="black-text" asp-action="GerenciarLivros" asp-controller="Livro">Livro</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Pessoa</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Imóveis</a></li>
         </ul>
@@ -41,7 +40,7 @@
 
 
         <ul id="manutencoes" class="dropdown-content">
-            <li><a class="black-text" asp-action="GerenciarLivro" asp-controller="Livro">Usuários</a></li>
+            <li><a class="black-text" asp-action="GerenciarLivros" asp-controller="Livro">Usuários</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Parâmetros</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Usuarios">Sequencias</a></li>
             <li><a class="black-text" asp-action="Cadastrar" asp-controller="Imoveis">Estornar cancelamento</a></li>
@@ -113,6 +112,8 @@
     <script src="~/js/inicializacoes/InicializarTooltips.js"></script>
     <script src="~/js/inicializacoes/InicializarDatepicker.js"></script>
     <script src="~/js/inicializacoes/inicializarselects.js"></script>
+    <script src="~/js/inicializacoes/inicializarCollapsible.js"></script>
+    <script src="~/js/inicializacoes/inicializarTabs.js"></script>
     <script src="~/js/util/util.js"></script>
 </body>
 </html>

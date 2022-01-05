@@ -76,3 +76,4 @@ C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.Data.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.IoC.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.IoC.pdb
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\bin\Debug\net6.0\RI.Web.Infra.Data.pdb
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.UI\obj\Debug\net6.0\scopedcss\Views\Shared\recepcao\_Menu.cshtml.rz.scp.css

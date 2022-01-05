@@ -3,7 +3,7 @@
     {
         if (ViewBag.Pagina == i)
         {
-            <li class="active carmesim"><a onclick="proximaPagina(@i, 10)">@i</a></li>
+            <li class="active carmesim"><a asp-action="GerenciarLivro" asp-controller="Livro" , asp-route-Pagina="1">@i</a></li>
         }
         else
         {
@@ -11,4 +11,3 @@
         }
     }
 </ul>
-<script src="~/js/util/util.js"></script>
