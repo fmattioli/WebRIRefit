@@ -1,16 +1,14 @@
 ﻿using RI.Application.ViewModels.Recepcao.Titulo;
 using RI.Application.ViewModels.Usuario;
 using RI.Web.Application.ViewModels.Cliente;
+using RI.Web.Application.ViewModels.TipoPrenotacao;
 using RI.Web.Domain.Entities.Banco;
 using RI.Web.Domain.Entities.MensagemCertidaoTalao;
 
 namespace RI.Web.Application.ViewModels.Recepcao
 {
-    public class RecepcaoViewModel
+    public class RecepcaoViewModel : TituloViewModel
     {
-        public short? FlagRecepcao { get; set; }
-        public int? Recepcao { get; set; }
-        public int? SeqTitulo { get; set; }
         public short? TipoPrenotacaoId { get; set; }
         public TituloInformacoesViewModel TituloInformacoes { get; set; }
         public int? NumPrenotacao { get; set; }

@@ -1,5 +1,6 @@
 ﻿using RI.Web.Domain.Entities.Cliente;
 using RI.Web.Domain.Entities.Recepcao.Titulo;
+using RI.Web.Domain.Entities.TipoPrenotacao;
 
 namespace RI.Web.Domain.Entities.Recepcao
 {
@@ -23,7 +24,7 @@ namespace RI.Web.Domain.Entities.Recepcao
         public decimal Saldo { get; set; }
         public decimal VlrTotCustas { get; set; }
         public short QtdTitulos { get; set; }
-        public TipoPrenotacao TipoPrenotacao { get; set; }
+        public TipoPrenotacaoEntity TipoPrenotacao { get; set; }
         public DateTime DataCancelamento { get; set; }
         public short TipoCancelamento { get; set; }
         public DateTime DataExpiraPrn { get; set; }
@@ -107,7 +108,7 @@ namespace RI.Web.Domain.Entities.Recepcao
             FlagRegParcial = "N";
             FlagCancelamento = "N";
             FlagExpiraPrn = "";
-            TipoPrenotacao = new TipoPrenotacao();
+            TipoPrenotacao = new TipoPrenotacaoEntity();
             Cliente = new Cliente.Cliente();
             ClienteSeqContato = new ClienteSeqContato();
             ClienteApresentante = new Cliente.Cliente();

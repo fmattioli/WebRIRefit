@@ -5,7 +5,7 @@ using RI.Application.ViewModels.Usuario;
 
 namespace RI.Application.ViewModels.Recepcao.Titulo
 {
-    public class TituloInformacoesViewModel : TituloBasicoViewModel
+    public class TituloInformacoesViewModel : TituloViewModel
     {
         public int Num_LivroTN { get; set; }
         public short FolhaTN { get; set; }

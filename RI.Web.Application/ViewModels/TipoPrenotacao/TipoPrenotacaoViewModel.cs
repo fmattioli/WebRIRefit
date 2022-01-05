@@ -1,8 +1,8 @@
-﻿namespace RI.Web.Domain.Entities.Recepcao
+﻿namespace RI.Web.Application.ViewModels.TipoPrenotacao
 {
-    public class TipoPrenotacao
+    public class TipoPrenotacaoViewModel
     {
-        public int IdTipoPrenotacao { get; set; }
+        public int Id { get; set; }
         public string? DescricaoTipoPrenotacao { get; set; }
         public short Validade { get; set; }
         public bool NuncaExpira { get; set; }

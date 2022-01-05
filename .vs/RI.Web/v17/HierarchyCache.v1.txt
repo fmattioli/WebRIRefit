@@ -1,17 +1,134 @@
 ﻿++Solution 'RI.Web' ‎(6 of 6 projects)
 i:{00000000-0000-0000-0000-000000000000}:RI.Web.sln
+++Script Documents
+++util.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\util\util.js
+++Livro.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\livro\livro.js
+++jquery.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\dist\jquery.js
+++confirmarexclusao.js
+++materialize.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\js\materialize.js
+++InicializarTooltips.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializartooltips.js
+++InicializarDatepicker.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializardatepicker.js
+++inicializarselects.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializarselects.js
+++aspnetcore-browser-refresh.js
+++browserLink
+++RI.Web.Infra.Data
+i:{00000000-0000-0000-0000-000000000000}:RI.Web.Infra.Data
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.data\bin\debug\net6.0\ri.web.infra.data.dll
+++Dependencies
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>566
+i:{9819e00c-923c-4634-af52-ff6463832150}:>1117
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>568
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:>567
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:>569
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1116
+++Base
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\base\
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\base\
+++ConfigDB
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\
+++Livro
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\interfaces\livro\
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\services\livro\
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\livro\
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\livro\
+++Recepcao
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\recepcao\
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\recepcao\
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\recepcao\
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\recepcao\
+++RecepcaoRepository.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\recepcao\recepcaorepository.cs
+++Analyzers
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:analyzers
+i:{9819e00c-923c-4634-af52-ff6463832150}:analyzers
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:analyzers
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:analyzers
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:analyzers
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:analyzers
+++Frameworks
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:frameworks
+i:{9819e00c-923c-4634-af52-ff6463832150}:frameworks
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:frameworks
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:frameworks
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:frameworks
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:frameworks
+++Packages
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:packages
+i:{9819e00c-923c-4634-af52-ff6463832150}:packages
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:packages
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:packages
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:packages
+++Projects
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:projects
+i:{9819e00c-923c-4634-af52-ff6463832150}:projects
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:projects
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:projects
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:projects
+++BaseRepository.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\base\baserepository.cs
+++ConfigDapper.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\configdapper.cs
+++ConfigSQLServer.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\configsqlserver.cs
+++LivroRepository.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\livrorepository.cs
+++LivroTJRepository.cs
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\livrotjrepository.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++System.Text.Json.SourceGeneration
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\microsoft.netcore.app
+i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\microsoft.netcore.app
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\microsoft.netcore.app
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\microsoft.netcore.app
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\microsoft.netcore.app
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\microsoft.netcore.app
+++Dapper (2.0.123)
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1153
+++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1150
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1152
+++System.Data.SqlClient (4.8.3)
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1155
+++RI.Web.Domain
+i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.domain\bin\debug\net6.0\ri.web.domain.dll
+i:{00000000-0000-0000-0000-000000000000}:RI.Web.Domain
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.domain\bin\debug\net6.0\ri.web.domain.dll
 ++RI.Web.API
 i:{00000000-0000-0000-0000-000000000000}:RI.Web.API
 ++Connected Services 
-i:{9819e00c-923c-4634-af52-ff6463832150}:>1117
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1116
-++Dependencies
-i:{9819e00c-923c-4634-af52-ff6463832150}:>1115
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:>565
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>563
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>562
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:>564
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1114
+i:{9819e00c-923c-4634-af52-ff6463832150}:>1118
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1119
 ++Properties
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\properties\
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\properties\
@@ -23,6 +140,7 @@ i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.a
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\livrocontroller.cs
 ++RecepcaoController.cs
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\controllers\recepcaocontroller.cs
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\recepcaocontroller.cs
 ++appsettings.json
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\appsettings.json
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\appsettings.json
@@ -32,34 +150,8 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 ++Startup.cs
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\startup.cs
 ++No service dependencies discovered
-i:{9819e00c-923c-4634-af52-ff6463832150}:>1119
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1118
-++Analyzers
-i:{9819e00c-923c-4634-af52-ff6463832150}:analyzers
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:analyzers
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:analyzers
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:analyzers
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:analyzers
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:analyzers
-++Frameworks
-i:{9819e00c-923c-4634-af52-ff6463832150}:frameworks
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:frameworks
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:frameworks
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:frameworks
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:frameworks
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:frameworks
-++Packages
-i:{9819e00c-923c-4634-af52-ff6463832150}:packages
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:packages
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:packages
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:packages
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:packages
-++Projects
-i:{9819e00c-923c-4634-af52-ff6463832150}:projects
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:projects
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:projects
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:projects
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:projects
+i:{9819e00c-923c-4634-af52-ff6463832150}:>1120
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1121
 ++launchSettings.json
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\properties\launchsettings.json
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\properties\launchsettings.json
@@ -84,55 +176,40 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdk
 ++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.Extensions.Logging.Generators
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++Microsoft.NET.Sdk.Razor.SourceGenerators
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
-++System.Text.Json.SourceGeneration
-i:{9819e00c-923c-4634-af52-ff6463832150}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 ++Microsoft.AspNetCore.App
 i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\microsoft.aspnetcore.app
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\microsoft.aspnetcore.app
-++Microsoft.NETCore.App
-i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.api\microsoft.netcore.app
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\microsoft.netcore.app
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\microsoft.netcore.app
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\microsoft.netcore.app
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\microsoft.netcore.app
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\microsoft.netcore.app
 ++Swashbuckle.AspNetCore (6.2.3)
-i:{9819e00c-923c-4634-af52-ff6463832150}:>1154
+i:{9819e00c-923c-4634-af52-ff6463832150}:>1197
 ++RI.Web.Infra.IoC
-i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\ri.web.infra.ioc.csproj
+i:{9819e00c-923c-4634-af52-ff6463832150}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\bin\debug\net6.0\ri.web.infra.ioc.dll
 i:{00000000-0000-0000-0000-000000000000}:RI.Web.Infra.IoC
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\ri.web.infra.ioc.csproj
-++RI.Web.Domain
-i:{00000000-0000-0000-0000-000000000000}:RI.Web.Domain
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.domain\ri.web.domain.csproj
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.domain\ri.web.domain.csproj
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\bin\debug\net6.0\ri.web.infra.ioc.dll
+++AutoMapperConfig.cs
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\automapperconfig.cs
+++DependecyInjection.cs
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\dependecyinjection.cs
+++AutoMapper.Extensions.Microsoft.DependencyInjection (8.1.1)
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1151
+++Microsoft.Extensions.Configuration (6.0.0)
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1156
+++Microsoft.Extensions.DependencyInjection.Abstractions (6.0.0)
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1154
+++RI.Web.Application
+i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.application\bin\debug\net6.0\ri.web.application.dll
+i:{00000000-0000-0000-0000-000000000000}:RI.Web.Application
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.application\bin\debug\net6.0\ri.web.application.dll
 ++Entities
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\
+++Interfaces
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\interfaces\
 ++Acoes
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\acoes\
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\services\acoes\
@@ -150,18 +227,6 @@ i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.d
 ++EstadoCivil
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\estadocivil\
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\estadocivil\
-++Livro
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\interfaces\livro\
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\services\livro\
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\livro\
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\livro\
-++LivroEntity.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\livroentity.cs
-++LivroTJ.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\livrotj.cs
 ++MensagemCertidaoTalao
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\mensagemcertidaotalao\
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\mensagemcertidaotalao\
@@ -179,11 +244,6 @@ i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.a
 ++Profissao
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\profissao\
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\profissao\
-++Recepcao
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\recepcao\
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\recepcao\
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\recepcao\
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\
 ++SIPEntities
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\sipentities\
 ++Texto
@@ -195,9 +255,6 @@ i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.a
 ++Usuario
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\usuario\
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\usuario\
-++Interfaces
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\interfaces\
 ++RetornoAcao.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\acoes\retornoacao.cs
 ++Banco.cs
@@ -216,6 +273,10 @@ i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.d
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\estadocivil\estadocivil.cs
 ++PeerEstadoCivil.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\estadocivil\peerestadocivil.cs
+++LivroEntity.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\livroentity.cs
+++LivroTJ.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\livro\livrotj.cs
 ++MensagemCertidaoTalao.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\mensagemcertidaotalao\mensagemcertidaotalao.cs
 ++MolduraExtrato.cs
@@ -256,9 +317,14 @@ i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.d
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\usuario\setores.cs
 ++Usuario.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\usuario\usuario.cs
-++Base
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\base\
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\base\
+++IBaseRepository.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\base\ibaserepository.cs
+++ILivroRepository.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\ilivrorepository.cs
+++ILivroTJRepository.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\ilivrotjrepository.cs
+++IRecepcaoRepository.cs
+i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\recepcao\irecepcaorepository.cs
 ++Amortizacao.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\recepcao\titulo\amortizacao.cs
 ++Indice.cs
@@ -275,52 +341,6 @@ i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.d
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\recepcao\titulo\titulobasicoentity.cs
 ++TituloInformacoes.cs
 i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\entities\recepcao\titulo\tituloinformacoes.cs
-++IBaseRepository.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\base\ibaserepository.cs
-++ILivroRepository.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\ilivrorepository.cs
-++ILivroTJRepository.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\livro\ilivrotjrepository.cs
-++IRecepcaoRepository.cs
-i:{52b1901e-2cd5-477c-9d44-30c6e3a0ea2d}:c:\projetos\refitri\webrirefit\ri.web.domain\interfaces\recepcao\irecepcaorepository.cs
-++RI.Web.Infra.Data
-i:{00000000-0000-0000-0000-000000000000}:RI.Web.Infra.Data
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.data\ri.web.infra.data.csproj
-++ConfigDB
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\
-++BaseRepository.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\base\baserepository.cs
-++ConfigDapper.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\configdapper.cs
-++ConfigSQLServer.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\configdb\configsqlserver.cs
-++LivroRepository.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\livrorepository.cs
-++LivroTJRepository.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\livro\livrotjrepository.cs
-++RecepcaoRepository.cs
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:c:\projetos\refitri\webrirefit\ri.web.infra.data\recepcao\recepcaorepository.cs
-++Dapper (2.0.123)
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1127
-++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1126
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1138
-++System.Data.SqlClient (4.8.3)
-i:{ab46667f-9fc1-4ef2-9168-2bf924c1dfd0}:>1128
-++AutoMapperConfig.cs
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\automapperconfig.cs
-++DependecyInjection.cs
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.infra.ioc\dependecyinjection.cs
-++AutoMapper.Extensions.Microsoft.DependencyInjection (8.1.1)
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1137
-++Microsoft.Extensions.Configuration (6.0.0)
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1140
-++Microsoft.Extensions.DependencyInjection.Abstractions (6.0.0)
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:>1139
-++RI.Web.Application
-i:{9f392665-fd32-4400-b306-ef602cf27f7d}:c:\projetos\refitri\webrirefit\ri.web.application\ri.web.application.csproj
-i:{00000000-0000-0000-0000-000000000000}:RI.Web.Application
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.application\ri.web.application.csproj
 ++Mappings
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\mappings\
 ++Services
@@ -338,7 +358,7 @@ i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.a
 ++TipoDocumento
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\tipodocumento\
 ++AutoMapper (10.1.1)
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:>1168
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:>1149
 ++ILivroService.cs
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\interfaces\livro\ilivroservice.cs
 ++IRecepcaoService.cs
@@ -404,7 +424,6 @@ i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.a
 ++TipoGrauViewModel.cs
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\titulo\tipograuviewmodel.cs
 ++TituloBasicoViewModel.cs
-i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\titulo\titulobasicoviewmodel.cs
 ++TituloInformacoesViewModel.cs
 i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\titulo\tituloinformacoesviewmodel.cs
 ++RI.Web.UI
@@ -425,25 +444,56 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\
 ++livro
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\livro\
-++Livro.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\livro\livro.js
 ++util
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\util\
+++ConfirmarExclusao.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\util\confirmarexclusao.js
 ++lib
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\
+++bootstrap
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\
+++jquery
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\
+++jquery-validation
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation-unobtrusive\
+++materialize
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\
+++materialize.css
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\css\materialize.css
+++LICENSE
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\license
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\license
+++README.md
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\readme.md
 ++favicon.ico
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\favicon.ico
+++BaseController.cs
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\basecontroller.cs
+++HomeController.cs
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\homecontroller.cs
 ++Models
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\models\
-++NewFolder
 ++Views
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\
 ++Home
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\home\
+++Index.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\home\index.cshtml
 ++GerenciarLivro.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\livro\gerenciarlivro.cshtml
 ++Shared
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\
+++_Layout.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_layout.cshtml
+++_ModalExcluir.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_modalexcluir.cshtml
+++_Paginacao.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_paginacao.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\error.cshtml
 ++_ViewImports.cshtml
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\_viewimports.cshtml
 ++_ViewStart.cshtml
@@ -456,57 +506,14 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\css\site.css
 ++logo.png
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\imagens\logo.png
-++InicializarDatepicker.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializardatepicker.js
-++inicializarselects.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializarselects.js
 ++InicializarSideNav.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializarsidenav.js
-++InicializarTooltips.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializartooltips.js
 ++IniciarMascaras.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\iniciarmascaras.js
-++ConfirmarExclusao.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\util\confirmarexclusao.js
-++util.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\util\util.js
-++bootstrap
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\
-++jquery
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\
-++jquery-validation
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\
-++jquery-validation-unobtrusive
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation-unobtrusive\
-++materialize
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\
-++BaseController.cs
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\basecontroller.cs
-++HomeController.cs
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\controllers\homecontroller.cs
-++LivroComponent.cs
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\models\livrocomponent.cs
-++Index.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\home\index.cshtml
-++_Layout.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_layout.cshtml
-++_ModalExcluir.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_modalexcluir.cshtml
-++_ValidationScriptsPartial.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_validationscriptspartial.cshtml
-++Error.cshtml
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\error.cshtml
-++Newtonsoft.Json (13.0.1)
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1181
-++System.Net.Http (4.3.4)
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1182
 ++dist
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\dist\
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\dist\
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\dist\
-++LICENSE
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\license
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\license
 ++LICENSE.txt
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\license.txt
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation-unobtrusive\license.txt
@@ -514,22 +521,24 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\license.md
 ++jquery.validate.unobtrusive.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
-++README.md
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\readme.md
+++materialize.min.css
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\css\materialize.min.css
+++LivroComponent.cs
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\models\livrocomponent.cs
 ++_Layout.cshtml.css
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\_layout.cshtml.css
-++jquery.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery\dist\jquery.js
+++Newtonsoft.Json (13.0.1)
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1196
+++System.Net.Http (4.3.4)
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:>1199
 ++additional-methods.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\dist\additional-methods.js
 ++jquery.validate.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\dist\jquery.validate.js
 ++jquery.validate.unobtrusive.min.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
-++materialize.css
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\css\materialize.css
-++materialize.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\js\materialize.js
+++materialize.min.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\js\materialize.min.js
 ++bootstrap.css
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\dist\css\bootstrap.css
 ++bootstrap-grid.css
@@ -544,10 +553,6 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 ++jquery.validate.min.js
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-++materialize.min.css
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\css\materialize.min.css
-++materialize.min.js
-i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\materialize\js\materialize.min.js
 ++bootstrap.css.map
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 ++bootstrap.min.css
@@ -582,10 +587,49 @@ i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.u
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 ++bootstrap.bundle.min.js.map
 i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-++Script Documents
 ++VM5
+++GerenciarLivro
+++VM28
+++VM29
+++VM30
+++2
+++GerenciarLivros.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\livro\gerenciarlivros.cshtml
 ++index.html
 ++swagger-ui-bundle.js
 ++swagger-ui-standalone-preset.js
-++aspnetcore-browser-refresh.js
-++browserLink
+++Recepcao.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\recepcao\recepcao.cshtml
+++inicializarselects - Copy.js
+++inicializarCollapsible.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializarcollapsible.js
+++inicializarCollapsible - Copy.js
+++inicializarTabs.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\inicializacoes\inicializartabs.js
+++NewFolder
+++recepcao
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\recepcao\
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\recepcao\
+++_Menu.cshtml
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\recepcao\_menu.cshtml
+++_Menu.cshtml.css
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\views\shared\recepcao\_menu.cshtml.css
+++recepcao.js
+i:{0f935cc8-26a0-416f-9226-b88a1dbc7c73}:c:\projetos\refitri\webrirefit\ri.web.ui\wwwroot\js\recepcao\recepcao.js
+++VM31
+++VM32
+++VM33
+++VM34
+++VM35
+++VM36
+++VM37
+++VM57
+++VM58
+++VM59
+++VM61
+++VM62
+++VM63
+++VM79
+++VM80
+++TituloViewModel.cs
+i:{3c1ad271-c529-497d-acc8-1d636898a203}:c:\projetos\refitri\webrirefit\ri.web.application\viewmodels\recepcao\titulo\tituloviewmodel.cs

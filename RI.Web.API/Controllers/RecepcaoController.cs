@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RI.Application.ViewModels.Recepcao.Titulo;
-using RI.Web.Application.Interfaces.Titulo;
+using RI.Web.Application.Interfaces.Recepcao;
+using RI.Web.Application.Interfaces.TipoPrenotacao;
+using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Recepcao;
+using RI.Web.Application.ViewModels.TipoPrenotacao;
 
 namespace RI.Web.API.Controllers
 {
@@ -13,7 +16,7 @@ namespace RI.Web.API.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<RecepcaoViewModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ObterRecepcao([FromQuery] TituloBasicoViewModel titulo, [FromServices] IRecepcaoService recepcaoService)
+        public async Task<IActionResult> ObterRecepcao([FromQuery] TituloViewModel titulo, [FromServices] IRecepcaoService recepcaoService)
         {
             if (ModelState.IsValid)
             {
@@ -23,5 +26,8 @@ namespace RI.Web.API.Controllers
 
             return BadRequest(ModelState);
         }
+
+
     }
+
 }
