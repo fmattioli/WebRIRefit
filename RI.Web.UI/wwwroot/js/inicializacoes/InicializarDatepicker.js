@@ -2,8 +2,6 @@
     $(".date-calendar").datepicker({
         autoclose: true,
         format: "dd/mm/yyyy",
-        defaultDate: new Date(),
-        setDefaultDate: true,
         disableWeekends: false,
         showDaysInNextandPreviousMonths: true,
         showMonthAfterYear: true,

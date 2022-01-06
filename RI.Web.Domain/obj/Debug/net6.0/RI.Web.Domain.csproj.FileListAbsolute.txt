@@ -29,3 +29,4 @@ C:\Projetos\RefitRI\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.cspr
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\ref\RI.Web.Domain.dll
 C:\Projetos\RefitRI\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.pdb
+C:\Projetos\RefitRI\WebRIRefit\RI.Web.Domain\obj\Debug\net6.0\RI.Web.Domain.csproj.AssemblyReference.cache

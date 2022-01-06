@@ -1,7 +1,7 @@
 ﻿using RI.Application.ViewModels.Cidade;
-using RI.Application.ViewModels.Natureza;
 using RI.Application.ViewModels.Orgao;
 using RI.Application.ViewModels.Usuario;
+using RI.Web.Application.ViewModels.Natureza;
 
 namespace RI.Application.ViewModels.Recepcao.Titulo
 {

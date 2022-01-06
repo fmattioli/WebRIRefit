@@ -1,4 +1,9 @@
-﻿<title>Recepção</title>
+﻿@{
+    var tiposPrenotacao = ViewBag.TiposPrenotacoes as IEnumerable<RI.Web.Application.ViewModels.TipoPrenotacao.TipoPrenotacaoViewModel>;
+    var naturezas = ViewBag.Naturezas as IEnumerable<RI.Web.Application.ViewModels.Natureza.NaturezaViewModel>;
+    var negociosCDS = ViewBag.NegociosCDS as IEnumerable<RI.Web.Application.ViewModels.Distribuicao.NegocioCDSViewModel>;
+}
+<title>Recepção</title>
 <div class="section"></div>
 <partial name="recepcao/_menu" />
 <div class="row">
@@ -13,178 +18,165 @@
     </div>
     <div id="test1" class="col s12">
         <ul class="collapsible">
-            <li class="active">
-                <div class="collapsible-header carmesim"><i class="material-icons">content_paste</i>Dados da prenotação</div>
+            <li>
+                <div class="collapsible-header carmesim" id="dadosprenotacao"><i class="material-icons">content_paste</i>Dados da prenotação</div>
                 <div class="collapsible-body">
                     <div class="row">
-                        <div class="input-field col s2">
+                        <div class="input-field col s3">
                             <select id="natureza" required>
                                 <option value="" disabled selected>Escolha uma</option>
-                                <option value="0">AV</option>
-                                <option value="1">REG</option>
-                                <option value="2">ABM</option>
-                                <option value="3">Todas</option>
+                                @if (tiposPrenotacao is not null)
+                                {
+                                    @foreach (var tipoprotocolo in tiposPrenotacao)
+                                    {
+                                        <option value="@tipoprotocolo.Id">@tipoprotocolo.DescricaoTipoPrenotacao</option>
+                                    }
+                                }
                             </select>
                             <label>Tipo da prenotação</label>
                         </div>
                         <div class='input-field col s1'>
                             <input id="protocolo" type="text" class="validate" required>
                             <label for="protocolo">Protocolo</label>
-                            <span class="helper-text" data-error="Informe um protocolo!" data-success="Tudo certo!"></span>
+                            <span class="helper-text"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="magnetico" type="text" class="validate" required disabled>
+                            <input id="magnetico" type="text" class="validate" required>
                             <label for="magnetico">Magnético</label>
-                            <span class="helper-text"></span>
                         </div>
                         <div class='input-field col s2'>
                             <input id="solicitacao" type="text" class="validate" required>
                             <label for="solicitacao">Solicitação</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
                             <input id="nratendimento" type="text" class="validate" required>
                             <label for="nratendimento">Nr atendimento</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="rps" type="text" class="validate" required>
+                            <input id="rps" type="text" class="validate" required disabled>
                             <label for="rps">RPS</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class='input-field col s2'>
-                            <input id="dataprotocolo" type="text" class="validate" required>
+                            <input id="dataprotocolo" type="text" class="validate" required disabled>
                             <label for="dataprotocolo">Data protocolo</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="previsao" type="text" class="validate" required>
+                            <input id="previsao" type="text" class="date-calendar" required>
                             <label for="previsao">Data previsão</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="dataexigencia" type="text" class="validate" required>
+                            <input id="dataexigencia" type="date" class="validate" required disabled>
                             <label for="dataexigencia">Exigência</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
-                        <div class='input-field col s2'>
-                            <input id="seq" type="text" class="validate" required>
+                        <div class='input-field col s1'>
+                            <input id="seq" type="text" class="validate" required disabled>
                             <label for="seq">Seq</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="dataregistro" type="text" class="validate" required>
+                            <input id="dataregistro" type="text" class="validate" required disabled>
                             <label for="dataregistro">Registro</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="datacancelamento" type="text" class="validate" required>
+                            <input id="datacancelamento" type="text" class="validate" required disabled>
                             <label for="datacancelamento">Data cancelamento</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class='input-field col s2'>
-                            <input id="reentrada" type="text" class="validate" required>
+                            <input id="reentrada" type="text" class="validate" required disabled>
                             <label for="reentrada">Reentrada</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="dataexpira" type="text" class="validate" required>
+                            <input id="dataexpira" type="text" class="validate" required disabled>
                             <label for="dataexpira">Data expira</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="previacustas" type="text" class="validate" required>
+                            <input id="previacustas" type="text" class="validate" required disabled>
                             <label for="previacustas">Prévia de custas</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="deposito" type="text" class="validate" required>
+                            <input id="deposito" type="text" class="validate" required disabled>
                             <label for="deposito">Depósito</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s1'>
-                            <input id="acessorias" type="text" class="validate" required>
+                            <input id="acessorias" type="text" class="validate" required disabled>
                             <label for="acessorias">Acessórias</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="custas" type="text" class="validate" required>
+                            <input id="custas" type="text" class="validate" required disabled>
                             <label for="custas">Custas</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                         <div class='input-field col s1'>
-                            <input id="saldo" type="text" class="validate" required>
+                            <input id="saldo" type="text" class="validate" required disabled>
                             <label for="saldo">Saldo</label>
-                            <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                         </div>
                     </div>
                 </div>
             </li>
-            <li>
+            <li class="active" id="dadostitulo">
                 <div class="collapsible-header carmesim"><i class="material-icons">storage</i>Dados do título</div>
                 <div class="collapsible-body">
                     <form id="livroForm">
                         <div class="row">
-                            <div class="input-field col s2">
+                            <div class="input-field col s3">
                                 <select id="natureza" required>
                                     <option value="" disabled selected>Escolha uma</option>
-                                    <option value="0">AV</option>
-                                    <option value="1">REG</option>
-                                    <option value="2">ABM</option>
-                                    <option value="3">Todas</option>
+                                    @if (naturezas is not null)
+                                    {
+                                        @foreach (var natureza in naturezas)
+                                        {
+                                            <option value="@natureza.Id">@natureza.Descricao</option>
+                                        }
+                                    }
                                 </select>
                                 <label>Natureza</label>
                             </div>
-                            <div class="input-field col s2">
+                            <div class="input-field col s3">
                                 <select id="negocio" required>
-                                    <option value="" disabled selected>Escolha uma</option>
-                                    <option value="0">AV</option>
-                                    <option value="1">REG</option>
-                                    <option value="2">ABM</option>
-                                    <option value="3">Todas</option>
+                                    @if (negociosCDS is not null)
+                                    {
+                                        @foreach (var negocioCDS in negociosCDS)
+                                        {
+                                            <option value="@negocioCDS.CodigoNegocio">@negocioCDS.Negocio</option>
+                                        }
+                                    }
                                 </select>
                                 <label>Negócio</label>
                             </div>
                             <div class='input-field col s3'>
                                 <input id="orgao" type="text" class="validate" required>
                                 <label for="orgao">Orgão</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um orgão!" data-success="Tudo certo!"></span>
                             </div>
-                            <div class='input-field col s2'>
-                                <input id="datatitulo" type="text" class="validate" required>
+                            <div class='input-field col s1'>
+                                <input id="datatitulo" type="text" class="date-calendar" required>
                                 <label for="datatitulo">Data título</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um data do título!" data-success="Tudo certo!"></span>
                             </div>
-                            <div class='input-field col s2'>
+                            <div class='input-field col s1'>
                                 <input id="processo" type="text" class="validate" required>
                                 <label for="processo">Processo</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class='input-field col s1'>
                                 <input id="oficio" type="text" class="validate" required>
                                 <label for="oficio">Ofício</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                             <div class='input-field col s1'>
                                 <input id="livro" type="text" class="validate" required>
                                 <label for="livro">Livro</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um livro!" data-success="Tudo certo!"></span>
                             </div>
                             <div class='input-field col s1'>
                                 <input id="complemento" type="text" class="validate" required>
                                 <label for="complemento">Compl.</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                             <div class='input-field col s1'>
                                 <input id="folhainicial" type="text" class="validate" required>
                                 <label for="folhainicial">Folha inicial</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                             <div class="input-field col s2">
                                 <select id="complementofolhainicial" required>
@@ -199,7 +191,6 @@
                             <div class='input-field col s2'>
                                 <input id="folhafinal" type="text" class="validate" required>
                                 <label for="sigla">Folha final</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                             <div class="input-field col s2">
                                 <select id="complementofolhafinal" required>
@@ -214,7 +205,6 @@
                             <div class='input-field col s2'>
                                 <input id="dataprevisao" type="text" class="validate" required>
                                 <label for="dataprevisao">Data previsão</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
                             </div>
                         </div>
                         <div class="row">
@@ -227,8 +217,8 @@
                     </form>
                 </div>
             </li>
-            <li>
-                <div class="collapsible-header carmesim"><i class="material-icons">person_add</i>Dados do apresentante</div>
+            <li class="active">
+                <div class="collapsible-header carmesim" id="dadosapresentante"><i class="material-icons">person_add</i>Dados do apresentante</div>
                 <div class="collapsible-body">
                     <form id="livroForm">
                         <blockquote>
@@ -248,7 +238,7 @@
                             <div class='input-field col s2'>
                                 <input id="numerodocumentoapresentante" type="text" class="validate" required>
                                 <label for="sigla">Documento</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um número de documento!" data-success="Tudo certo!"></span>
                             </div>
                             <div class='input-field col s2'>
                                 <input id="nome" type="text" class="validate" required>
@@ -268,12 +258,12 @@
                             <div class='input-field col s2'>
                                 <input id="telefone" type="text" class="validate" required>
                                 <label for="telefone">Telefone</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um telefone!" data-success="Tudo certo!"></span>
                             </div>
                             <div class='input-field col s2'>
                                 <input id="email" type="text" class="validate" required>
                                 <label for="email">Email</label>
-                                <span class="helper-text" data-error="Informe uma sigla!" data-success="Tudo certo!"></span>
+                                <span class="helper-text" data-error="Informe um e-mail!" data-success="Tudo certo!"></span>
                             </div>
                         </div>
                     </form>
@@ -408,7 +398,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header carmesim"><i class="material-icons">group_add</i>Participantes</div>
+                <div class="collapsible-header carmesim" id="dadosparticipante">><i class="material-icons">group_add</i>Participantes</div>
                 <div class="collapsible-body">
                     <form id="livroForm">
                         <div class="row">

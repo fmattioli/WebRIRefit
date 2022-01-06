@@ -10,19 +10,18 @@ namespace RI.Web.Application.Services.Recepcao
 {
     public class RecepcaoService : IRecepcaoService
     {
-        private readonly IRecepcaoRepository recepcaoRepository;
-        private readonly ITipoPrenotacaoRepository tipoPrenotacaoRepository;
-        private readonly IMapper mapper;
-        public RecepcaoService(IRecepcaoRepository recepcaoRepository, ITipoPrenotacaoRepository tipoPrenotacaoRepository, IMapper mapper)
+        public RecepcaoService()
         {
-            this.recepcaoRepository = recepcaoRepository;
-            this.tipoPrenotacaoRepository = tipoPrenotacaoRepository;
-            this.mapper = mapper;
         }
 
         public async Task<RetornoAcao<IEnumerable<RecepcaoViewModel>>> ObterRecepcao(TituloViewModel tituloViewModel)
         {
-            return null;
+            await Task.Run(() =>
+            {
+                return null;
+            });
+
+            return new RetornoAcao<IEnumerable<RecepcaoViewModel>>();
         }
 
 

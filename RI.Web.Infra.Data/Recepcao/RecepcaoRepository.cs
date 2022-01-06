@@ -235,8 +235,12 @@ namespace RI.Web.Infra.Data.Recepcao
             //    retornoAcao.MensagemRetorno = ex.Message;
             //    return recepcao;
             //}
+            await Task.Run(() =>
+            {
+                
+            });
 
-            return null;
+            return new RecepcaoEntity();
         }
     }
 }

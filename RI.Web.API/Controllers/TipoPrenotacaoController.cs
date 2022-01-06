@@ -5,6 +5,8 @@ using RI.Web.Application.ViewModels.TipoPrenotacao;
 
 namespace RI.Web.API.Controllers
 {
+
+    [Route("api/v1/[controller]")]
     public class TipoPrenotacaoController : Controller
     {
         [HttpGet("ObterTiposPrenotacao")]

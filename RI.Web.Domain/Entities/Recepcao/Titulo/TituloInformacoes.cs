@@ -12,7 +12,7 @@
         public string? Processo { get; set; }
         public string? Oficio { get; set; }
         public short FK_tblWRINatureza_Id { get; set; }
-        public Natureza.Natureza Natureza { get; set; }
+        public Natureza.NaturezaEntity Natureza { get; set; }
         public DateTime DataDoTituloApresentado { get; set; }
         public DateTime DataPrevisaoEntrega { get; set; }
         public DateTime DtRetirada { get; set; }
@@ -67,7 +67,7 @@
         public TituloInformacoes()
         {
             Orgao = new Orgao.Orgao();
-            Natureza = new Natureza.Natureza();
+            Natureza = new Natureza.NaturezaEntity();
             TipoContrato = new TipoContrato();
             TipoGrau = new TipoGrau();
             Indice = new Indice();
