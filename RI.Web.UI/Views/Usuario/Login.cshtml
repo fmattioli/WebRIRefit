@@ -1,0 +1,72 @@
+﻿@model RI.Application.ViewModels.Usuario.UsuarioViewModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title icon="">Login</title>
+    <link href="~/lib/materialize/css/materialize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/faviconn.ico" />
+</head>
+<body style="background-color: #7f0101; width: 100%; height: 100%;">
+
+    <div class="loginform">
+        <div class="center-align">
+            <h4><i class="large material-icons">group</i></h4>
+            <h5>Login</h5>
+        </div>
+
+        <div>
+            <form asp-action="Login">
+                <div class="red-text text-darken-4" asp-validation-summary="ModelOnly"></div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input asp-for="NomeUsuario" class="validate" id="nome" placeholder="Nome" />
+                        <span asp-validation-for="NomeUsuario" class="red-text text-darken-4"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input asp-for="SenhaUsuario" class="validate" id="senha" placeholder="Senha" />
+                        <span asp-validation-for="SenhaUsuario" class="red-text text-darken-4"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <button class="btn waves-effect waves-light carmesim" type="submit" name="action">
+                            Entrar
+                            <i class="material-icons right">vpn_key</i>
+                        </button>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <button class="btn waves-effect waves-light carmesim" type="button" name="action">
+                            Biometria
+                            <i class="material-icons right">fingerprint</i>
+                        </button>
+                    </div>
+                     
+                </div>
+                <div class="row">
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/materialize/js/materialize.js"></script>
+    <script src="~/js/operacoesusuarios.js"></script>
+    }
+
+</body>
+</html>
