@@ -12,9 +12,41 @@ namespace RI.Web.Infra.Data.Recepcao
 {
     public class RecepcaoRepository : BaseRepository<RecepcaoEntity>, IRecepcaoRepository
     {
-
-        public RecepcaoRepository(ConfigDapper dapperConfig) : base(dapperConfig)
+        private readonly ConfigSQLServer _configSQLServer;
+        public RecepcaoRepository(ConfigDapper dapperConfig, ConfigSQLServer configSQLServer) : base(dapperConfig)
         {
+            _configSQLServer = configSQLServer;
+        }
+
+        public async Task<RetornoAcao<DateTime>> CalcularDataPrevisaoEntrega(int NaturezaId)
+        {
+            var retorno = new RetornoAcao<DateTime>();
+            try
+            {
+                SQL.Clear();
+                SQL.AppendLine("Select dbo.fn_DataPrevisaoEntrega(");
+                SQL.AppendLine($"'{DateTime.Now}', '{NaturezaId}') As DtPrevisao");
+                using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
+                if (reader != null)
+                {
+                    while (reader.Read())
+                    {
+                        var dataPrevisao = (reader["DtPrevisao"] as DateTime?).GetValueOrDefault();
+                        retorno.Result = dataPrevisao;
+                        retorno.Sucesso = true;
+                        return retorno;
+                    }
+                }
+
+                retorno.MensagemRetorno = "Não foi possível obter uma data de previsão";
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
         }
 
         public async Task<RecepcaoEntity> ObterRecepcao(TituloBasicoEntity Recepcao)

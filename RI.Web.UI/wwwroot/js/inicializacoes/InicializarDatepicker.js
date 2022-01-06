@@ -2,11 +2,12 @@
     $(".date-calendar").datepicker({
         autoclose: true,
         format: "dd/mm/yyyy",
+        defaultDate: new Date(),
+        setDefaultDate: true,
         disableWeekends: false,
         showDaysInNextandPreviousMonths: true,
         showMonthAfterYear: true,
         showClearBtn: true,
-
         i18n: {
             cancel: 'Cancelar',
             clear: 'Limpar',

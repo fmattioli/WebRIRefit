@@ -10,6 +10,14 @@ function carretorTextoInput(id, valueToSelect) {
     $("#" + id).focus();
 }
 
+function carregarDataComHora(id, valueToSelect) {
+    let element = document.getElementById(id);
+    M.AutoInit();
+    element.value = valueToSelect;
+    $("#" + id).val();
+    $("#" + id).focus();
+}
+
 function carregarSelectPeloValor(id, valueToSelect) {
     $('#' + id).val(parseInt(valueToSelect));
     $('#' + id).formSelect();

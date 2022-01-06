@@ -30,7 +30,7 @@ namespace RI.Web.Application.Services.Natureza
             if (retornoNaturezas.Sucesso)
             {
                 var tipoPrenotacao = mapper.Map<IEnumerable<NaturezaViewModel>>(retornoNaturezas.Result);
-                retorno.Result = tipoPrenotacao;
+                retorno.Result = tipoPrenotacao.OrderBy(n => n.Tipo);
                 retorno.Sucesso = true;
                 return retorno;
             }

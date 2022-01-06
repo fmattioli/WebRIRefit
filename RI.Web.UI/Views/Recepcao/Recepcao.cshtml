@@ -18,38 +18,37 @@
     </div>
     <div id="test1" class="col s12">
         <ul class="collapsible">
-            <li>
+            <li class="active">
                 <div class="collapsible-header carmesim" id="dadosprenotacao"><i class="material-icons">content_paste</i>Dados da prenotação</div>
                 <div class="collapsible-body">
                     <div class="row">
                         <div class="input-field col s3">
-                            <select id="natureza" required>
-                                <option value="" disabled selected>Escolha uma</option>
+                            <select onchange="alert('oi')" id="tipoprotocolo">
                                 @if (tiposPrenotacao is not null)
                                 {
                                     @foreach (var tipoprotocolo in tiposPrenotacao)
                                     {
-                                        <option value="@tipoprotocolo.Id">@tipoprotocolo.DescricaoTipoPrenotacao</option>
+                                        <option value="@tipoprotocolo?.Id">@tipoprotocolo?.DescricaoTipoPrenotacao</option>
                                     }
                                 }
                             </select>
                             <label>Tipo da prenotação</label>
                         </div>
                         <div class='input-field col s1'>
-                            <input id="protocolo" type="text" class="validate" required>
+                            <input id="protocolo" type="text" required>
                             <label for="protocolo">Protocolo</label>
                             <span class="helper-text"></span>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="magnetico" type="text" class="validate" required>
+                            <input id="magnetico" type="text" required>
                             <label for="magnetico">Magnético</label>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="solicitacao" type="text" class="validate" required>
+                            <input id="solicitacao" type="text" required>
                             <label for="solicitacao">Solicitação</label>
                         </div>
                         <div class='input-field col s2'>
-                            <input id="nratendimento" type="text" class="validate" required>
+                            <input id="nratendimento" type="text" required>
                             <label for="nratendimento">Nr atendimento</label>
                         </div>
                         <div class='input-field col s2'>
@@ -58,13 +57,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class='input-field col s2'>
-                            <input id="dataprotocolo" type="text" class="validate" required disabled>
+                        <div class='input-field col s1'>
+                            <input id="dataprotocolo" type="text" class="date-calendar" required disabled>
                             <label for="dataprotocolo">Data protocolo</label>
                         </div>
-                        <div class='input-field col s2'>
-                            <input id="previsao" type="text" class="date-calendar" required>
-                            <label for="previsao">Data previsão</label>
+                        <div class='input-field col s1'>
+                            <input id="dataprevisao" type="text" class="date-calendar" required>
+                            <label for="dataprevisao">Data previsão</label>
                         </div>
                         <div class='input-field col s2'>
                             <input id="dataexigencia" type="date" class="validate" required disabled>
@@ -82,15 +81,23 @@
                             <input id="datacancelamento" type="text" class="validate" required disabled>
                             <label for="datacancelamento">Data cancelamento</label>
                         </div>
-                    </div>
-                    <div class="row">
+                        <div class='input-field col s1'>
+                            <input id="dataretirada" type="text" class="validate" required disabled>
+                            <label for="dataretirada">Retirada</label>
+                        </div>
                         <div class='input-field col s2'>
                             <input id="reentrada" type="text" class="validate" required disabled>
                             <label for="reentrada">Reentrada</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class='input-field col s2'>
                             <input id="dataexpira" type="text" class="validate" required disabled>
                             <label for="dataexpira">Data expira</label>
+                        </div>
+                        <div class='input-field col s2'>
+                            <input id="expirareentrada" type="text" class="validate" required disabled>
+                            <label for="expirareentrada">Expira Reentrada</label>
                         </div>
                         <div class='input-field col s2'>
                             <input id="previacustas" type="text" class="validate" required disabled>
@@ -100,17 +107,26 @@
                             <input id="deposito" type="text" class="validate" required disabled>
                             <label for="deposito">Depósito</label>
                         </div>
-                        <div class='input-field col s1'>
-                            <input id="acessorias" type="text" class="validate" required disabled>
-                            <label for="acessorias">Acessórias</label>
-                        </div>
                         <div class='input-field col s2'>
-                            <input id="custas" type="text" class="validate" required disabled>
-                            <label for="custas">Custas</label>
+                            <input id="desp_acessorias" type="text" class="validate" required disabled>
+                            <label for="desp_acessorias">Desp. Acessórias</label>
+                        </div>
+                        <div class='input-field col s1'>
+                            <input id="totalcustas" type="text" class="validate" required disabled>
+                            <label for="totalcustas">Total custas</label>
                         </div>
                         <div class='input-field col s1'>
                             <input id="saldo" type="text" class="validate" required disabled>
                             <label for="saldo">Saldo</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s11">
+                            <textarea id="observacaoprenotacao" class="materialize-textarea"></textarea>
+                            <label>Observação</label>
+                        </div>
+                        <div id="add" class="input-field col s1">
+                            <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">save</i></a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +137,7 @@
                     <form id="livroForm">
                         <div class="row">
                             <div class="input-field col s3">
-                                <select id="natureza" required>
+                                <select onchange="CarregarDataPrevisaoPorNatureza()" id="natureza" required>
                                     <option value="" disabled selected>Escolha uma</option>
                                     @if (naturezas is not null)
                                     {
@@ -135,6 +151,7 @@
                             </div>
                             <div class="input-field col s3">
                                 <select id="negocio" required>
+                                    <option value="" disabled selected>Escolha uma</option>
                                     @if (negociosCDS is not null)
                                     {
                                         @foreach (var negocioCDS in negociosCDS)
@@ -159,13 +176,13 @@
                                 <input id="processo" type="text" class="validate" required>
                                 <label for="processo">Processo</label>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class='input-field col s1'>
                                 <input id="oficio" type="text" class="validate" required>
                                 <label for="oficio">Ofício</label>
                             </div>
-                            <div class='input-field col s1'>
+                        </div>
+                        <div class="row">
+                            <div class='input-field col s2'>
                                 <input id="livro" type="text" class="validate" required>
                                 <label for="livro">Livro</label>
                                 <span class="helper-text" data-error="Informe um livro!" data-success="Tudo certo!"></span>
@@ -181,10 +198,8 @@
                             <div class="input-field col s2">
                                 <select id="complementofolhainicial" required>
                                     <option value="" disabled selected>Escolha uma</option>
-                                    <option value="0">AV</option>
-                                    <option value="1">REG</option>
-                                    <option value="2">ABM</option>
-                                    <option value="3">Todas</option>
+                                    <option value="F">F</option>
+                                    <option value="V">V</option>
                                 </select>
                                 <label>Compl.</label>
                             </div>
@@ -195,10 +210,8 @@
                             <div class="input-field col s2">
                                 <select id="complementofolhafinal" required>
                                     <option value="" disabled selected>Escolha uma</option>
-                                    <option value="0">AV</option>
-                                    <option value="1">REG</option>
-                                    <option value="2">ABM</option>
-                                    <option value="3">Todas</option>
+                                    <option value="F">F</option>
+                                    <option value="V">V</option>
                                 </select>
                                 <label>Compl.</label>
                             </div>
@@ -208,11 +221,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s11">
                                 <textarea id="observacaotitulo" class="materialize-textarea"></textarea>
                                 <label>Observação</label>
                             </div>
-
+                            <div id="add" class="input-field col s1">
+                                <a class="btn-floating btn-large waves-effect waves-light carmesim" onclick="mostrarForm();"><i class="material-icons">add</i></a>
+                            </div>
                         </div>
                     </form>
                 </div>

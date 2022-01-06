@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RI.Application.ViewModels.Recepcao.Titulo;
+using RI.Web.Application.Interfaces.Livro;
 using RI.Web.Application.Interfaces.Recepcao;
-using RI.Web.Application.Interfaces.TipoPrenotacao;
 using RI.Web.Application.Services.Acoes;
-using RI.Web.Application.ViewModels.Recepcao;
-using RI.Web.Application.ViewModels.TipoPrenotacao;
+using RI.Web.Application.ViewModels.Livro;
 
 namespace RI.Web.API.Controllers
 {
@@ -13,21 +12,38 @@ namespace RI.Web.API.Controllers
     [ApiController]
     public class RecepcaoController : Controller
     {
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<RecepcaoViewModel>), StatusCodes.Status200OK)]
+
+        //[ApiExplorerSettings(IgnoreApi = true)]
+        [HttpGet("{TituloViewModel}", Name = "ObterRecepcao")]
+        [ProducesResponseType(typeof(RetornoAcaoService<IEnumerable<LivroTJViewModel>>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ObterRecepcao([FromQuery] TituloViewModel titulo, [FromServices] IRecepcaoService recepcaoService)
+        public async Task<ActionResult<IEnumerable<LivroTJViewModel>>> ObterRecepcao(TituloViewModel tituloViewModel, [FromServices] IRecepcaoService recepcaoService)
         {
             if (ModelState.IsValid)
             {
-                var retorno = await recepcaoService.ObterRecepcao(titulo);
+                var retorno = await recepcaoService.ObterRecepcao(tituloViewModel);
+                if (retorno.Sucesso)
                     return Ok(retorno);
+                return BadRequest(retorno.ExceptionRetorno);
             }
 
             return BadRequest(ModelState);
         }
 
+        [HttpGet("CalcularPrazoPorNatureza/{NaturezaId}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(RetornoAcaoService<LivroViewModel>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<LivroViewModel>> CalcularPrazoPorNatureza(int NaturezaId, [FromServices] IRecepcaoService recepcaoService)
+        {
+            if (ModelState.IsValid)
+            {
+                var retorno = await recepcaoService.CalcularDataPrevisao(NaturezaId);
+                if (retorno.Sucesso)
+                    return Ok(retorno);
+                return BadRequest(retorno.MensagemRetorno);
+            }
 
+            return BadRequest(ModelState);
+        }
     }
-
 }

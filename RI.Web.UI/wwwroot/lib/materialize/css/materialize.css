@@ -2253,7 +2253,7 @@ pre {
 a {
     background-color: transparent;
     /* 1 */
-    -webkit-text-decoration-skip: objects;
+    /*-webkit-text-decoration-skip: objects;*/
     /* 2 */
 }
 
@@ -2267,7 +2267,7 @@ abbr[title] {
     text-decoration: underline;
     /* 2 */
     -webkit-text-decoration: underline dotted;
-    -moz-text-decoration: underline dotted;
+    /*-moz-text-decoration: underline dotted;*/
     text-decoration: underline dotted;
     /* 2 */
 }
@@ -5042,7 +5042,7 @@ small {
             .card.horizontal .card-stacked .card-content {
                 -webkit-box-flex: 1;
                 -webkit-flex-grow: 1;
-                -ms-flex-positive: 1;
+                /*-ms-flex-positive: 1;*/
                 flex-grow: 1;
             }
 
@@ -5258,7 +5258,7 @@ small {
         .tabs.tabs-fixed-width .tab {
             -webkit-box-flex: 1;
             -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
+            /*-ms-flex-positive: 1;*/
             flex-grow: 1;
         }
 
@@ -5321,7 +5321,7 @@ small {
         .tabs .tab {
             -webkit-box-flex: 1;
             -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
+            /*-ms-flex-positive: 1;*/
             flex-grow: 1;
         }
 
@@ -5916,7 +5916,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .waves-circle {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    /*-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);*/
 }
 
 .waves-input-wrapper {
@@ -6319,9 +6319,9 @@ label {
     color: #d1d1d1;
 }
 
-::-ms-input-placeholder {
+/*::-ms-input-placeholder {
     color: #d1d1d1;
-}
+}*/
 
 ::placeholder {
     color: #d1d1d1;
@@ -7530,7 +7530,7 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
         font-size: 20px;
         cursor: pointer;
         opacity: 0;
-        filter: alpha(opacity=0);
+        /*filter: alpha(opacity=0);*/
     }
 
         .file-field input[type=file]::-webkit-file-upload-button {
@@ -7637,17 +7637,17 @@ input[type=range] {
     /*required for proper track sizing in FF*/
 }
 
-    input[type=range]::-moz-range-track {
+/*    input[type=range]::-moz-range-track {
         height: 3px;
         background: #c2c0c2;
         border: none;
     }
-
+*/
     input[type=range]::-moz-focus-inner {
         border: 0;
     }
 
-    input[type=range]::-moz-range-thumb {
+    input[type=range]{
         border: none;
         height: 14px;
         width: 14px;
@@ -7665,9 +7665,9 @@ input[type=range] {
         outline-offset: -1px;
     }
 
-.keyboard-focused input[type=range]:focus:not(.active)::-moz-range-thumb {
+/*.keyboard-focused input[type=range]:focus:not(.active)::-moz-range-thumb {
     box-shadow: 0 0 0 10px rgba(38, 166, 154, 0.26);
-}
+}*/
 
 input[type=range]::-ms-track {
     height: 3px;
@@ -7720,7 +7720,7 @@ input[type=range]::-ms-thumb {
     padding-left: 16px;
     height: 1.5rem;
     line-height: 1.5rem;
-    letter-spacing: .4;
+    /*letter-spacing: 4;*/
     display: inline-block;
 }
 
@@ -7746,7 +7746,7 @@ input[type=range]::-ms-thumb {
     transform: translateX(-100%);
     height: 100%;
     height: calc(100% + 60px);
-    height: -moz-calc(100%);
+    /*height: -moz-calc(100%);*/
     padding-bottom: 60px;
     background-color: #fff;
     z-index: 999;
@@ -9024,7 +9024,7 @@ input[type=range]::-ms-thumb {
         }
 
         .datepicker-table td.is-selected {
-            background-color: #ad0505;
+            background-color: #ad0505 !important;
             color: #fff;
         }
 
