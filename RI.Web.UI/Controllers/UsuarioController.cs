@@ -17,7 +17,7 @@ namespace RI.Web.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return RedirectToAction("Index", "Home");
             }
             return View(nameof(Login));
 
