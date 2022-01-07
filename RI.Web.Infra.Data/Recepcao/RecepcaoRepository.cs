@@ -282,7 +282,7 @@ namespace RI.Web.Infra.Data.Recepcao
             {
                 SQL.Clear();
                 SQL.AppendLine("set dateformat dmy");
-                SQL.AppendLine($"select dbo.fn_DataExpiraPrenotacao({IdTipoPrenotacao}, convert(smalldatetime, '{DateTime.Now.ToString("dd/MM/yyyy")}', 103), 1, {NaturezaId}) as dataExpira");
+                SQL.AppendLine($"select dbo.fn_DataExpiraPrenotacao({IdTipoPrenotacao}, convert(smalldatetime, '{DateTime.Now:dd/MM/yyyy}', 103), 1, {NaturezaId}) as dataExpira");
                 using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
                 if (reader != null && reader.Read())
                 {

@@ -1,4 +1,4 @@
-﻿namespace RI.Web.Domain.Entities.MensagemCertidaoTalao
+﻿namespace RI.Web.Application.ViewModels.MensagemCertidaoTalao
 {
     public class MensagemCertidaoTalaoViewModel
     {

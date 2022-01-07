@@ -1,7 +1,6 @@
-﻿using RI.Application.ViewModels.Recepcao.Titulo;
-using RI.Web.Application.Services.Acoes;
+﻿using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Recepcao;
-using RI.Web.Domain.Entities.Acoes;
+using RI.Web.Application.ViewModels.Recepcao.Titulo;
 
 namespace RI.Web.Application.Interfaces.Recepcao
 {

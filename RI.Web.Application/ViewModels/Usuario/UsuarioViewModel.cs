@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RI.Application.ViewModels.Usuario
+namespace RI.Web.Application.ViewModels.Usuario
 {
     public class UsuarioViewModel
     {
@@ -43,5 +43,8 @@ namespace RI.Application.ViewModels.Usuario
         public int IMGPermiteDigitalizar { get; set; }
         public int IdLoginOutroSistema { get; set; }
         public bool OficialDeCumprimento { get; set; }
+        public string? Token { get; set; }
+        public string? UrlAplicacao { get; set; }
+        
     }
 }

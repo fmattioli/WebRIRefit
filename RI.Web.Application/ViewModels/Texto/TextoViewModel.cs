@@ -1,4 +1,4 @@
-﻿namespace RI.Application.ViewModels.Texto
+﻿namespace RI.Web.Application.ViewModels.Recepcao.Texto
 {
     public struct TextoViewModel
     {

@@ -1,5 +1,4 @@
-﻿using RI.Application.ViewModels.Usuario;
-using RI.Web.Application.Interfaces.Usuario;
+﻿using RI.Web.Application.Interfaces.Usuario;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Usuario;
 

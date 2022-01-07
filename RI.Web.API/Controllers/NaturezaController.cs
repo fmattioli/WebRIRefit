@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RI.Web.Application.Interfaces.Natureza;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Natureza;
@@ -6,6 +7,8 @@ using RI.Web.Application.ViewModels.Natureza;
 namespace RI.Web.API.Controllers
 {
     [Route("api/v1/[controller]")]
+    [ApiController]
+    [Authorize]
     public class NaturezaController : Controller
     {
         [HttpGet("ObterNaturezas")]

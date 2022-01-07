@@ -1,9 +1,9 @@
-﻿namespace RI.Application.ViewModels.Natureza
+﻿namespace RI.Web.Application.ViewModels.Natureza
 {
-    public struct NaturezaEProtocoloViewModel
+    public class NaturezaEProtocoloViewModel
     {
         public int Id { get; set; }
-        public string CodigoNaturezaEProtocolo { get; set; }
-        public string DescricaoNaturezaEProtocolo { get; set; }
+        public string? CodigoNaturezaEProtocolo { get; set; }
+        public string? DescricaoNaturezaEProtocolo { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace RI.Application.ViewModels.Orgao
+﻿namespace RI.Web.Application.ViewModels.Orgao
 {
-    public struct OrgaoViewModel
+    public class OrgaoViewModel
     {
         public int OrgaoId { get; set; }
         public string? OrgaoDescricao { get; set; }

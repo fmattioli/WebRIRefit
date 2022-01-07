@@ -1,9 +1,9 @@
-﻿namespace RI.Application.ViewModels.Natureza
+﻿namespace RI.Web.Application.ViewModels.Natureza
 {
-    public struct PeerNaturezaViewModel
+    public class PeerNaturezaViewModel
     {
         public int Id { get; set; }
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
         public short Codigo { get; set; }
     }
 }

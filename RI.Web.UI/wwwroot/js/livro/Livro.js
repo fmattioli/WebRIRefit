@@ -36,6 +36,9 @@ function CarregarCamposEditarLivro(livroId) {
     $.ajax({
         method: "GET",
         url: endPoint,
+        headers: {
+            "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+        },
         success: function (response) {
 
             if (isNullOrEmpty(response.mensagemRetorno)) {
@@ -94,6 +97,9 @@ function editarLivro() {
         $.ajax({
             method: "PUT",
             url: endPoint,
+            headers: {
+                "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+            },
             dataType: "json",
             contentType: 'application/json; charset=UTF-8',
             data: JSON.stringify({
@@ -158,6 +164,9 @@ function adicionarLivro() {
         $.ajax({
             method: "POST",
             url: endPoint,
+            headers: {
+                "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+            },
             dataType: "json",
             contentType: 'application/json; charset=UTF-8',
             data: JSON.stringify({
@@ -225,6 +234,9 @@ function excluirLivro(livroId) {
         $.ajax({
             method: "DELETE",
             url: endPoint,
+            headers: {
+                "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+            },
             dataType: "json",
             data: { Id: livroId },
             success: function (response) {

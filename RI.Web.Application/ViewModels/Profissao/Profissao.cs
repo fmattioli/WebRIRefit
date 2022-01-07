@@ -1,4 +1,4 @@
-﻿namespace RI.Web.Domain.Entities.Profissao
+﻿namespace RI.Web.Application.ViewModels.Profissao
 {
     public class ProfissaoViewModel
     {

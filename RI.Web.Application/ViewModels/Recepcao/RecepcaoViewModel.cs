@@ -1,9 +1,9 @@
-﻿using RI.Application.ViewModels.Recepcao.Titulo;
-using RI.Application.ViewModels.Usuario;
+﻿using RI.Web.Application.ViewModels.Banco;
 using RI.Web.Application.ViewModels.Cliente;
+using RI.Web.Application.ViewModels.MensagemCertidaoTalao;
+using RI.Web.Application.ViewModels.Recepcao.Titulo;
 using RI.Web.Application.ViewModels.TipoPrenotacao;
-using RI.Web.Domain.Entities.Banco;
-using RI.Web.Domain.Entities.MensagemCertidaoTalao;
+using RI.Web.Application.ViewModels.Usuario;
 
 namespace RI.Web.Application.ViewModels.Recepcao
 {

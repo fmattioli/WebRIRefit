@@ -1,4 +1,4 @@
-﻿namespace RI.Application.ViewModels.Cidade
+﻿namespace RI.Web.Application.ViewModels.Cidade
 {
     public class CidadeViewModel
     {

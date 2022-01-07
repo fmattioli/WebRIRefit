@@ -18,6 +18,9 @@ function CarregarDataPrevisaoPorNatureza() {
     $.ajax({
         method: "GET",
         url: endPoint,
+        headers: {
+            "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+        },
         success: function (response) {
             if (isNullOrEmpty(response.mensagemRetorno)) {
                 var data = new Date(response.result);
@@ -50,6 +53,9 @@ function CarregarDataExpiraNatureza(naturezaId, tipoPrenotacaoId) {
     $.ajax({
         method: "GET",
         url: endPoint,
+        headers: {
+            "Authorization": "Bearer " + sessionStorage.getItem("tokenAuth")
+        },
         success: function (response) {
             if (isNullOrEmpty(response.mensagemRetorno)) {
                 var data = new Date(response.result);

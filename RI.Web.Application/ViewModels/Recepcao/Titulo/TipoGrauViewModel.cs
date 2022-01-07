@@ -1,6 +1,6 @@
-﻿namespace RI.Application.ViewModels.Recepcao.Titulo
-{
-    public struct TipoGrauViewModel
+﻿namespace RI.Web.Application.ViewModels.Recepcao.Titulo
+{ 
+    public class TipoGrauViewModel
     {
     }
 }

@@ -1,16 +1,11 @@
-﻿using RI.Application.ViewModels.Cidade;
+﻿using RI.Web.Application.ViewModels.Banco;
+using RI.Web.Application.ViewModels.Cidade;
 using RI.Web.Application.ViewModels.EstadoCivil;
 using RI.Web.Application.ViewModels.Nacionalidade;
+using RI.Web.Application.ViewModels.Profissao;
+using RI.Web.Application.ViewModels.Recepcao.TipoLogradouro;
 using RI.Web.Application.ViewModels.SIPTipoTelefone;
 using RI.Web.Application.ViewModels.TipoDocumento;
-using RI.Web.Domain.Entities.Banco;
-using RI.Web.Domain.Entities.Profissao;
-using RI.Web.Domain.Entities.TipoLogradouro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RI.Web.Application.ViewModels.Cliente
 {

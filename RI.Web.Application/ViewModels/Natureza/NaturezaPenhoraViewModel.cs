@@ -1,4 +1,4 @@
-﻿namespace RI.Application.ViewModels.Natureza
+﻿namespace RI.Web.Application.ViewModels.Natureza
 {
     public struct NaturezaPenhoraViewModel
     {

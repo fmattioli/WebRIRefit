@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RI.Web.Application.Interfaces.Distribuicao;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Distribuicao;
@@ -6,6 +7,7 @@ using RI.Web.Application.ViewModels.Distribuicao;
 namespace RI.Web.API.Controllers
 {
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class DistribuicaoController : Controller
     {
         [HttpGet("ObterNegociosCDS")]

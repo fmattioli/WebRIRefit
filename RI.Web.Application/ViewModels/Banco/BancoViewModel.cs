@@ -1,4 +1,4 @@
-﻿namespace RI.Web.Domain.Entities.Banco
+﻿namespace RI.Web.Application.ViewModels.Banco
 {
     public class BancoViewModel
     {

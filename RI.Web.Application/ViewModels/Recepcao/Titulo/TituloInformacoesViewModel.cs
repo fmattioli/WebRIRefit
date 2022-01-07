@@ -1,9 +1,9 @@
-﻿using RI.Application.ViewModels.Cidade;
-using RI.Application.ViewModels.Orgao;
-using RI.Application.ViewModels.Usuario;
+﻿using RI.Web.Application.ViewModels.Cidade;
 using RI.Web.Application.ViewModels.Natureza;
+using RI.Web.Application.ViewModels.Orgao;
+using RI.Web.Application.ViewModels.Usuario;
 
-namespace RI.Application.ViewModels.Recepcao.Titulo
+namespace RI.Web.Application.ViewModels.Recepcao.Titulo
 {
     public class TituloInformacoesViewModel : TituloViewModel
     {
@@ -70,6 +70,8 @@ namespace RI.Application.ViewModels.Recepcao.Titulo
         public TituloInformacoesViewModel()
         {
             Orgao = new OrgaoViewModel();
+            OrgaoDocumentoComprabatorio = new OrgaoViewModel();
+            OrgaoDistribuicaoAcao = new OrgaoViewModel();
             Natureza = new NaturezaViewModel();
             TipoContrato = new TipoContratoViewModel();
             TipoGrau = new TipoGrauViewModel();

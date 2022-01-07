@@ -1,4 +1,4 @@
-﻿namespace RI.Application.ViewModels.Recepcao.Titulo
+﻿namespace RI.Web.Application.ViewModels.Recepcao.Titulo
 {
     public struct AmortizacaoViewModel
     {

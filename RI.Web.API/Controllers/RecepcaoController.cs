@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RI.Application.ViewModels.Recepcao.Titulo;
-using RI.Web.Application.Interfaces.Livro;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RI.Web.Application.Interfaces.Recepcao;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.Livro;
+using RI.Web.Application.ViewModels.Recepcao.Titulo;
 
 namespace RI.Web.API.Controllers
 {
-
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class RecepcaoController : Controller
     {
 

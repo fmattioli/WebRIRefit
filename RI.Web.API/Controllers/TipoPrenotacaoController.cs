@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RI.Web.Application.Interfaces.TipoPrenotacao;
 using RI.Web.Application.Services.Acoes;
 using RI.Web.Application.ViewModels.TipoPrenotacao;
@@ -7,6 +8,8 @@ namespace RI.Web.API.Controllers
 {
 
     [Route("api/v1/[controller]")]
+    [ApiController]
+    [Authorize]
     public class TipoPrenotacaoController : Controller
     {
         [HttpGet("ObterTiposPrenotacao")]

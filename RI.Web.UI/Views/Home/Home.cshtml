@@ -1,0 +1,25 @@
+﻿@model RI.Web.Application.ViewModels.Usuario.UsuarioViewModel
+<title>Home</title>
+
+ @if (Model != null)
+{
+    <input type="hidden" id="txtToken" value="@Model.Token" />
+    <input type="hidden" id="txtNome" value="@Model.NomeUsuario" />
+}
+
+
+<script>
+    window.onload = function () {
+        //Salvando token na sessão.
+        var token = "";
+        if (sessionStorage.getItem("tokenAuth") == "" || sessionStorage.getItem("tokenAuth") == null) {
+            token = $('#txtToken').val();
+            sessionStorage.setItem("tokenAuth", token);
+        }
+        if (sessionStorage.getItem("nomeUser") == "" || sessionStorage.getItem("nomeUser") == null) {
+
+            var nome = $('#txtNome').val();
+            sessionStorage.setItem("nomeUser", nome);
+        }
+    }
+</script>

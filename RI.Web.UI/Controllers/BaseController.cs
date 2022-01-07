@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RI.Web.Application.ViewModels.Usuario;
+using System.Net.Http.Headers;
 
 namespace RI.Web.UI.Controllers
 {
@@ -7,6 +9,15 @@ namespace RI.Web.UI.Controllers
         protected async Task<HttpResponseMessage> RequisicaoAPI(string Metodo)
         {
             using var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("token"));
+            var response = await httpClient.GetAsync(GetUrlAPI(Metodo));
+            return response;
+        }
+
+        protected async Task<HttpResponseMessage> AutenticarUsuarioRequest(string Metodo, LoginViewModel loginViewModel)
+        {
+            using var httpClient = new HttpClient();
+            Metodo += $"?NomeUsuario={loginViewModel.NomeUsuario}?SenhaUsuario={loginViewModel.SenhaUsuario}";
             var response = await httpClient.GetAsync(GetUrlAPI(Metodo));
             return response;
         }
@@ -20,6 +31,7 @@ namespace RI.Web.UI.Controllers
 
             return config.GetSection("ApiSettings:Url").Value + action;
         }
+
 
         public IEnumerable<T> ConfigurarPaginacao(IEnumerable<T> lista, int? totalResultado, int totalPorPagina, int Pagina)
         {

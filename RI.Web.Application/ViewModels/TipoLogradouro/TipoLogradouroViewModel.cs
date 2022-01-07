@@ -1,4 +1,4 @@
-﻿namespace RI.Web.Domain.Entities.TipoLogradouro
+﻿namespace RI.Web.Application.ViewModels.Recepcao.TipoLogradouro
 {
     public class TipoLogradouroViewModel
     {
