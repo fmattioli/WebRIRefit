@@ -4,7 +4,7 @@ namespace RI.Web.Domain.Entities.TipoPrenotacao
 {
     public class TipoPrenotacaoEntity
     {
-        [Column("PK_Id")]
+        [Column("PK_ID")]
         public int Id { get; set; }
         [Column("TipoPrenotacao")]
         public string? DescricaoTipoPrenotacao { get; set; }

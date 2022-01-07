@@ -19,6 +19,18 @@ namespace RI.Web.Application.Services.Recepcao
             this.recepcaoRepository = recepcaoRepository;
         }
 
+
+        public async Task<RetornoAcaoService<IEnumerable<RecepcaoViewModel>>> ObterRecepcao(TituloViewModel tituloViewModel)
+        {
+            await Task.Run(() =>
+            {
+                return null;
+            });
+
+            return new RetornoAcaoService<IEnumerable<RecepcaoViewModel>>();
+        }
+
+
         public async Task<RetornoAcaoService<DateTime>> CalcularDataPrevisao(int NaturezaId)
         {
             var retorno = new RetornoAcaoService<DateTime>();
@@ -36,16 +48,22 @@ namespace RI.Web.Application.Services.Recepcao
             return retorno;
         }
 
-        public async Task<RetornoAcaoService<IEnumerable<RecepcaoViewModel>>> ObterRecepcao(TituloViewModel tituloViewModel)
+        public async Task<RetornoAcaoService<DateTime>> CalcularDataExpiraNatureza(int NaturezaId, int IdTipoPrenotacao)
         {
-            await Task.Run(() =>
+            var retorno = new RetornoAcaoService<DateTime>();
+            var retornoRepository = await recepcaoRepository.CalcularDataExpiraNatureza(NaturezaId, IdTipoPrenotacao);
+            if (retornoRepository.Sucesso)
             {
-                return null;
-            });
+                retorno.Result = retornoRepository.Result;
+                retorno.Sucesso = true;
+                return retorno;
+            }
 
-            return new RetornoAcaoService<IEnumerable<RecepcaoViewModel>>();
+            retorno.Sucesso = false;
+            retorno.ExceptionRetorno = retornoRepository.ExceptionRetorno;
+            retorno.MensagemRetorno = retornoRepository.MensagemRetorno;
+            return retorno;
         }
-
 
     }
 }

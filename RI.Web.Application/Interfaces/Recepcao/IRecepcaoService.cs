@@ -9,5 +9,6 @@ namespace RI.Web.Application.Interfaces.Recepcao
     {
         Task<RetornoAcaoService<IEnumerable<RecepcaoViewModel>>> ObterRecepcao(TituloViewModel tituloViewModel);
         Task<RetornoAcaoService<DateTime>> CalcularDataPrevisao(int NaturezaId);
+        Task<RetornoAcaoService<DateTime>> CalcularDataExpiraNatureza(int NaturezaId, int IdTipoPrenotacao);
     }
 }

@@ -18,36 +18,6 @@ namespace RI.Web.Infra.Data.Recepcao
             _configSQLServer = configSQLServer;
         }
 
-        public async Task<RetornoAcao<DateTime>> CalcularDataPrevisaoEntrega(int NaturezaId)
-        {
-            var retorno = new RetornoAcao<DateTime>();
-            try
-            {
-                SQL.Clear();
-                SQL.AppendLine("Select dbo.fn_DataPrevisaoEntrega(");
-                SQL.AppendLine($"'{DateTime.Now}', '{NaturezaId}') As DtPrevisao");
-                using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
-                if (reader != null)
-                {
-                    while (reader.Read())
-                    {
-                        var dataPrevisao = (reader["DtPrevisao"] as DateTime?).GetValueOrDefault();
-                        retorno.Result = dataPrevisao;
-                        retorno.Sucesso = true;
-                        return retorno;
-                    }
-                }
-
-                retorno.MensagemRetorno = "Não foi possível obter uma data de previsão";
-                return retorno;
-            }
-            catch (Exception ex)
-            {
-                retorno.ExceptionRetorno = ex;
-                retorno.MensagemRetorno = ex.Message;
-                return retorno;
-            }
-        }
 
         public async Task<RecepcaoEntity> ObterRecepcao(TituloBasicoEntity Recepcao)
         {
@@ -269,10 +239,122 @@ namespace RI.Web.Infra.Data.Recepcao
             //}
             await Task.Run(() =>
             {
-                
+
             });
 
             return new RecepcaoEntity();
+        }
+
+        public async Task<RetornoAcao<DateTime>> CalcularDataPrevisaoEntrega(int NaturezaId)
+        {
+            var retorno = new RetornoAcao<DateTime>();
+            try
+            {
+                SQL.Clear();
+                SQL.AppendLine("Select dbo.fn_DataPrevisaoEntrega(");
+                SQL.AppendLine($"'{DateTime.Now}', '{NaturezaId}') As DtPrevisao");
+                using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
+                if (reader != null && reader.Read())
+                {
+                    var dataPrevisao = (reader["DtPrevisao"] as DateTime?).GetValueOrDefault();
+                    retorno.Result = dataPrevisao;
+                    retorno.Sucesso = true;
+                    return retorno;
+
+                }
+
+                retorno.MensagemRetorno = "Não foi possível obter uma data de previsão";
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
+        public async Task<RetornoAcao<DateTime>> CalcularDataExpiraNatureza(int NaturezaId, int IdTipoPrenotacao)
+        {
+            var retorno = new RetornoAcao<DateTime>();
+            var dataExpira = new DateTime();
+            try
+            {
+                SQL.Clear();
+                SQL.AppendLine("set dateformat dmy");
+                SQL.AppendLine($"select dbo.fn_DataExpiraPrenotacao({IdTipoPrenotacao}, convert(smalldatetime, '{DateTime.Now.ToString("dd/MM/yyyy")}', 103), 1, {NaturezaId}) as dataExpira");
+                using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
+                if (reader != null && reader.Read())
+                {
+                    dataExpira = (reader["dataExpira"] as DateTime?).GetValueOrDefault();
+                    //Caso utilize o cálculo de datas pela validade da natureza, a data expira e contagem em dias uteis ou não serão calculadas pela própria natureza.
+                    var dataInicio = DateTime.Now;
+                    var validadeNatureza = await ObterValorInteiro("tblWRINatureza", "Validade", NaturezaId);
+                    var diasUteisNatureza = await ObterValorInteiro("tblWRINatureza", "DiasUteis", NaturezaId);
+                    if (validadeNatureza.Result >= 1)
+                    {
+                        if (diasUteisNatureza.Result == 1)
+                        {
+                            var dataExpiraCalculoMP = await ObterDiaUtilSomandoValidade(DateTime.Now, validadeNatureza.Result);
+                            dataExpira = dataExpiraCalculoMP.Result;
+                            retorno.Result = dataExpira;
+                            retorno.Sucesso = true;
+                            return retorno;
+                        }
+                    }
+
+                    //Validar se tipo da prenotação utiliza dias uteis para calcular a data expira em dias uteis.
+                    var validadeTipoPrenotacao = await ObterValorInteiro("tblWRITipoPrenotacao", "Validade", IdTipoPrenotacao);
+                    var diasUteisTipoPrenotacao = await ObterValorBooleano("tblWRITipoPrenotacao", "DiasUteis", IdTipoPrenotacao);
+                    if (diasUteisTipoPrenotacao.Result)
+                    {
+                        var dataExpiraCalculoMP = await ObterDiaUtilSomandoValidade(DateTime.Now, validadeTipoPrenotacao.Result);
+                        dataExpira = dataExpiraCalculoMP.Result;
+                        retorno.Result = dataExpira;
+                        retorno.Sucesso = true;
+                        return retorno;
+                    }
+
+                    retorno.Result = dataExpira;
+                    retorno.Sucesso = true;
+                    return retorno;
+                }
+
+                retorno.MensagemRetorno = "Não foi possível obter a data expira.";
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
+        public async Task<RetornoAcao<DateTime>> ObterDiaUtilSomandoValidade(DateTime dataInicio, int Validade)
+        {
+            var retorno = new RetornoAcao<DateTime>();
+            try
+            {
+                SQL.Clear();
+                SQL.AppendLine($@"Select CONVERT(CHAR, dbo.fn_adicionar_dias_uteis('{dataInicio}', {Validade}), 103) AS 'DiaUtil'");
+                using SqlDataReader reader = await _configSQLServer.RetornarDadosSQLServer(SQL.ToString(), Lista);
+                if (reader != null && reader.Read())
+                {
+                    var diaUtil = (reader["DiaUtil"] as DateTime?).GetValueOrDefault();
+                    retorno.Result = diaUtil;
+                    retorno.Sucesso = true;
+                    return retorno;
+                }
+                retorno.MensagemRetorno = "Não foi possível obter a data expira.";
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
         }
     }
 }

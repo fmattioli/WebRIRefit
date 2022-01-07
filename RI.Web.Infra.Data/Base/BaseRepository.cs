@@ -67,6 +67,55 @@ namespace RI.Web.Infra.Data.Repositories.Base
             }
         }
 
+
+        public async Task<RetornoAcao<int>> ObterValorInteiro(string Tabela, string Coluna, int Valor)
+        {
+            var retorno = new RetornoAcao<int>();
+            try
+            {
+                using var conn = dapper.Connection;
+                SQL.Clear();
+                SQL.AppendLine($"SELECT * FROM {Tabela} WHERE {Coluna} = {Valor}");
+                var resultado = (await conn.QueryFirstOrDefaultAsync<int>(SQL.ToString()));
+                retorno.Sucesso = true;
+                retorno.Result = resultado;
+                conn.Close();
+                return retorno;
+
+            }
+            catch (Exception ex)
+            {
+                retorno.Sucesso = false;
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
+        public async Task<RetornoAcao<bool>> ObterValorBooleano(string Tabela, string Coluna, int Valor)
+        {
+            var retorno = new RetornoAcao<bool>();
+            try
+            {
+                using var conn = dapper.Connection;
+                SQL.Clear();
+                SQL.AppendLine($"SELECT * FROM {Tabela} WHERE {Coluna} = {Valor}");
+                var resultado = (await conn.QueryFirstOrDefaultAsync<bool>(SQL.ToString()));
+                retorno.Sucesso = true;
+                retorno.Result = resultado;
+                conn.Close();
+                return retorno;
+
+            }
+            catch (Exception ex)
+            {
+                retorno.Sucesso = false;
+                retorno.ExceptionRetorno = ex;
+                retorno.MensagemRetorno = ex.Message;
+                return retorno;
+            }
+        }
+
         public void MapDapper()
         {
             SqlMapper.SetTypeMap(typeof(T), new CustomPropertyTypeMap(
@@ -201,5 +250,6 @@ namespace RI.Web.Infra.Data.Repositories.Base
                 return retorno;
             }
         }
+
     }
 }

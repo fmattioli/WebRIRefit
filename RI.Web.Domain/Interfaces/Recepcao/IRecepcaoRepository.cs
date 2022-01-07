@@ -7,7 +7,9 @@ namespace RI.Web.Domain.Interfaces.Titulo
 {
     public interface IRecepcaoRepository : IBaseRepository<RecepcaoEntity>
     {
-        Task<RetornoAcao<DateTime>> CalcularDataPrevisaoEntrega(int NaturezaId);
         Task<RecepcaoEntity> ObterRecepcao(TituloBasicoEntity Recepcao);
+        Task<RetornoAcao<DateTime>> CalcularDataPrevisaoEntrega(int NaturezaId);
+        Task<RetornoAcao<DateTime>> CalcularDataExpiraNatureza(int NaturezaId, int IdTipoPrenotacao);
+        Task<RetornoAcao<DateTime>> ObterDiaUtilSomandoValidade(DateTime dataInicio, int Validade);
     }
 }

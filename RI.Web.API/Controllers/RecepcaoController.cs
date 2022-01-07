@@ -45,5 +45,21 @@ namespace RI.Web.API.Controllers
 
             return BadRequest(ModelState);
         }
+
+        [HttpGet("CalcularPrazoPorNatureza/{NaturezaId}/{IdTipoPrenotacao}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(RetornoAcaoService<LivroViewModel>), StatusCodes.Status200OK)]
+        public async Task<ActionResult<LivroViewModel>> CalcularDataExpiraNatureza(int NaturezaId, int IdTipoPrenotacao, [FromServices] IRecepcaoService recepcaoService)
+        {
+            if (ModelState.IsValid)
+            {
+                var retorno = await recepcaoService.CalcularDataExpiraNatureza(NaturezaId, IdTipoPrenotacao);
+                if (retorno.Sucesso)
+                    return Ok(retorno);
+                return BadRequest(retorno.MensagemRetorno);
+            }
+
+            return BadRequest(ModelState);
+        }
     }
 }
