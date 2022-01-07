@@ -19,5 +19,7 @@ namespace RI.Web.API.Controllers
             return BadRequest(retorno.ExceptionRetorno);
 
         }
+
+
     }
 }

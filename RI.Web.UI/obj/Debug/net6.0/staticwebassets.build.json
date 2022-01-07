@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TaIhI+fMdz3L1doC9ATyt35oJzf3vfiZuLsoFCsoZww=",
+  "Hash": "QdeIJZDAdtDSMf0zkbB8WMSD4zodyZ/geYulqEdMxbI=",
   "Source": "RI.Web.UI",
   "BasePath": "_content/RI.Web.UI",
   "Mode": "Default",
@@ -102,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\faviconspcm.ico",
       "SourceId": "RI.Web.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\",
       "BasePath": "_content/RI.Web.UI",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "faviconspcm.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,7 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\faviconspcm.ico"
     },
     {
       "Identity": "C:\\Projetos\\RefitRI\\WebRIRefit\\RI.Web.UI\\wwwroot\\imagens\\logo.png",
