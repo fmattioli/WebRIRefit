@@ -23,7 +23,7 @@ namespace RI.Web.API
             services.AddAutoMapperConfiguration();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "apiagenda", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API WebRI", Version = "v1" });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
@@ -32,8 +32,9 @@ namespace RI.Web.API
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "JWT Authorization header using the Bearer scheme. n Enter 'Bearer'[space] and then your token in the text input below. Bearer 12345abcdef",
+                    Description = "JWT Authorization header",
                 });
+
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
